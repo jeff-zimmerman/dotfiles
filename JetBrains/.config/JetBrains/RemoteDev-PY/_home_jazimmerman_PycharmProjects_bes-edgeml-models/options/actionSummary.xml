@@ -1,0 +1,97 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <e n="$Copy">
+      <i c="1" l="1679936230098" />
+    </e>
+    <e n="AddRemoteJupyter">
+      <i c="1" l="1679935636917" />
+    </e>
+    <e n="EditorBackSpace">
+      <i c="80" l="1679942283948" />
+    </e>
+    <e n="EditorDelete">
+      <i c="1" l="1679936591205" />
+    </e>
+    <e n="EditorDeleteToWordStart">
+      <i c="1" l="1679936123112" />
+    </e>
+    <e n="EditorEnter">
+      <i c="3" l="1679936523460" />
+    </e>
+    <e n="EditorLeft">
+      <i c="47" l="1679936632610" />
+    </e>
+    <e n="EditorRight">
+      <i c="27" l="1679936630005" />
+    </e>
+    <e n="GotoDeclaration">
+      <i c="2" l="1679942000115" />
+    </e>
+    <e n="JupyterDebugAction">
+      <i c="15" l="1679944633524" />
+    </e>
+    <e n="JupyterEditorCutAction">
+      <i c="2" l="1679944619409" />
+    </e>
+    <e n="JupyterInterruptKernelAction">
+      <i c="3" l="1679942159847" />
+    </e>
+    <e n="JupyterRestartKernelAction">
+      <i c="4" l="1679942326596" />
+    </e>
+    <e n="MoreRunToolbarActions">
+      <i c="1" l="1679942142290" />
+    </e>
+    <e n="NotebookDeleteCellAction">
+      <i c="2" l="1679944626238" />
+    </e>
+    <e n="NotebookInsertCellBelowAction">
+      <i c="3" l="1679944607605" />
+    </e>
+    <e n="NotebookOutputCollapseSingleInCellAction">
+      <i c="3" l="1679936482709" />
+    </e>
+    <e n="NotebookRunCellAction">
+      <i c="30" l="1679944611224" />
+    </e>
+    <e n="NotebookRunCellSelectBelowAction">
+      <i c="23" l="1679944649956" />
+    </e>
+    <e n="PyDebugger.CustomizeDataView">
+      <i c="4" l="1679937398382" />
+    </e>
+    <e n="PyExecuteCellAction">
+      <i c="1" l="1679937671993" />
+    </e>
+    <e n="SaveAll">
+      <i c="3" l="1679938059550" />
+    </e>
+    <e n="Stop">
+      <i c="5" l="1679942139916" />
+    </e>
+    <e n="ToggleLineBreakpoint">
+      <i c="3" l="1679944620319" />
+    </e>
+    <e n="com.intellij.notification.NotificationAction$Simple">
+      <i c="1" l="1679935397681" />
+    </e>
+    <e n="com.intellij.openapi.project.DumbAwareAction$SimpleDumbAwareAction">
+      <i c="1" l="1679942136780" />
+    </e>
+    <e n="com.intellij.ui.CommonActionsPanel$RemoveButton">
+      <i c="2" l="1679937415170" />
+    </e>
+    <e n="com.intellij.xdebugger.impl.breakpoints.RemoveBreakpointGutterIconAction">
+      <i c="2" l="1679937945625" />
+    </e>
+    <e n="com.jetbrains.python.debugger.PyCythonExtensionWarning$1">
+      <i c="2" l="1679936867921" />
+    </e>
+    <e n="com.jetbrains.python.debugger.containerview.PyDataView$CloseViewerAction">
+      <i c="1" l="1679937214073" />
+    </e>
+    <e n="org.jetbrains.plugins.notebooks.jupyter.editor.JupyterServerChooserAction$createPopupActionGroup$actionList$1">
+      <i c="1" l="1679942382378" />
+    </e>
+  </component>
+</application>

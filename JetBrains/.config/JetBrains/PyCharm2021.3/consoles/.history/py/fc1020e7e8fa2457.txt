@@ -1,0 +1,212 @@
+runfile('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction/train.py', args=['--device', 'cuda', '--n_epochs', '10', '--batch_size', '32'], wdir='/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction')
+-. . -..- - / . -. - .-. -.--
+runfile('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction/train.py', args=['--device', 'cuda', '--n_epochs', '10'], wdir='/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction')
+-. . -..- - / . -. - .-. -.--
+runfile('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction/train.py', args=['--data_file', 'labeled-elm-events.hdf5', '--device', 'cuda', '--n_epochs', '10'], wdir='/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction')
+-. . -..- - / . -. - .-. -.--
+runfile('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction/train.py', args=['--input_data_file', 'labeled-elm-events.hdf5', '--device', 'cuda', '--n_epochs', '10'], wdir='/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction')
+-. . -..- - / . -. - .-. -.--
+runfile('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction/train.py', args=['--input_data_file', 'labeled-elm-events.hdf5', '--device', 'cuda', '--max_elms', '-1', '--n_epochs', '10'], wdir='/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction')
+-. . -..- - / . -. - .-. -.--
+runfile('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction/train.py', args=['--input_data_file', 'labeled-elm-events.hdf5', '--device', 'cuda', '--batch_size', '128', '--max_elms', '-1', '--n_epochs', '10'], wdir='/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction')
+-. . -..- - / . -. - .-. -.--
+runfile('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction/analyze.py', args=['--device', 'cuda'], wdir='/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction')
+-. . -..- - / . -. - .-. -.--
+runfile('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction/train.py', args=['--input_data_file', 'labeled-elm-events.hdf5', '--device', 'cuda', '--batch_size', '128', '--max_elms', '-1', '--fraction_test', '0.025', '--n_epochs', '10'], wdir='/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction')
+-. . -..- - / . -. - .-. -.--
+runfile('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction/train_regression.py', args=['--input_data_file', 'labeled-elm-events.hdf5', '--device', 'cuda', '--batch_size', '128', '--n_epochs', '10', '--max_elms', '-1', '--fraction_test', '0.025'], wdir='/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction')
+-. . -..- - / . -. - .-. -.--
+runfile('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction/analyze.py', args=['--device', 'cuda', '--regression'], wdir='/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction')
+-. . -..- - / . -. - .-. -.--
+s = 'CGC 2.0 vg+'
+-. . -..- - / . -. - .-. -.--
+s.split(r'\d+')
+-. . -..- - / . -. - .-. -.--
+import re
+-. . -..- - / . -. - .-. -.--
+s.split(re.findall('\d+'))
+-. . -..- - / . -. - .-. -.--
+s.split(re.findall('\d+', s))
+-. . -..- - / . -. - .-. -.--
+re.findall('\d+', s)
+-. . -..- - / . -. - .-. -.--
+re.findall('\f+', s)
+-. . -..- - / . -. - .-. -.--
+re.findall('^_\d+', s)
+-. . -..- - / . -. - .-. -.--
+re.findall('_\d+', s)
+-. . -..- - / . -. - .-. -.--
+re.findall('\d', s)
+-. . -..- - / . -. - .-. -.--
+re.findall('^\d', s)
+-. . -..- - / . -. - .-. -.--
+re.findall('^[\d]', s)
+-. . -..- - / . -. - .-. -.--
+re.findall('^[0-9]', s)
+-. . -..- - / . -. - .-. -.--
+re.findall('[^0-9]', s)
+-. . -..- - / . -. - .-. -.--
+re.findall('/[^0-9]/', s)
+-. . -..- - / . -. - .-. -.--
+re.find('/[^0-9]/g', s)
+-. . -..- - / . -. - .-. -.--
+re.findall('/[^0-9]/g', s)
+-. . -..- - / . -. - .-. -.--
+re.findall(/[^0-9]/g, s)
+-. . -..- - / . -. - .-. -.--
+re.findall('\c+', s)
+-. . -..- - / . -. - .-. -.--
+re.findall('^\d+', s)
+-. . -..- - / . -. - .-. -.--
+re.findall('^\d+.\d+', s)
+-. . -..- - / . -. - .-. -.--
+re.findall('\d+.\d+', s)
+-. . -..- - / . -. - .-. -.--
+re.findall(r'\d+.\d+', s)
+-. . -..- - / . -. - .-. -.--
+re.findall(r'[-+]?(?:\d*\.\d+|\d+)', s)
+-. . -..- - / . -. - .-. -.--
+re.findall(r'[CGC]?[CBCS]?', s)
+-. . -..- - / . -. - .-. -.--
+re.findall(r'[^CGC]?[^CBCS]?', s)
+-. . -..- - / . -. - .-. -.--
+re.findall(r'[CGC][CBCS]', s)
+-. . -..- - / . -. - .-. -.--
+re.findall(r'/[CGC][CBCS]/w+', s)
+-. . -..- - / . -. - .-. -.--
+re.findall(r'/[CGC][CBCS]\w+/g', s)
+-. . -..- - / . -. - .-. -.--
+re.findall(r'[CGC][CBCS]\w+', s)
+-. . -..- - / . -. - .-. -.--
+re.findall(r'[CGC]?[CBCS]?\w+', s)
+-. . -..- - / . -. - .-. -.--
+re.findall(r'([CGC]?)([CBCS]?)\w+', s)
+-. . -..- - / . -. - .-. -.--
+re.findall(r'(\bCGC\b?)(\bCBCS\b)\w+', s)
+-. . -..- - / . -. - .-. -.--
+re.findall(r'(\bCGC\b)(\bCBCS\b)\w+', s)
+-. . -..- - / . -. - .-. -.--
+re.findall(r'(\bCGC\b)(\bCBCS\b)', s)
+-. . -..- - / . -. - .-. -.--
+re.findall(r'(\bCGC\b)', s)
+-. . -..- - / . -. - .-. -.--
+re.findall(r'[\bCGC\b]', s)
+-. . -..- - / . -. - .-. -.--
+re.findall(r'[\bCGC\b]\w', s)
+-. . -..- - / . -. - .-. -.--
+re.findall(r'[\bCGC\b]\w+', s)
+-. . -..- - / . -. - .-. -.--
+re.findall(r'[\bCGC\b]?\w+', s)
+-. . -..- - / . -. - .-. -.--
+re.findall(r'[\bCGC\b]?[\bCBCS\b]?\w+', s)
+-. . -..- - / . -. - .-. -.--
+re.findall(r'\w+', s)
+-. . -..- - / . -. - .-. -.--
+re.findall(r'[\bCGC\b]?\w+[\bCBCS\b]?\w+', s)
+-. . -..- - / . -. - .-. -.--
+re.findall(r'([\bCGC\b]?\w+)([\bCBCS\b]?\w+)', s)
+-. . -..- - / . -. - .-. -.--
+re.findall(r'([\bCGC\b]?\w+)|([\bCBCS\b]?\w+)', s)
+-. . -..- - / . -. - .-. -.--
+re.findall(r'[\bCGC\b]|[\bCBCS\b]', s)
+-. . -..- - / . -. - .-. -.--
+re.findall(r'[\bCGC\b]\w|[\bCBCS\b]\w', s)
+-. . -..- - / . -. - .-. -.--
+s = 'CGC CBCS 2.0'
+-. . -..- - / . -. - .-. -.--
+s = 'CGC 2.0 vg+ white'
+-. . -..- - / . -. - .-. -.--
+re.findall(r'[\bCGC\b]\w+|[\bCBCS\b]\w+', s)
+-. . -..- - / . -. - .-. -.--
+comp = re.findall(r'[\bCGC\b]\w+|[\bCBCS\b]\w+', s)[0]
+-. . -..- - / . -. - .-. -.--
+g = re.findall(r'[-+]?(?:\d*\.\d+|\d+)', s)[0]
+-. . -..- - / . -. - .-. -.--
+re.findall('^(g)', s)
+-. . -..- - / . -. - .-. -.--
+re.findall('^g', s)
+-. . -..- - / . -. - .-. -.--
+re.findall('[^g]', s)
+-. . -..- - / . -. - .-. -.--
+re.findall('[^g]\w+', s)
+-. . -..- - / . -. - .-. -.--
+s.split(' ').pop('CGC')
+-. . -..- - / . -. - .-. -.--
+s.split(' ').filter('CGC')
+-. . -..- - / . -. - .-. -.--
+filter(s.split(' '), 'CGC')
+-. . -..- - / . -. - .-. -.--
+(filter(s.split(' '), 'CGC'))
+-. . -..- - / . -. - .-. -.--
+list(filter(s.split(' '), 'CGC'))
+-. . -..- - / . -. - .-. -.--
+s.split(' ').remove('CGC')
+-. . -..- - / . -. - .-. -.--
+s.split(' ')
+-. . -..- - / . -. - .-. -.--
+x = s.split(' ').remove('CGC')
+-. . -..- - / . -. - .-. -.--
+x
+-. . -..- - / . -. - .-. -.--
+'CGC' in s.split(' ')
+-. . -..- - / . -. - .-. -.--
+x.remove(g)
+-. . -..- - / . -. - .-. -.--
+x.remove(s)
+-. . -..- - / . -. - .-. -.--
+x.remove(comp)
+-. . -..- - / . -. - .-. -.--
+' '.join([x.remove(i) for i in [comp, g]])
+-. . -..- - / . -. - .-. -.--
+[x.remove(i) for i in [comp, g]]
+-. . -..- - / . -. - .-. -.--
+(lambda x: [x.remove(i) for i in [comp, g]])(s.split(' '))
+-. . -..- - / . -. - .-. -.--
+x = s.split(' ')
+-. . -..- - / . -. - .-. -.--
+(lambda x: [x.remove(i) for i in [comp, g]])(x)
+-. . -..- - / . -. - .-. -.--
+(lambda x: x.remove(i) for i in [comp, g])(x)
+-. . -..- - / . -. - .-. -.--
+(lambda x: i for i in [comp, g])(x)
+-. . -..- - / . -. - .-. -.--
+(lambda x: i for i in [comp, g])
+-. . -..- - / . -. - .-. -.--
+((lambda x: i for i in [comp, g]))
+-. . -..- - / . -. - .-. -.--
+(lambda x: (i for i in [comp, g]))
+-. . -..- - / . -. - .-. -.--
+(lambda x: (i for i in [comp, g]))()
+-. . -..- - / . -. - .-. -.--
+(lambda: (i for i in [comp, g]))()
+-. . -..- - / . -. - .-. -.--
+(lambda x: (i for i in [comp, g]))(x)
+-. . -..- - / . -. - .-. -.--
+(lambda x: [i for i in [comp, g]])(x)
+-. . -..- - / . -. - .-. -.--
+[i for i in [comp, g]]
+-. . -..- - / . -. - .-. -.--
+for i in [comp, g]: print(i)
+
+-. . -..- - / . -. - .-. -.--
+import torch
+-. . -..- - / . -. - .-. -.--
+torch.cuda.is_available()
+-. . -..- - / . -. - .-. -.--
+' '.join(x)
+-. . -..- - / . -. - .-. -.--
+runfile('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction/src/utils.py', wdir='/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction/src')
+-. . -..- - / . -. - .-. -.--
+import numpy as np
+-. . -..- - / . -. - .-. -.--
+np.sqrt
+-. . -..- - / . -. - .-. -.--
+np.sqrt(648567)
+-. . -..- - / . -. - .-. -.--
+runfile('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction/analyze.py', args=['--model_name', 'multi_features_ds', '--device', 'cuda', '--fft_num_filters', '20', '--dwt_num_filters', '20', '--signal_window_size', '256', '--regression', 'log'], wdir='/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction')
+-. . -..- - / . -. - .-. -.--
+runfile('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction/train_regression.py', args=['--model_name', 'multi_features_ds_v2', '--input_data_file', 'labeled-elm-events.hdf5', '--device', 'cuda', '--batch_size', '64', '--n_epochs', '20', '--max_elms', '-1', '--fraction_test', '0.025', '--fft_num_filters', '20', '--dwt_num_filters', '20', '--signal_window_size', '256', '--regression', 'log'], wdir='/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction')
+-. . -..- - / . -. - .-. -.--
+runfile('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction/train_regression.py', args=['--model_name', 'multi_features_ds_v2', '--input_data_file', 'labeled-elm-events.hdf5', '--device', 'cuda', '--batch_size', '64', '--n_epochs', '20', '--max_elms', '-1', '--fraction_test', '0.025', '--fft_num_filters', '20', '--dwt_num_filters', '20', '--signal_window_size', '256', '--regression'], wdir='/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction')
+-. . -..- - / . -. - .-. -.--
+runfile('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction/analyze.py', args=['--model_name', 'multi_features_ds', '--device', 'cuda', '--fft_num_filters', '20', '--dwt_num_filters', '20', '--signal_window_size', '256', '--regression', 'log', '--checkpoint_file', 'checkpoint.pytorch'], wdir='/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction')

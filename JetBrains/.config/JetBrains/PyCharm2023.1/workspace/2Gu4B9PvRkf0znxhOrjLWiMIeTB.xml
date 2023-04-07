@@ -1,0 +1,235 @@
+<project version="4">
+  <component name="BookmarksManager">
+    <option name="groups">
+      <GroupState>
+        <option name="name" value="ELMLabeler" />
+      </GroupState>
+    </option>
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="-1">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SHOW_PREVIEW" is_vertical_split="false">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/elm_finder_pkg.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="757">
+              <caret line="149" selection-start-line="149" selection-end-line="149" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/elm_scoring_plot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1539">
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTypeUsageLocalSummary">
+    <fileType name="Markdown">
+      <summary usageCount="2" lastUsed="1667225428077" />
+    </fileType>
+    <fileType name="Python">
+      <summary usageCount="3" lastUsed="1667226283933" />
+    </fileType>
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/elm_finder_pkg.py" />
+    </changedPaths>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="JupyterTrust" id="9a083c72-83a8-4995-82b3-2aa688f923fe" />
+  <component name="LanguageUsageStatistics">
+    <language id="Markdown">
+      <summary usageCount="2" lastUsage="1667225428078" />
+    </language>
+    <language id="Python">
+      <summary usageCount="3" lastUsage="1667226283933" />
+    </language>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ELMLabeler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ELMLabeler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ELMLabeler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ELMLabeler" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="RunConfigurationStartHistory">
+    <history>
+      <element setting="Python.elm_finder_pkg" executorId="Run" />
+      <element setting="Python.elm_finder_pkg" executorId="Debug" />
+    </history>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="4728000" />
+  </component>
+  <component name="ToolWindowManager">
+    <editor active="true" />
+    <layout>
+      <window_info id="Commit" weight="0.32999998" />
+      <window_info id="Bookmarks" order="0" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.16621622" />
+      <window_info id="Learn" order="2" />
+      <window_info id="Structure" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" show_stripe_button="false" weight="0.2750984" />
+      <window_info anchor="bottom" id="Python Packages" order="4" />
+      <window_info anchor="bottom" id="TODO" order="5" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Python Console" order="7" visible="true" weight="0.22785433" />
+      <window_info anchor="bottom" id="Problems View" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="ExcelReader" order="10" />
+      <window_info anchor="bottom" id="Endpoints" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Services" order="12" />
+      <window_info anchor="right" id="github.copilotToolWindow" sideWeight="0.50085324" weight="0.32999998" />
+      <window_info anchor="right" x="0" y="0" width="412" height="853" id="Documentation" sideWeight="0.49919093" side_tool="true" weight="0.42837837" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="SciView" sideWeight="0.5008091" visible="true" weight="0.59594595" />
+      <window_info anchor="right" id="Notifications" side_tool="true" />
+    </layout>
+    <recentWindows>
+      <value>SciView</value>
+      <value>Project</value>
+      <value>github.copilotToolWindow</value>
+      <value>Python Console</value>
+      <value>Debug</value>
+      <value>Commit</value>
+    </recentWindows>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="680" y="308" key="FileChooserDialogImpl" timestamp="1667225455057">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="680" y="308" key="FileChooserDialogImpl/70.27.1850.1053@70.27.1850.1053" timestamp="1667225455057" />
+    <state width="1804" height="251" key="GridCell.Tab.0.bottom" timestamp="1667250395869">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="251" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1667250395869" />
+    <state width="1804" height="251" key="GridCell.Tab.0.center" timestamp="1667250395869">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="251" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1667250395869" />
+    <state width="1804" height="251" key="GridCell.Tab.0.left" timestamp="1667250395869">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="251" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1667250395869" />
+    <state width="1804" height="251" key="GridCell.Tab.0.right" timestamp="1667250395869">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="251" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1667250395869" />
+    <state width="1804" height="251" key="GridCell.Tab.1.bottom" timestamp="1667250395869">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="251" key="GridCell.Tab.1.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1667250395869" />
+    <state width="1804" height="251" key="GridCell.Tab.1.center" timestamp="1667250395869">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="251" key="GridCell.Tab.1.center/70.27.1850.1053@70.27.1850.1053" timestamp="1667250395869" />
+    <state width="1804" height="251" key="GridCell.Tab.1.left" timestamp="1667250395869">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="251" key="GridCell.Tab.1.left/70.27.1850.1053@70.27.1850.1053" timestamp="1667250395869" />
+    <state width="1804" height="251" key="GridCell.Tab.1.right" timestamp="1667250395869">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="251" key="GridCell.Tab.1.right/70.27.1850.1053@70.27.1850.1053" timestamp="1667250395869" />
+    <state x="594" y="211" key="PythonInterpreterConfigurable.size" timestamp="1667225417345">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="594" y="211" key="PythonInterpreterConfigurable.size/70.27.1850.1053@70.27.1850.1053" timestamp="1667225417345" />
+    <state x="481" y="185" key="SettingsEditor" timestamp="1667225422776">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="481" y="185" key="SettingsEditor/70.27.1850.1053@70.27.1850.1053" timestamp="1667225422776" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SHOW_PREVIEW" is_vertical_split="false">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elm_scoring_plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1539">
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elm_finder_pkg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="757">
+          <caret line="149" selection-start-line="149" selection-end-line="149" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

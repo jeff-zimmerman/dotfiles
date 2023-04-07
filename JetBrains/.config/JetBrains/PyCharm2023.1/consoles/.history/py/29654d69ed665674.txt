@@ -1,0 +1,251 @@
+self.process = subprocess.Popen(
+                cmd,
+                env=self.env,
+                close_fds=system() != "Windows",
+                # stdout=self.log_file,
+                # stderr=self.log_file,
+                stdin=PIPE,
+                creationflags=self.creation_flags,
+            )
+-. . -..- - / . -. - .-. -.--
+self.process.stdout
+-. . -..- - / . -. - .-. -.--
+self.process.stdin
+-. . -..- - / . -. - .-. -.--
+self.process.kill
+-. . -..- - / . -. - .-. -.--
+self.process = subprocess.Popen(
+                cmd,
+                env=self.env,
+                close_fds=system() != "Windows",
+                stdout=self.log_file,
+                # stderr=self.log_file,
+                stdin=PIPE,
+                creationflags=self.creation_flags,
+            )
+-. . -..- - / . -. - .-. -.--
+self.process = subprocess.Popen(
+                cmd,
+                env=self.env,
+                close_fds=system() != "Windows",
+                # stdout=self.log_file,
+                stderr=self.log_file,
+                stdin=PIPE,
+                creationflags=self.creation_flags,
+            )
+-. . -..- - / . -. - .-. -.--
+self.process.poll()
+-. . -..- - / . -. - .-. -.--
+subprocess.Popen(
+                cmd,
+                env=self.env,
+                close_fds=system() != "Windows",
+                stdout=self.log_file,
+                # stderr=self.log_file,
+                stdin=PIPE,
+                creationflags=self.creation_flags,
+            )
+-. . -..- - / . -. - .-. -.--
+subprocess.Popen(
+                cmd,
+                env=self.env,
+                close_fds=system() != "Windows",
+                # stdout=self.log_file,
+                stderr=self.log_file,
+                stdin=PIPE,
+                creationflags=self.creation_flags,
+            )
+-. . -..- - / . -. - .-. -.--
+subprocess.kill
+-. . -..- - / . -. - .-. -.--
+Popen(
+                cmd,
+                env=self.env,
+                close_fds=system() != "Windows",
+                stdout=self.log_file,
+                stderr=self.log_file,
+                RUST_BACKTRACE=1,
+                stdin=PIPE,
+                creationflags=self.creation_flags,
+            )
+-. . -..- - / . -. - .-. -.--
+std.Popen(
+                cmd,
+                env=self.env,
+                close_fds=system() != "Windows",
+                stdout=self.log_file,
+                stderr=self.log_file,
+                RUST_BACKTRACE=1,
+                stdin=PIPE,
+                creationflags=self.creation_flags,
+            )
+-. . -..- - / . -. - .-. -.--
+process1 = subprocess.Popen(
+                cmd,
+                env=self.env,
+                close_fds=system() != "Windows",
+                # stdout=self.log_file,
+                stderr=self.log_file,
+                RUST_BACKTRACE=1,
+                stdin=PIPE,
+                creationflags=self.creation_flags,
+            )
+-. . -..- - / . -. - .-. -.--
+self.log_file
+-. . -..- - / . -. - .-. -.--
+process1.kill()
+-. . -..- - / . -. - .-. -.--
+process1 = subprocess.Popen(
+                cmd,
+                env=self.env,
+                close_fds=system() != "Windows",
+                stdout=self.log_file,
+                stderr=self.log_file,
+                stdin=PIPE,
+                creationflags=self.creation_flags,
+            )
+-. . -..- - / . -. - .-. -.--
+process1 = subprocess.Popen(
+                cmd,
+                env=self.env,
+                close_fds=system() != "Windows",
+                # stdout=self.log_file,
+                stderr=self.log_file,
+                stdin=PIPE,
+                creationflags=self.creation_flags,
+            )
+-. . -..- - / . -. - .-. -.--
+process1.communicate()
+-. . -..- - / . -. - .-. -.--
+process1.poll()
+-. . -..- - / . -. - .-. -.--
+process2 = subprocess.Popen(
+                cmd,
+                env=self.env,
+                close_fds=system() != "Windows",
+                stdout=self.log_file,
+                stderr=self.log_file,
+                stdin=PIPE,
+                creationflags=self.creation_flags,
+            )
+-. . -..- - / . -. - .-. -.--
+process2.poll()
+-. . -..- - / . -. - .-. -.--
+' ' in 4
+-. . -..- - / . -. - .-. -.--
+i = 5
+-. . -..- - / . -. - .-. -.--
+isinstance(i, str) and ' ' in numOfJobs
+-. . -..- - / . -. - .-. -.--
+int(1,234)
+-. . -..- - / . -. - .-. -.--
+x = 0
+-. . -..- - / . -. - .-. -.--
+try:
+    x+=1
+    raise ValueError
+except ValueError:
+    print(x)
+    
+-. . -..- - / . -. - .-. -.--
+list(range(0, None))
+-. . -..- - / . -. - .-. -.--
+'asdf'+None
+-. . -..- - / . -. - .-. -.--
+'asdf'+''
+-. . -..- - / . -. - .-. -.--
+'asdf'+''.center(20)
+-. . -..- - / . -. - .-. -.--
+'asdf'+'a'.center(20)
+-. . -..- - / . -. - .-. -.--
+('asdf'+'a').center(20)
+-. . -..- - / . -. - .-. -.--
+from pathlib import Path
+-. . -..- - / . -. - .-. -.--
+f = Path('/home/jazimmerman/PycharmProjects/ApplyBot/ApplyBot/data/Applied Jobs DATA - 20230201.txt')
+-. . -..- - / . -. - .-. -.--
+f.stem
+-. . -..- - / . -. - .-. -.--
+f = Path('/home/jazimmerman/PycharmProjects/ApplyBot/ApplyBot/data/urlData.txt')
+-. . -..- - / . -. - .-. -.--
+'DATA' in f.stem
+-. . -..- - / . -. - .-. -.--
+f = Path('/home/jazimmerman/PycharmProjects/ApplyBot/ApplyBot/data/')
+-. . -..- - / . -. - .-. -.--
+f.glob('DATA')
+-. . -..- - / . -. - .-. -.--
+[f.glob('DATA')]
+-. . -..- - / . -. - .-. -.--
+list(f.glob('DATA'))
+-. . -..- - / . -. - .-. -.--
+list(f.glob('*DATA*'))
+-. . -..- - / . -. - .-. -.--
+x = {1,2,3,4}
+-. . -..- - / . -. - .-. -.--
+y={3,4,5,6}
+-. . -..- - / . -. - .-. -.--
+x+y
+-. . -..- - / . -. - .-. -.--
+x.add(y)
+-. . -..- - / . -. - .-. -.--
+x.update(y)
+-. . -..- - / . -. - .-. -.--
+print([line for line in f])
+-. . -..- - / . -. - .-. -.--
+{int(
+                    re.search(r'(\bSuccess|\bPreviously Applied).+(/view/(\d+))', line)
+                    .group(3))
+                    for line in f.readlines()}
+-. . -..- - / . -. - .-. -.--
+{int(
+                    re.search(r'(\bSuccess|\bPreviously Applied).+(/view/(\d+))', line)
+                    .group(3))
+                    for line in f}
+-. . -..- - / . -. - .-. -.--
+f.seek(0)
+-. . -..- - / . -. - .-. -.--
+{re.search(r'(\bSuccess|\bPreviously Applied).+(/view/(\d+))', line) for line in f}
+-. . -..- - / . -. - .-. -.--
+re.search(r'(\bSuccess|\bPreviously Applied).+(/view/(\d+))', 'asdf')
+-. . -..- - / . -. - .-. -.--
+re.search(r'(\bSuccess|\bPreviously Applied).+(/view/(\d+))', 'asdf').group()
+-. . -..- - / . -. - .-. -.--
+{[1,2,3,4]}
+-. . -..- - / . -. - .-. -.--
+set([1,2,3,4])
+-. . -..- - / . -. - .-. -.--
+re.search(r'(\bSuccess|\bPreviously Applied).+(/view/(\d+))', 'asdf').group(0)
+-. . -..- - / . -. - .-. -.--
+re.search(r'a', 'asdf').group(0)
+-. . -..- - / . -. - .-. -.--
+re.search(r'a', 'asdf')
+-. . -..- - / . -. - .-. -.--
+re.search(r'(a).+(f)', 'asdf')
+-. . -..- - / . -. - .-. -.--
+re.search(r'(a).+(f)', 'asdf').group(0)
+-. . -..- - / . -. - .-. -.--
+re.search(r'(a).+(f)', 'asdf').group(1)
+-. . -..- - / . -. - .-. -.--
+re.search(r'(a).+(f)', 'asdf').group(2)
+-. . -..- - / . -. - .-. -.--
+re.search(r'(a).+(f)', 'asdf').group(3)
+-. . -..- - / . -. - .-. -.--
+re.search(r'(a).+(f)', 'asdf').group(-1)
+-. . -..- - / . -. - .-. -.--
+set([1,2,3,4, None])
+-. . -..- - / . -. - .-. -.--
+set([1,2,3,4, None]).pop(None)
+-. . -..- - / . -. - .-. -.--
+set(offerIds) - previously_visited
+-. . -..- - / . -. - .-. -.--
+previously_visited - set(offerIds)
+-. . -..- - / . -. - .-. -.--
+import linkedin
+-. . -..- - / . -. - .-. -.--
+import cProfile
+-. . -..- - / . -. - .-. -.--
+cProfile.run(LinkedinFirefox().linkJobApply())
+-. . -..- - / . -. - .-. -.--
+cProfile.run(linkedin.LinkedinFirefox().linkJobApply())
+-. . -..- - / . -. - .-. -.--
+3/7

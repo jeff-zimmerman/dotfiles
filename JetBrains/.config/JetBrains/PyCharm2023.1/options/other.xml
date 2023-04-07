@@ -1,0 +1,243 @@
+<application>
+  <component name="AppInspectionProfilesVisibleTreeState">
+    <entry key="Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>Python</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>PyCompatibilityInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="DynamicPluginEnabler">
+    <trackers>
+      <map>
+        <entry key="25U34hKclT0pzVTSIvHWyF7D2kL">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="25tJk9ldlvW0GwJVsT0oyy25Fja">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="26YyI98ahipy6AKf2t01MaIwoP2">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="26hUUeZaHgMVRDj1M4PLbEuSXdu">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="26tNi1KzQBMbRTsldWI6xWTUWGG">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="271H5raKq9V8GvbgYKZmcpAvgw1">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="277RRgolYJSuw7QoRm4qfEbSL8y">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="27AT98MVlOmHMhM1b0Fp9wEfXHO">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="27CqheZ8QgGKmnRkcy4ZArf8qLX">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="27ehmXdvMRODxV44CXXewJKQ7xf">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="2D4zeiv5yciHP94w8MfGpsJisHO">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="2Gu4B9PvRkf0znxhOrjLWiMIeTB">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+      </map>
+    </trackers>
+  </component>
+  <component name="NotRoamableUiSettings">
+    <option name="fontScale" value="1.0" />
+    <option name="fontSize" value="16.0" />
+    <option name="presentationModeIdeScale" value="1.75" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="CWM_LOGGING_VERSION" value="1" />
+    <property name="DocumentationAutoUpdateEnabled" value="true" />
+    <property name="ExpandBeforeRunStepsPanel" value="true" />
+    <property name="FileTemplates.SelectedTemplate" value="HTML File" />
+    <property name="FindSplitterProportion" value="0.3299428" />
+    <property name="MarketplacePluginsSearchHistory" value="copilot" />
+    <property name="NonModalCommitCustomization.IsApplied" value="true" />
+    <property name="PluginConfigurable.selectionTab" value="1" />
+    <property name="PyCharm.InitialConfiguration" value="true" />
+    <property name="PyCharm.InitialConfiguration.V2" value="true" />
+    <property name="PyCharm.InitialConfiguration.V3" value="true" />
+    <property name="PyCharm.InitialConfiguration.V4" value="true" />
+    <property name="PyCharm.InitialConfiguration.V5" value="true" />
+    <property name="PyCharm.InitialConfiguration.V6" value="true" />
+    <property name="PyCharm.InitialConfiguration.V7" value="true" />
+    <property name="ShowDocumentationInToolWindow" value="true" />
+    <property name="appcds.runOnSecondStart" value="PY-213.7172.26-1e0f7cf51ffa6e4cff71acd86cebef326186e63ed9c29cd6eab2ecab34dd636a" />
+    <property name="ask.about.ctrl.y.shortcut.v2" value="true" />
+    <property name="bundled.plugins.list.saved.version" value="PY-213.7172.26" />
+    <property name="debugger.smart.chooser.counter" value="1" />
+    <property name="evlsprt3.213" value="3" />
+    <property name="experimentalFeature.terminal.shell.command.handling" value="false" />
+    <property name="file.chooser.recent.files" value="$USER_HOME$/PycharmProjects/bes-edgeml-models/bes-edgeml-models&#10;/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction&#10;/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml_work&#10;/home/jazimmerman/PycharmProjects/plainspoken/beckett&#10;/home/jazimmerman/PycharmProjects/plainspoken/beckett/ebay_parsing/artemis-ebay-parsing&#10;/home/jazimmerman/PycharmProjects/plainspoken/beckett/ebay_parsing&#10;/home/jazimmerman/PycharmProjects/bes-edgeml-models&#10;/home/jazimmerman/PycharmProjects/plainspoken/beckett/card_grading&#10;/home/jazimmerman/PycharmProjects/plainspoken/beckett/web_scraper&#10;/home/jazimmerman/PycharmProjects/plainspoken/watchtower&#10;/home/jazimmerman/PycharmProjects/plainspoken/watchtower/watchtower&#10;/home/jazimmerman/PycharmProjects/plainspoken/beckett/card_grading/card_grading" />
+    <property name="file.gist.reindex.count" value="145" />
+    <property name="fileTypeChangedCounter" value="2" />
+    <property name="fileTypeDetectors" value="com.intellij.database.vfs.DbStorageFileType$Detector:com.intellij.docker.dockerFile.DockerFileTypeDetector:com.intellij.ide.scratch.ScratchFileServiceImpl$Detector:com.intellij.javascript.debugger.sourcemap.SourceMapFileType$MyFileTypeDetector:org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector" />
+    <property name="got.it.tooltip.cwm.invitation.notification" value="1" />
+    <property name="got.it.tooltip.python.console.command.queue.show" value="1" />
+    <property name="got.it.tooltip.reader.mode.got.it" value="1" />
+    <property name="gotit.previous.run" value="PY-213.7172.26" />
+    <property name="ide.memory.adjusted" value="true" />
+    <property name="ide.updates.previous.build.number" value="PY-213.7172.26" />
+    <property name="ift.learning.panel.opened.in" value="213.7172.26" />
+    <property name="input.method.disabler.muted" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/plainspoken/beckett/ebay_parsing" />
+    <property name="quick.doc.font.size.v3" value="LARGE" />
+    <property name="registry.to.advanced.settings.migration.build" value="PY-213.7172.26" />
+    <property name="tasks.pass.word.conversion.enforced" value="true" />
+    <property name="ts.lib.d.ts.version" value="4.5.4" />
+  </component>
+  <component name="PropertyService"><![CDATA[{
+  "keyToString": {
+    "CWM_LOGGING_VERSION": "1",
+    "CommitChangeListDialog.DETAILS_SPLITTER_PROPORTION_2": "0.61396575",
+    "DocumentationAutoUpdateEnabled": "true",
+    "ExpandBeforeRunStepsPanel": "false",
+    "FindSplitterProportion": "0.26208025",
+    "InstalledPluginsSearchHistory": "xlsx",
+    "LAST_EXTRACTOR_SCRIPTS_CLEANUP_VERSION/data/aggregators": "PY-231.8109.197",
+    "MarketplacePluginsSearchHistory": "xlsx\nxls\nx\nexce\ne",
+    "PluginConfigurable.selectionTab": "1",
+    "PyCharm.InitialConfiguration": "true",
+    "PyCharm.InitialConfiguration.V2": "true",
+    "PyCharm.InitialConfiguration.V3": "true",
+    "PyCharm.InitialConfiguration.V4": "true",
+    "PyCharm.InitialConfiguration.V5": "true",
+    "PyCharm.InitialConfiguration.V6": "true",
+    "PyCharm.InitialConfiguration.V7": "true",
+    "PyCharm.InitialConfiguration.V8": "true",
+    "PythonUnitTestRunner.Splitter.Proportion": "0.16883117",
+    "PythonUnitTestRunnerSupport.hideIgnoredTests": "true",
+    "PythonUnitTestRunnerSupport.hidePassedTests": "false",
+    "PythonUnitTestRunnerSupport.sortTestsAlphabetically": "false",
+    "RunOnceActivity.se.text.search": "true",
+    "ShowDocumentationInToolWindow": "true",
+    "TextEditorWithPreview.SplitterProportionKey": "0.53739786",
+    "appcds.runOnSecondStart": "PY-231.8109.197-42ad7a64565cce7f6289d594c6f3b93377cf951e5551e5154d50f88f9419903a",
+    "bundled.plugins.list.saved.version": "PY-231.8109.197",
+    "com.intellij.history.integration.ui.views.DirectoryHistoryDialog.0": "300",
+    "com.intellij.history.integration.ui.views.FileHistoryDialog.0": "318",
+    "com.intellij.history.integration.ui.views.FileHistoryDialog.1": "800",
+    "com.intellij.history.integration.ui.views.SelectionHistoryDialog.0": "300",
+    "com.intellij.history.integration.ui.views.SelectionHistoryDialog.1": "800",
+    "debugger.smart.chooser.counter": "3",
+    "debugger.speed.search.tree.option.hint.counter": "1",
+    "evlsprt3.221": "23",
+    "evlsprt3.222": "26",
+    "evlsprt3.223": "25",
+    "evlsprt3.231": "22",
+    "experimental.ui.first.promotion.localdate": "2023-03-31",
+    "experimental.ui.promo.banner.disabled": "true",
+    "experimentalFeature.terminal.shell.command.handling": "false",
+    "file.gist.reindex.count": "134",
+    "fileTypeChangedCounter": "7",
+    "find.popup.splitter": "0.40836012",
+    "fontSizeToResetConsole": "16.0",
+    "fontSizeToResetEditor": "16.0",
+    "got.it.tooltip.copilot.inlayGotIt": "1",
+    "got.it.tooltip.cwm.invitation.notification": "1",
+    "got.it.tooltip.python.console.command.queue.show": "1",
+    "got.it.tooltip.reader.mode.got.it": "1",
+    "gotit.previous.run": "PY-221.5080.212",
+    "ide.updates.old.dirs.scan.scheduled": "1680876704160",
+    "ide.updates.previous.build.number": "PY-231.8109.197",
+    "ift.learning.panel.opened.in": "221.5591.52",
+    "input.method.disabler.muted": "true",
+    "last_opened_file_path": "/usr/local/bin/python3.11",
+    "migrated.non.roamable.values.from.general.settings": "true",
+    "previousColorScheme": "_@user_Darcula",
+    "quick.doc.font.size.v3": "LARGE",
+    "registry.to.advanced.settings.migration.build": "PY-231.8109.197",
+    "tasks.pass.word.conversion.enforced": "true",
+    "ts.lib.d.ts.version": "4.8.4",
+    "vcs.branch.view.splitter.proportion": "0.26693",
+    "vcs.log.changes.splitter.proportion": "0.6902928"
+  },
+  "keyToStringList": {
+    "file.chooser.recent.files": [
+      "/home/jazimmerman/PycharmProjects/bes-edgeml-models/venv",
+      "/usr/local/bin/python3.11",
+      "/home/jazimmerman/PycharmProjects/ApplyBot/ApplyBot/linkedin.py",
+      "/home/jazimmerman/PycharmProjects/ApplyBot",
+      "/home/jazimmerman/PycharmProjects/ApplyBot/ApplyBot",
+      "/home/jazimmerman/PycharmProjects",
+      "/home/jazimmerman/PycharmProjects/bes-edgeml-models/venv/bin/python3.10",
+      "/home/jazimmerman/PycharmProjects/bes-edgeml-models/venv/bin/python",
+      "/home/jazimmerman/PycharmProjects/bes-edgeml-models/venv/bin/python3",
+      "/home/jazimmerman/PycharmProjects/bes-edgeml-models",
+      "/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/bes_edgeml_models/turbulence_regime_classification/analyze.py",
+      "/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/bes_edgeml_models/turbulence_regime_classification/train.py",
+      "/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/bes_edgeml_models/velocimetry/train.py",
+      "/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/bes_edgeml_models/velocimetry/analyze.py",
+      "/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-work",
+      "/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-ml/bes_ml/base",
+      "/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-work/regime_classification",
+      "/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/bes_edgeml_models/turbulence_regime_classification/src/dataset.py",
+      "/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-work/velocimetry",
+      "/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models",
+      "/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/models",
+      "/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/models/slurm_resources",
+      "/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/models/bes_edgeml_models/visualizations",
+      "/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/bes_edgeml_models/elm_prediction",
+      "/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-work/run_dir_classification",
+      "/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-work/run_dir_classification/plots",
+      "/home/jazimmerman/PycharmProjects/plainspoken/beckett/ebay_parsing/artemis-ebay-parsing/figures"
+    ],
+    "fileTypeDetectors": [
+      "com.intellij.ide.scratch.ScratchFileServiceImpl$Detector",
+      "com.intellij.docker.dockerFile.DockerFileTypeDetector",
+      "com.intellij.javascript.debugger.sourcemap.SourceMapFileType$MyFileTypeDetector",
+      "com.intellij.database.vfs.DbStorageFileType$Detector",
+      "com.jetbrains.nodejs.util.NodeFileTypeDetector$JavaScriptFileTypeDetector",
+      "com.jetbrains.nodejs.util.NodeFileTypeDetector$TypeScriptFileTypeDetector",
+      "org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector"
+    ]
+  }
+}]]></component>
+  <component name="TerminalCommandHistoryManager">
+    <command-history-files>
+      <command-history-file filename="bes-ml-history" project-path="$USER_HOME$/PycharmProjects/bes-edgeml-models/bes-ml" last-access-time="1680275653335" />
+    </command-history-files>
+  </component>
+</application>

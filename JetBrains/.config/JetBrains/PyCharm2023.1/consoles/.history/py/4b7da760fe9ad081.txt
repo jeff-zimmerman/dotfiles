@@ -1,0 +1,577 @@
+2340*0.75
+-. . -..- - / . -. - .-. -.--
+2340*0.85
+-. . -..- - / . -. - .-. -.--
+mean_squared_error(vZ_labels.flat, vZ_predictions.flat, squared=False)
+-. . -..- - / . -. - .-. -.--
+hf = h5py.File('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-ml/bes_data/sample_data/turbulence_data/bes_signals_175490.hdf5')
+-. . -..- - / . -. - .-. -.--
+hf = h5py.File('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-ml/bes_data/sample_data/turbulence_data/bes_signals_149992.hdf5')
+-. . -..- - / . -. - .-. -.--
+hf = h5py.File('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-work/regime_classification/data/bes_signals_149995.hdf5')
+-. . -..- - / . -. - .-. -.--
+list(hf)
+-. . -..- - / . -. - .-. -.--
+len(hf['time'])
+-. . -..- - / . -. - .-. -.--
+time = np.array(hf['time'])
+-. . -..- - / . -. - .-. -.--
+signals = np.array(hf['signals'])
+-. . -..- - / . -. - .-. -.--
+time[(time >= 2550) & (time < 3480)]
+-. . -..- - / . -. - .-. -.--
+len(time[(time >= 2550) & (time < 3480)])
+-. . -..- - / . -. - .-. -.--
+3480-2550
+-. . -..- - / . -. - .-. -.--
+time[(time >= 2550) & (time < 3480)][::10]
+-. . -..- - / . -. - .-. -.--
+len(time[(time >= 2550) & (time < 3480)][::10])
+-. . -..- - / . -. - .-. -.--
+len(time[(time >= 2550) & (time < 3480)][::20])
+-. . -..- - / . -. - .-. -.--
+len(time[(time >= 2550) & (time < 3480)][::50])
+-. . -..- - / . -. - .-. -.--
+len(time[(time >= 2550) & (time < 3480)][::40])
+-. . -..- - / . -. - .-. -.--
+time[(time >= 2550) & (time < 3480)][::40]
+-. . -..- - / . -. - .-. -.--
+idx = np.arange(len(time))
+-. . -..- - / . -. - .-. -.--
+idx[(time >= 2550) & (time < 3480)][::40]
+-. . -..- - / . -. - .-. -.--
+new_idx = idx[(time >= 2550) & (time < 3480)][::40]
+-. . -..- - / . -. - .-. -.--
+new_time = time[(time >= 2550) & (time < 3480)][::40]
+-. . -..- - / . -. - .-. -.--
+new_sig = signals[:, new_idx]
+-. . -..- - / . -. - .-. -.--
+new_sig
+-. . -..- - / . -. - .-. -.--
+with h5py.File('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-ml/bes_data/sample_data/turbulence_data/bes_signals_149995.hdf5') as f:
+    f.create_dataset('signals', data=new_sig)
+    f.create_dataset('time', data=new_time)
+    
+-. . -..- - / . -. - .-. -.--
+with h5py.File('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-ml/bes_data/sample_data/turbulence_data/bes_signals_149995.hdf5', 'w') as f:
+    f.create_dataset('signals', data=new_sig)
+    f.create_dataset('time', data=new_time)
+    
+-. . -..- - / . -. - .-. -.--
+from pathlib import Path
+-. . -..- - / . -. - .-. -.--
+Path('..')
+-. . -..- - / . -. - .-. -.--
+Path('..').resolve()
+-. . -..- - / . -. - .-. -.--
+154+128
+-. . -..- - / . -. - .-. -.--
+x = [1,2,3]
+-. . -..- - / . -. - .-. -.--
+x[0:3]
+-. . -..- - / . -. - .-. -.--
+x[3]
+-. . -..- - / . -. - .-. -.--
+None ^ None
+-. . -..- - / . -. - .-. -.--
+import h5py
+-. . -..- - / . -. - .-. -.--
+with h5py.File('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-work/velocimetry/data/velocimetry_data_171495.hdf5') as hf:
+    list(hf)
+    
+-. . -..- - / . -. - .-. -.--
+with h5py.File('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-work/velocimetry/data/velocimetry_data_171495.hdf5') as hf:
+    print(list(hf))
+    
+-. . -..- - / . -. - .-. -.--
+with h5py.File('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-work/velocimetry/data/velocimetry_data_171495.hdf5') as hf:
+    print(list(hf['signals']))
+    
+-. . -..- - / . -. - .-. -.--
+with h5py.File('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-work/velocimetry/data/velocimetry_data_shot_171472_labeled.hdf5') as hf:
+    print(list(hf['signals']))
+    
+-. . -..- - / . -. - .-. -.--
+with h5py.File('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-work/velocimetry/data/velocimetry_data_shot_171472_labeled.hdf5') as hf:
+    print(np.array(hf['signals']))
+    
+-. . -..- - / . -. - .-. -.--
+with h5py.File('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-work/velocimetry/data/velocimetry_data_shot_171472_labeled.hdf5') as hf:
+    list(hf)
+    
+-. . -..- - / . -. - .-. -.--
+with h5py.File('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-work/velocimetry/data/velocimetry_data_shot_171472_labeled.hdf5') as hf:
+    print(list(hf))
+    
+    
+    
+-. . -..- - / . -. - .-. -.--
+with h5py.File('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-work/velocimetry/data/velocimetry_data_shot_171472_labeled.hdf5') as hf:
+    print(hf['vZ'][0])
+    
+-. . -..- - / . -. - .-. -.--
+with h5py.File('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-work/velocimetry/data/velocimetry_data_shot_171472_labeled.hdf5') as hf:
+    print(hf['vZ'][0].shape)
+    
+-. . -..- - / . -. - .-. -.--
+4096/8
+-. . -..- - / . -. - .-. -.--
+4096/2
+-. . -..- - / . -. - .-. -.--
+2048/8
+-. . -..- - / . -. - .-. -.--
+x := 5
+-. . -..- - / . -. - .-. -.--
+f:=5
+-. . -..- - / . -. - .-. -.--
+8*26*26
+-. . -..- - / . -. - .-. -.--
+8*12*12
+-. . -..- - / . -. - .-. -.--
+runfile('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-ml/bes_ml/squarenet/train.py', wdir='/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-ml/bes_ml/squarenet')
+-. . -..- - / . -. - .-. -.--
+import torch
+-. . -..- - / . -. - .-. -.--
+torch.cuda.is_available()
+-. . -..- - / . -. - .-. -.--
+plt.plot(np.array(shot['signals']).mean(0))
+-. . -..- - / . -. - .-. -.--
+plt.plot(np.array(shot['signals'])[0, :])
+-. . -..- - / . -. - .-. -.--
+plt.plot(vR_labels[:, 0, 0])
+-. . -..- - / . -. - .-. -.--
+plt.show()
+-. . -..- - / . -. - .-. -.--
+plt.plot(signals[:, 0])
+-. . -..- - / . -. - .-. -.--
+plt.plot(labels[:, 0])
+-. . -..- - / . -. - .-. -.--
+plt.plot(signals[0][:,0])
+-. . -..- - / . -. - .-. -.--
+plt.plot(signals[1][:,0])
+-. . -..- - / . -. - .-. -.--
+plt.plot(signals[1][:,22])
+-. . -..- - / . -. - .-. -.--
+plt.plot(signals[1][:,21])
+-. . -..- - / . -. - .-. -.--
+plt.plot(signals[0][:,21])
+-. . -..- - / . -. - .-. -.--
+len(signals[0][:,21])
+-. . -..- - / . -. - .-. -.--
+len(signals[0][:,0])
+-. . -..- - / . -. - .-. -.--
+len(signals[0][:])
+-. . -..- - / . -. - .-. -.--
+plt.plot(signals[0][:])
+-. . -..- - / . -. - .-. -.--
+fig = plt.figure() # make figure
+
+# make axesimage object
+# the vmin and vmax here are very important to get the color map correct
+im = plt.imshow(signals[0].reshape((-1,8,8)), cmap=plt.get_cmap('jet'), vmin=0, vmax=255)
+
+# function to update figure
+def updatefig(j):
+    # set the data in the axesimage object
+    im.set_array(signals[0].reshape((-1,8,8))[j])
+    # return the artists set
+    return [im]
+# kick off the animation
+ani = animation.FuncAnimation(fig, updatefig, frames=range(20), 
+                              interval=50, blit=True)
+plt.show()
+-. . -..- - / . -. - .-. -.--
+plt.plot(signals[1][::100])
+-. . -..- - / . -. - .-. -.--
+plt.plot(signals[0][::100])
+-. . -..- - / . -. - .-. -.--
+all_set = self.velocimetry_dataset.load_datasets()
+-. . -..- - / . -. - .-. -.--
+len(self.velocimetry_dataset) == len(test_set)+len(train_set)+len(valid_set)
+-. . -..- - / . -. - .-. -.--
+len(self.velocimetry_dataset)
+-. . -..- - / . -. - .-. -.--
+len(test_set)+len(train_set)+len(valid_set)
+-. . -..- - / . -. - .-. -.--
+len(self.velocimetry_dataset) - len(test_set)+len(train_set)+len(valid_set)
+-. . -..- - / . -. - .-. -.--
+len(self.velocimetry_dataset) - (len(test_set)+len(train_set)+len(valid_set))
+-. . -..- - / . -. - .-. -.--
+68*3
+-. . -..- - / . -. - .-. -.--
+264/3
+-. . -..- - / . -. - .-. -.--
+plot.plot(hf2np_s[0, :])
+-. . -..- - / . -. - .-. -.--
+max(hf2np_s)
+-. . -..- - / . -. - .-. -.--
+hf2np_s.max()
+-. . -..- - / . -. - .-. -.--
+self.velocimetry_dataset.load_datasets()
+-. . -..- - / . -. - .-. -.--
+import matplotlib.pyplot as plt
+-. . -..- - / . -. - .-. -.--
+plt.plot(self.velocimetry_dataset.signals[0][::100])
+-. . -..- - / . -. - .-. -.--
+plt.plot(self.velocimetry_dataset.signals[1][::100])
+-. . -..- - / . -. - .-. -.--
+len(hf2np_s)
+-. . -..- - / . -. - .-. -.--
+plt.plot(hf2np_s[0, :])
+-. . -..- - / . -. - .-. -.--
+len(hf['signals'])
+-. . -..- - / . -. - .-. -.--
+hf['signals'].shape
+-. . -..- - / . -. - .-. -.--
+np.array(hf['signals'][151200:])
+-. . -..- - / . -. - .-. -.--
+np.array(hf['signals'][0, 151200:])
+-. . -..- - / . -. - .-. -.--
+np.array(hf['signals'][0, 151200:]).max()
+-. . -..- - / . -. - .-. -.--
+np.array(hf['signals'][:, 151200:]).max()
+-. . -..- - / . -. - .-. -.--
+np.array(hf['signals'][:]).max()
+-. . -..- - / . -. - .-. -.--
+np.array(hf['signals'][:, :]).max()
+-. . -..- - / . -. - .-. -.--
+plt.plot(np.array(hf['signals'][:, ::100]))
+-. . -..- - / . -. - .-. -.--
+plt.plot(np.array(hf['signals'][:, ::10]))
+-. . -..- - / . -. - .-. -.--
+np.array(hf['signals'][:, ::10]).shape
+-. . -..- - / . -. - .-. -.--
+np.array(hf['signals'][0, ::10]).shape
+-. . -..- - / . -. - .-. -.--
+plt.plot(np.array(hf['signals'][0, ::10]))
+-. . -..- - / . -. - .-. -.--
+plt.plot(np.array(hf['signals'][0:64, ::10]))
+-. . -..- - / . -. - .-. -.--
+plt.plot(np.array(hf['signals'][:, ::10]).T)
+-. . -..- - / . -. - .-. -.--
+import numpy as np
+-. . -..- - / . -. - .-. -.--
+np.linspace(0, 10, 30)
+-. . -..- - / . -. - .-. -.--
+import numpy as np
+import pandas as pd
+import h5py as hf
+import torch
+import pickle
+import pytorch_lightning as pl
+from pathlib import Path
+from pytorch_lightning.callbacks import EarlyStopping, LearningRateMonitor, ModelCheckpoint
+from pytorch_lightning.loggers import TensorBoardLogger
+from pytorch_forecasting import TimeSeriesDataSet, TemporalFusionTransformer, Baseline
+from pytorch_forecasting.metrics import RMSE, QuantileLoss
+from pytorch_forecasting.models.temporal_fusion_transformer.tuning import optimize_hyperparameters
+
+-. . -..- - / . -. - .-. -.--
+# Presets for the notebook
+SAMPLE_DATA_FILE = "../bes_data/sample_data/sample_elm_events.hdf5"
+RUN_DIR = Path("./tft") # directory for storing logs and checkpoints
+TARGET = 'mean' # use 'mean' for predicting 't_to_elm' for predicting time to ELM or 'log_t_to_elm' for predicting log(time to ELM)
+SWS = 512
+LOOKAHEAD = 256
+BATCH_SIZE = 128
+N_EPOCHS = 2
+N_WORKERS = 24
+N_GPUS = 1
+LEARNING_RATE = 0.03
+HIDDEN_SIZE = 16 # size of hidden layers in network
+N_HEADS = 4 # number of attention heads.
+
+# Optuna hyperparameter tuning
+OPTUNA_STUDY_NAME = "tft_study"
+OPTUNA_N_TRIALS = 1 # set to 0 to disable
+OPTUNA_TIMEOUT = 60 * 60 * 24 # 24 hours
+OPTUNA_MAX_EPOCHS = 2
+OPTUNA_HIDDEN_SIZE_RANGE = (16, 128)
+OPTUNA_N_HEADS_RANGE = (1, 32)
+
+BEST_MODEL_PATH = RUN_DIR / "best_model.ckpt" # THIS MUST BE SPECIFIED IF trainer.checkpoint_callback.best_model_path IS NOT SET
+
+-. . -..- - / . -. - .-. -.--
+# Presets for the notebook
+SAMPLE_DATA_FILE = "../bes_ml/bes_data/sample_data/sample_elm_events.hdf5"
+RUN_DIR = Path("./tft") # directory for storing logs and checkpoints
+TARGET = 'mean' # use 'mean' for predicting 't_to_elm' for predicting time to ELM or 'log_t_to_elm' for predicting log(time to ELM)
+SWS = 512
+LOOKAHEAD = 256
+BATCH_SIZE = 128
+N_EPOCHS = 2
+N_WORKERS = 24
+N_GPUS = 1
+LEARNING_RATE = 0.03
+HIDDEN_SIZE = 16 # size of hidden layers in network
+N_HEADS = 4 # number of attention heads.
+
+# Optuna hyperparameter tuning
+OPTUNA_STUDY_NAME = "tft_study"
+OPTUNA_N_TRIALS = 1 # set to 0 to disable
+OPTUNA_TIMEOUT = 60 * 60 * 24 # 24 hours
+OPTUNA_MAX_EPOCHS = 2
+OPTUNA_HIDDEN_SIZE_RANGE = (16, 128)
+OPTUNA_N_HEADS_RANGE = (1, 32)
+
+BEST_MODEL_PATH = RUN_DIR / "best_model.ckpt" # THIS MUST BE SPECIFIED IF trainer.checkpoint_callback.best_model_path IS NOT SET
+
+-. . -..- - / . -. - .-. -.--
+import os
+print(os.getcwd())
+
+-. . -..- - / . -. - .-. -.--
+# Presets for the notebook
+SAMPLE_DATA_FILE = "/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes_ml/bes_data/sample_data/sample_elm_events.hdf5"
+RUN_DIR = Path("./tft") # directory for storing logs and checkpoints
+TARGET = 'mean' # use 'mean' for predicting 't_to_elm' for predicting time to ELM or 'log_t_to_elm' for predicting log(time to ELM)
+SWS = 512
+LOOKAHEAD = 256
+BATCH_SIZE = 128
+N_EPOCHS = 2
+N_WORKERS = 24
+N_GPUS = 1
+LEARNING_RATE = 0.03
+HIDDEN_SIZE = 16 # size of hidden layers in network
+N_HEADS = 4 # number of attention heads.
+
+# Optuna hyperparameter tuning
+OPTUNA_STUDY_NAME = "tft_study"
+OPTUNA_N_TRIALS = 1 # set to 0 to disable
+OPTUNA_TIMEOUT = 60 * 60 * 24 # 24 hours
+OPTUNA_MAX_EPOCHS = 2
+OPTUNA_HIDDEN_SIZE_RANGE = (16, 128)
+OPTUNA_N_HEADS_RANGE = (1, 32)
+
+BEST_MODEL_PATH = RUN_DIR / "best_model.ckpt" # THIS MUST BE SPECIFIED IF trainer.checkpoint_callback.best_model_path IS NOT SET
+
+-. . -..- - / . -. - .-. -.--
+# Presets for the notebook
+SAMPLE_DATA_FILE = "/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-ml/bes_data/sample_data/sample_elm_events.hdf5"
+RUN_DIR = Path("./tft") # directory for storing logs and checkpoints
+TARGET = 'mean' # use 'mean' for predicting 't_to_elm' for predicting time to ELM or 'log_t_to_elm' for predicting log(time to ELM)
+SWS = 512
+LOOKAHEAD = 256
+BATCH_SIZE = 128
+N_EPOCHS = 2
+N_WORKERS = 24
+N_GPUS = 1
+LEARNING_RATE = 0.03
+HIDDEN_SIZE = 16 # size of hidden layers in network
+N_HEADS = 4 # number of attention heads.
+
+# Optuna hyperparameter tuning
+OPTUNA_STUDY_NAME = "tft_study"
+OPTUNA_N_TRIALS = 1 # set to 0 to disable
+OPTUNA_TIMEOUT = 60 * 60 * 24 # 24 hours
+OPTUNA_MAX_EPOCHS = 2
+OPTUNA_HIDDEN_SIZE_RANGE = (16, 128)
+OPTUNA_N_HEADS_RANGE = (1, 32)
+
+BEST_MODEL_PATH = RUN_DIR / "best_model.ckpt" # THIS MUST BE SPECIFIED IF trainer.checkpoint_callback.best_model_path IS NOT SET
+
+-. . -..- - / . -. - .-. -.--
+# load data
+with hf.File(SAMPLE_DATA_FILE) as ds:
+    ds_list = []
+    for key in ds.keys():
+        ds_df = pd.DataFrame(np.array(ds[key]['signals']).T).add_prefix('channel_')
+        if TARGET == 'mean':
+            ds_df['target'] = ds_df.mean(axis=1)
+        elif TARGET == 't_to_elm':
+            ds_df['target'] = ds_df.index.array - ds_df.index.array[ds_df['label'] == 1][0]
+        elif TARGET == 'log_t_to_elm':
+            ds_df['target'] = np.log(ds_df.index.array - ds_df.index.array[ds_df['label'] == 1][0])
+        else:
+            raise ValueError("Invalid target")
+        ds_df['shot_id'] = key
+        ds_df['label'] = np.array(ds[key]['labels'])
+        ds_df = ds_df.reset_index().rename(columns={'index': 'time_idx'})
+        ds_df = ds_df.iloc[: ds_df.loc[ds_df['label'].diff() == -1].index[0]] # remove everything after the ELM
+        ds_list.append(ds_df)
+
+data = pd.concat(ds_list, ignore_index=True)
+
+-. . -..- - / . -. - .-. -.--
+# create dataset
+max_prediction_length = LOOKAHEAD
+max_encoder_length = SWS
+
+training_cutoff = data['time_idx'].max() - max_prediction_length
+
+training = TimeSeriesDataSet(
+    data[lambda x: x.time_idx <= training_cutoff],
+    time_idx='time_idx',
+    target='target',
+    group_ids=['shot_id'],
+    min_encoder_length=max_encoder_length // 2,  # allow model to see half of the data
+    max_encoder_length=max_encoder_length,
+    min_prediction_length=1,
+    max_prediction_length=max_prediction_length,
+    static_categoricals=[],
+    static_reals=[],
+    time_varying_known_categoricals=[],
+    time_varying_known_reals=['time_idx'],
+    time_varying_unknown_categoricals=[],
+    time_varying_unknown_reals=[col for col in data.columns if col.startswith('channel_')] + ['target'],
+    target_normalizer=None,
+    add_relative_time_idx=True,
+    add_target_scales=True,
+    add_encoder_length=True,
+    predict_mode=True,
+)
+
+-. . -..- - / . -. - .-. -.--
+# create validation set (predict=True) which means to predict the last max_prediction_length points in time
+# for each series
+validation = TimeSeriesDataSet.from_dataset(training, data, predict=True, stop_randomization=True)
+
+# create dataloaders for model
+train_dataloader = training.to_dataloader(train=True, batch_size=BATCH_SIZE, num_workers=N_WORKERS)
+val_dataloader = validation.to_dataloader(train=False, batch_size=BATCH_SIZE, num_workers=N_WORKERS)
+
+-. . -..- - / . -. - .-. -.--
+# calculate baseline mean absolute error, i.e. predict next value as the last available value from the history
+actuals = torch.cat([y for x, (y, weight) in iter(val_dataloader)])
+baseline_predictions = Baseline().predict(val_dataloader)
+(actuals - baseline_predictions).abs().mean().item()
+
+-. . -..- - / . -. - .-. -.--
+# configure network and trainer
+early_stop_callback = EarlyStopping(monitor='val_loss', min_delta=1e-4, patience=10, verbose=False, mode='min')
+lr_logger = LearningRateMonitor()  # log the learning rate
+logger = TensorBoardLogger(RUN_DIR / "lightning_logs")  # logging results to a tensorboard
+ckpt = ModelCheckpoint(
+    dirpath=RUN_DIR / "checkpoints",
+    filename="tft-epoch={epoch:02d}-val_loss={val_loss:.2f}",
+    save_top_k=1,
+    verbose=True,
+    monitor='val_loss',
+    mode='min',)
+
+trainer = pl.Trainer(
+    max_epochs=N_EPOCHS,
+    accelerator='gpu',
+    devices=[N_GPUS],
+    enable_model_summary=True,
+    gradient_clip_val=0.1,
+    limit_train_batches=30,  # coment in for training, running valiation every 30 batches
+    # fast_dev_run=True,  # comment in to check that networkor dataset has no serious bugs
+    callbacks=[lr_logger, early_stop_callback, ckpt],
+    logger=logger,
+)
+
+
+tft = TemporalFusionTransformer.from_dataset(
+    training,
+    learning_rate=res.suggestion if 'res' in locals() else LEARNING_RATE,
+    hidden_size=HIDDEN_SIZE,
+    attention_head_size=N_HEADS,
+    dropout=0.1,
+    hidden_continuous_size=8,
+    output_size=7,  # 7 quantiles by default
+    loss=QuantileLoss(),
+    log_interval=10,  # uncomment for learning rate finder and otherwise, e.g. to 10 for logging every 10 batches
+    reduce_on_plateau_patience=4,
+)
+print(f"Number of parameters in network: {tft.size()/1e3:.1f}k")
+
+-. . -..- - / . -. - .-. -.--
+# Presets for the notebook
+SAMPLE_DATA_FILE = "/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-ml/bes_data/sample_data/sample_elm_events.hdf5"
+RUN_DIR = Path("./tft") # directory for storing logs and checkpoints
+TARGET = 'mean' # use 'mean' for predicting 't_to_elm' for predicting time to ELM or 'log_t_to_elm' for predicting log(time to ELM)
+SWS = 512
+LOOKAHEAD = 256
+BATCH_SIZE = 128
+N_EPOCHS = 2
+N_WORKERS = 24
+N_GPUS = 0
+LEARNING_RATE = 0.03
+HIDDEN_SIZE = 16 # size of hidden layers in network
+N_HEADS = 4 # number of attention heads.
+
+# Optuna hyperparameter tuning
+OPTUNA_STUDY_NAME = "tft_study"
+OPTUNA_N_TRIALS = 1 # set to 0 to disable
+OPTUNA_TIMEOUT = 60 * 60 * 24 # 24 hours
+OPTUNA_MAX_EPOCHS = 2
+OPTUNA_HIDDEN_SIZE_RANGE = (16, 128)
+OPTUNA_N_HEADS_RANGE = (1, 32)
+
+BEST_MODEL_PATH = RUN_DIR / "best_model.ckpt" # THIS MUST BE SPECIFIED IF trainer.checkpoint_callback.best_model_path IS NOT SET
+
+-. . -..- - / . -. - .-. -.--
+# configure network and trainer
+early_stop_callback = EarlyStopping(monitor='val_loss', min_delta=1e-4, patience=10, verbose=False, mode='min')
+lr_logger = LearningRateMonitor()  # log the learning rate
+logger = TensorBoardLogger(RUN_DIR / "lightning_logs")  # logging results to a tensorboard
+ckpt = ModelCheckpoint(
+    dirpath=RUN_DIR / "checkpoints",
+    filename="tft-epoch={epoch:02d}-val_loss={val_loss:.2f}",
+    save_top_k=1,
+    verbose=True,
+    monitor='val_loss',
+    mode='min',)
+
+trainer = pl.Trainer(
+    max_epochs=N_EPOCHS,
+    accelerator='gpu',
+    devices=[N_GPUS],
+    enable_model_summary=True,
+    gradient_clip_val=0.1,
+    limit_train_batches=30,  # coment in for training, running valiation every 30 batches
+    # fast_dev_run=True,  # comment in to check that networkor dataset has no serious bugs
+    callbacks=[lr_logger, early_stop_callback, ckpt],
+    logger=logger,
+)
+
+-. . -..- - / . -. - .-. -.--
+tft = TemporalFusionTransformer.from_dataset(
+    training,
+    learning_rate=res.suggestion if 'res' in locals() else LEARNING_RATE,
+    hidden_size=HIDDEN_SIZE,
+    attention_head_size=N_HEADS,
+    dropout=0.1,
+    hidden_continuous_size=8,
+    output_size=7,  # 7 quantiles by default
+    loss=QuantileLoss(),
+    log_interval=10,  # uncomment for learning rate finder and otherwise, e.g. to 10 for logging every 10 batches
+    reduce_on_plateau_patience=4,
+)
+print(f"Number of parameters in network: {tft.size()/1e3:.1f}k")
+
+-. . -..- - / . -. - .-. -.--
+# optimize hyperparameters
+if OPTUNA_N_TRIALS > 0:
+    # create study
+    study = optimize_hyperparameters(
+        train_dataloader,
+        val_dataloader,
+        model_path=RUN_DIR/'optuna_test',
+        n_trials=OPTUNA_N_TRIALS,
+        max_epochs=OPTUNA_MAX_EPOCHS,
+        gradient_clip_val_range=(0.01, 1.0),
+        hidden_size_range=OPTUNA_HIDDEN_SIZE_RANGE,
+        hidden_continuous_size_range=OPTUNA_HIDDEN_SIZE_RANGE,
+        attention_head_size_range=OPTUNA_N_HEADS_RANGE,
+        learning_rate_range=(0.001, 0.1),
+        dropout_range=(0.1, 0.5),
+        trainer_kwargs=dict(limit_train_batches=30,
+                            accelerator='gpu',
+                            devices=[N_GPUS],),
+        reduce_on_plateau_patience=4,
+        use_learning_rate_finder=False,  # use Optuna to find ideal learning rate or use in-built learning rate finder
+        log_dir=RUN_DIR/'lightning_logs',
+        timeout=OPTUNA_TIMEOUT,
+    )
+
+    # save study results - also we can resume tuning at a later point in time
+    with open(RUN_DIR/f"optuna_test/{OPTUNA_STUDY_NAME}.pkl", 'wb') as fout:
+        pickle.dump(study, fout)
+
+    # show best hyperparameters
+    print(study.best_trial.params)
+
+-. . -..- - / . -. - .-. -.--
+torch.cuda.isavailablle()

@@ -1,0 +1,418 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <e n="$Copy">
+      <i c="10" l="1649693153339" />
+    </e>
+    <e n="$Delete">
+      <i c="7" l="1649693345792" />
+    </e>
+    <e n="$Paste">
+      <i c="4" l="1649693157332" />
+    </e>
+    <e n="$SearchWeb">
+      <i c="4" l="1648490898219" />
+    </e>
+    <e n="$SelectAll">
+      <i c="2" l="1649694269417" />
+    </e>
+    <e n="$Undo">
+      <i c="124" l="1649713196405" />
+    </e>
+    <e n="BraceOrQuoteOut">
+      <i c="1" l="1648477923524" />
+    </e>
+    <e n="CheckinProject">
+      <i c="9" l="1649713425413" />
+    </e>
+    <e n="CloseProject">
+      <i c="1" l="1648348575240" />
+    </e>
+    <e n="CodeCompletion">
+      <i c="2" l="1649084287622" />
+    </e>
+    <e n="CommentByLineComment">
+      <i c="13" l="1649693365792" />
+    </e>
+    <e n="Compare.SameVersion">
+      <i c="1" l="1649081783639" />
+    </e>
+    <e n="CopyAbsolutePath">
+      <i c="2" l="1648740377547" />
+    </e>
+    <e n="CopyReferencePopupGroup">
+      <i c="3" l="1648740376623" />
+    </e>
+    <e n="Coverage">
+      <i c="1" l="1648742157878" />
+    </e>
+    <e n="CreateRunConfiguration">
+      <i c="2" l="1648564404139" />
+    </e>
+    <e n="Debug">
+      <i c="93" l="1649713369910" />
+    </e>
+    <e n="DebugClass">
+      <i c="12" l="1649712875663" />
+    </e>
+    <e n="EditorBackSpace">
+      <i c="3554" l="1649713390554" />
+    </e>
+    <e n="EditorChooseLookupItem">
+      <i c="3" l="1649268545540" />
+    </e>
+    <e n="EditorChooseLookupItemReplace">
+      <i c="237" l="1649713385571" />
+    </e>
+    <e n="EditorCopy">
+      <i c="96" l="1649713343649" />
+    </e>
+    <e n="EditorCut">
+      <i c="68" l="1649713208578" />
+    </e>
+    <e n="EditorDelete">
+      <i c="63" l="1649708779740" />
+    </e>
+    <e n="EditorDown">
+      <i c="60" l="1649711912718" />
+    </e>
+    <e n="EditorEnter">
+      <i c="708" l="1649713422299" />
+    </e>
+    <e n="EditorIndentSelection">
+      <i c="8" l="1649712482212" />
+    </e>
+    <e n="EditorLeft">
+      <i c="2543" l="1649712621531" />
+    </e>
+    <e n="EditorLeftWithSelection">
+      <i c="1" l="1648825061555" />
+    </e>
+    <e n="EditorLineEnd">
+      <i c="5" l="1649268681309" />
+    </e>
+    <e n="EditorLineStart">
+      <i c="5" l="1649712919159" />
+    </e>
+    <e n="EditorPaste">
+      <i c="173" l="1649713347046" />
+    </e>
+    <e n="EditorPasteFromX11">
+      <i c="5" l="1649094918112" />
+    </e>
+    <e n="EditorRight">
+      <i c="1162" l="1649713176338" />
+    </e>
+    <e n="EditorSplitLine">
+      <i c="1" l="1649084050798" />
+    </e>
+    <e n="EditorStartNewLine">
+      <i c="2" l="1649432422775" />
+    </e>
+    <e n="EditorTab">
+      <i c="86" l="1649713382435" />
+    </e>
+    <e n="EditorUnindentSelection">
+      <i c="3" l="1649094315873" />
+    </e>
+    <e n="EditorUp">
+      <i c="27" l="1649713150901" />
+    </e>
+    <e n="EvaluateExpression">
+      <i c="48" l="1649712915014" />
+    </e>
+    <e n="ExecuteInPyConsoleAction">
+      <i c="1" l="1649433008372" />
+    </e>
+    <e n="FileChooser.Delete">
+      <i c="1" l="1648489317528" />
+    </e>
+    <e n="FileChooser.NewFolder">
+      <i c="2" l="1649686606970" />
+    </e>
+    <e n="Find">
+      <i c="69" l="1649705637716" />
+    </e>
+    <e n="Git.Add">
+      <i c="2" l="1649713419257" />
+    </e>
+    <e n="Git.Clone">
+      <i c="2" l="1648761660236" />
+    </e>
+    <e n="Git.Commit.And.Push.Executor">
+      <i c="7" l="1649713432330" />
+    </e>
+    <e n="Git.CompareWithBranch">
+      <i c="1" l="1648566351623" />
+    </e>
+    <e n="Git.Fetch">
+      <i c="1" l="1648566342147" />
+    </e>
+    <e n="GotoDeclaration">
+      <i c="26" l="1649687015437" />
+    </e>
+    <e n="Images.EditExternally">
+      <i c="1" l="1648571038382" />
+    </e>
+    <e n="Images.Editor.ZoomIn">
+      <i c="6" l="1648571049421" />
+    </e>
+    <e n="Images.Editor.ZoomOut">
+      <i c="5" l="1648571052096" />
+    </e>
+    <e n="NewDir">
+      <i c="5" l="1649693224229" />
+    </e>
+    <e n="NewDirectoryProject">
+      <i c="3" l="1649788414284" />
+    </e>
+    <e n="NewPythonFile">
+      <i c="6" l="1649713017894" />
+    </e>
+    <e n="NextTemplateVariable">
+      <i c="1" l="1648754213579" />
+    </e>
+    <e n="OpenFile">
+      <i c="6" l="1649686597639" />
+    </e>
+    <e n="PyExecuteCellAction">
+      <i c="1" l="1649084054596" />
+    </e>
+    <e n="PySciView">
+      <i c="2" l="1649082438088" />
+    </e>
+    <e n="RenameElement">
+      <i c="17" l="1649695208937" />
+    </e>
+    <e n="Rerun">
+      <i c="1" l="1649690506157" />
+    </e>
+    <e n="Resume">
+      <i c="59" l="1649693831195" />
+    </e>
+    <e n="RevealIn">
+      <i c="2" l="1649694172236" />
+    </e>
+    <e n="Run">
+      <i c="197" l="1649713400845" />
+    </e>
+    <e n="RunClass">
+      <i c="18" l="1649712655216" />
+    </e>
+    <e n="SaveAll">
+      <i c="5" l="1649081751627" />
+    </e>
+    <e n="SearchEverywhere">
+      <i c="3" l="1649706058392" />
+    </e>
+    <e n="ShowIntentionActions">
+      <i c="42" l="1649707188163" />
+    </e>
+    <e n="ShowSettings">
+      <i c="26" l="1649686795379" />
+    </e>
+    <e n="Start.Use.Vcs">
+      <i c="1" l="1649687161690" />
+    </e>
+    <e n="StepInto">
+      <i c="2" l="1648742711097" />
+    </e>
+    <e n="StepIntoMyCode">
+      <i c="8" l="1649690509634" />
+    </e>
+    <e n="StepOver">
+      <i c="205" l="1649711210449" />
+    </e>
+    <e n="Stop">
+      <i c="119" l="1649713374417" />
+    </e>
+    <e n="ToggleBookmark">
+      <i c="2" l="1649101373627" />
+    </e>
+    <e n="ToggleLineBreakpoint">
+      <i c="78" l="1649711562745" />
+    </e>
+    <e n="Tree-selectPrevious">
+      <i c="3" l="1648576440709" />
+    </e>
+    <e n="UML.ShowChanges">
+      <i c="1" l="1649687256894" />
+    </e>
+    <e n="UnmarkResourceRoot">
+      <i c="1" l="1648576273188" />
+    </e>
+    <e n="Vcs.Push">
+      <i c="4" l="1649705385207" />
+    </e>
+    <e n="Vcs.UpdateProject">
+      <i c="7" l="1649431286327" />
+    </e>
+    <e n="ViewBreakpoints">
+      <i c="3" l="1648742827849" />
+    </e>
+    <e n="WelcomeScreen.OpenDirectoryProject">
+      <i c="1" l="1648348588453" />
+    </e>
+    <e n="XDebugger.CopyValue">
+      <i c="1" l="1648742187300" />
+    </e>
+    <e n="com.intellij.diff.actions.ProxyUndoRedoAction">
+      <i c="1" l="1649093951527" />
+    </e>
+    <e n="com.intellij.dvcs.ui.BranchActionGroupPopup$MoreAction">
+      <i c="2" l="1649704862628" />
+    </e>
+    <e n="com.intellij.execution.actions.RunConfigurationsComboBoxAction$SelectConfigAction">
+      <i c="19" l="1649694265378" />
+    </e>
+    <e n="com.intellij.execution.console.ConsoleExecuteAction">
+      <i c="176" l="1649706778420" />
+    </e>
+    <e n="com.intellij.execution.console.ConsoleHistoryController$MyAction">
+      <i c="245" l="1649706778181" />
+    </e>
+    <e n="com.intellij.execution.console.DuplexConsoleView$MergedToggleAction">
+      <i c="4" l="1649084803963" />
+    </e>
+    <e n="com.intellij.execution.lineMarker.LineMarkerActionWrapper">
+      <i c="5" l="1649713363854" />
+    </e>
+    <e n="com.intellij.find.editorHeaderActions.NextOccurrenceAction">
+      <i c="42" l="1649694023551" />
+    </e>
+    <e n="com.intellij.find.editorHeaderActions.PrevOccurrenceAction">
+      <i c="22" l="1649101033767" />
+    </e>
+    <e n="com.intellij.find.editorHeaderActions.SwitchToFind">
+      <i c="1" l="1649078597144" />
+    </e>
+    <e n="com.intellij.find.editorHeaderActions.SwitchToReplace">
+      <i c="1" l="1648759288404" />
+    </e>
+    <e n="com.intellij.ide.ReopenProjectAction">
+      <i c="14" l="1649704870824" />
+    </e>
+    <e n="com.intellij.ide.actions.NextOccurenceToolbarAction">
+      <i c="29" l="1648741230605" />
+    </e>
+    <e n="com.intellij.notification.NotificationAction$Simple">
+      <i c="12" l="1649712819527" />
+    </e>
+    <e n="com.intellij.openapi.actionSystem.DefaultActionGroup">
+      <i c="4" l="1648569968455" />
+    </e>
+    <e n="com.intellij.openapi.editor.actions.ScrollToTheEndToolbarAction">
+      <i c="6" l="1649698356144" />
+    </e>
+    <e n="com.intellij.openapi.fileEditor.impl.tabActions.CloseTab">
+      <i c="7" l="1649695236333" />
+    </e>
+    <e n="com.intellij.openapi.project.DumbAwareAction$SimpleDumbAwareAction">
+      <i c="92" l="1649094940237" />
+    </e>
+    <e n="com.intellij.openapi.roots.ui.configuration.CommonContentEntriesEditor$AddContentEntryAction">
+      <i c="3" l="1649686845463" />
+    </e>
+    <e n="com.intellij.openapi.vcs.changes.ignore.actions.CreateNewIgnoreFileAction">
+      <i c="1" l="1648480847765" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.ToolWindowHeader$HideAction">
+      <i c="24" l="1649696485172" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.welcomeScreen.ActionGroupPanelWrapper$5">
+      <i c="1" l="1648239041430" />
+    </e>
+    <e n="com.intellij.ui.CommonActionsPanel$AddButton">
+      <i c="4" l="1648563607980" />
+    </e>
+    <e n="com.intellij.ui.CommonActionsPanel$RemoveButton">
+      <i c="1" l="1648832618792" />
+    </e>
+    <e n="com.intellij.xdebugger.impl.actions.EditBreakpointAction$ContextAction">
+      <i c="2" l="1649430656372" />
+    </e>
+    <e n="com.intellij.xdebugger.impl.breakpoints.RemoveBreakpointGutterIconAction">
+      <i c="67" l="1649712936386" />
+    </e>
+    <e n="com.jetbrains.python.console.PyConsoleUtil$1">
+      <i c="14" l="1649706769960" />
+    </e>
+    <e n="com.jetbrains.python.console.PydevConsoleRunnerImpl$6">
+      <i c="6" l="1649433299959" />
+    </e>
+    <e n="com.jetbrains.python.console.PydevConsoleRunnerImpl$ConnectDebuggerAction">
+      <i c="1" l="1649084729164" />
+    </e>
+    <e n="com.jetbrains.python.console.actions.ShowCommandQueueAction">
+      <i c="4" l="1648565557589" />
+    </e>
+    <e n="com.jetbrains.python.console.actions.ShowVarsAction">
+      <i c="2" l="1649171444546" />
+    </e>
+    <e n="com.jetbrains.python.debugger.PyCythonExtensionWarning$1">
+      <i c="1" l="1648571417015" />
+    </e>
+    <e n="com.jetbrains.python.debugger.PyCythonExtensionWarning$2">
+      <i c="1" l="1648480173645" />
+    </e>
+    <e n="com.jetbrains.python.debugger.containerview.PyDataView$CloseViewerAction">
+      <i c="51" l="1649713100241" />
+    </e>
+    <e n="com.jetbrains.python.debugger.containerview.PyDataView$NewViewerAction">
+      <i c="1" l="1649688032526" />
+    </e>
+    <e n="com.jetbrains.python.module.PyRootTypeProvider$RootEntryEditingAction">
+      <i c="1" l="1648576241317" />
+    </e>
+    <e n="com.jetbrains.python.packaging.toolwindow.PyPackagingToolWindowPanel$$special$$inlined$apply$lambda$3">
+      <i c="2" l="1648474885392" />
+    </e>
+    <e n="com.jetbrains.python.packaging.toolwindow.PyPackagingToolWindowPanel$initOrientation$4">
+      <i c="1" l="1648489477167" />
+    </e>
+    <e n="com.jetbrains.python.scientific.cells.PyCellLineMarkerProvider$1$1$1">
+      <i c="86" l="1649708426781" />
+    </e>
+    <e n="com.jetbrains.python.scientific.figures.PyPlotToolWindow$ClosePlotAction">
+      <i c="17" l="1649694537866" />
+    </e>
+    <e n="com.jetbrains.python.sdk.PySdkPopupFactory$InterpreterSettingsAction">
+      <i c="5" l="1649686631041" />
+    </e>
+    <e n="copilot.applyInlays">
+      <i c="314" l="1649713393285" />
+    </e>
+    <e n="copilot.disposeInlays">
+      <i c="62" l="1649713243685" />
+    </e>
+    <e n="copilot.loginGitHub">
+      <i c="1" l="1648570169878" />
+    </e>
+    <e n="editRunConfigurations">
+      <i c="79" l="1649694266908" />
+    </e>
+    <e n="git4idea.ui.branch.GitBranchPopupActions$CheckoutAsNewBranch">
+      <i c="4" l="1649705369422" />
+    </e>
+    <e n="git4idea.ui.branch.GitBranchPopupActions$GitNewBranchAction">
+      <i c="2" l="1649081704021" />
+    </e>
+    <e n="git4idea.ui.branch.GitBranchPopupActions$LocalBranchActions$CheckoutAction">
+      <i c="8" l="1649705280505" />
+    </e>
+    <e n="git4idea.ui.branch.GitBranchPopupActions$LocalBranchActions$DeleteAction">
+      <i c="3" l="1649705599702" />
+    </e>
+    <e n="git4idea.ui.branch.GitBranchPopupActions$LocalBranchActions$RenameBranchAction">
+      <i c="3" l="1649705051965" />
+    </e>
+    <e n="git4idea.ui.branch.GitBranchPopupActions$MergeAction">
+      <i c="1" l="1649093623804" />
+    </e>
+    <e n="git4idea.ui.branch.GitBranchPopupActions$UpdateSelectedBranchAction">
+      <i c="3" l="1649705141122" />
+    </e>
+    <e n="performancePlugin.ShowMemoryDialogAction">
+      <i c="2" l="1648490720953" />
+    </e>
+  </component>
+</application>

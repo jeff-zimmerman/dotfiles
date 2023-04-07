@@ -1,0 +1,541 @@
+<project version="4">
+  <component name="BookmarksManager">
+    <option name="groups">
+      <GroupState>
+        <option name="name" value="artemis-ebay-parsing" />
+      </GroupState>
+    </option>
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DatabaseView">
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="-1">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/naive_ebay_record_linkage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="112" column="52" lean-forward="true" selection-start-line="112" selection-start-column="52" selection-end-line="112" selection-end-column="52" />
+              <folding>
+                <element signature="e#112#121#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dedupe_prototype.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="268" selection-start-line="268" selection-end-line="268" />
+              <folding>
+                <element signature="e#6#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTypeUsageLocalSummary">
+    <fileType name="CSV/TSV">
+      <summary usageCount="6" lastUsed="1649429421880" />
+    </fileType>
+    <fileType name="DIFF">
+      <summary usageCount="2" lastUsed="1649429430472" />
+    </fileType>
+    <fileType name="GitIgnore file">
+      <summary usageCount="5" lastUsed="1649341449751" />
+    </fileType>
+    <fileType name="JSON">
+      <summary usageCount="2" lastUsed="1649352057830" />
+    </fileType>
+    <fileType name="Jupyter">
+      <summary usageCount="1" lastUsed="1649429446832" />
+    </fileType>
+    <fileType name="Markdown">
+      <summary usageCount="3" lastUsed="1649082861578" />
+    </fileType>
+    <fileType name="PLAIN_TEXT">
+      <summary usageCount="1" lastUsed="1649081796497" />
+    </fileType>
+    <fileType name="Python">
+      <summary usageCount="46" lastUsed="1649795980332" />
+    </fileType>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>pycharm</find>
+      <find>nlp</find>
+      <find>print(i)</find>
+      <find>df_eva</find>
+      <find>person</find>
+      <find>bool</find>
+      <find>df_ebay</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/ebay_parsing.py" />
+      <option value="$PROJECT_DIR$/.gitignore" />
+      <option value="$PROJECT_DIR$/dedupe.py" />
+      <option value="$PROJECT_DIR$/link_dataframes_training.json" />
+      <option value="$PROJECT_DIR$/naive_ebay_record_linkage.py" />
+      <option value="$PROJECT_DIR$/data_processing/__init__.py" />
+      <option value="$PROJECT_DIR$/data_processing/synthetic.py" />
+      <option value="$PROJECT_DIR$/dedupe_prototype.py" />
+    </changedPaths>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="JupyterTrust" id="9a083c72-83a8-4995-82b3-2aa688f923fe" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="artemis-ebay-parsing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="artemis-ebay-parsing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="artemis-ebay-parsing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="artemis-ebay-parsing" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="artemis-ebay-parsing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="artemis-ebay-parsing" type="462c0819:PsiDirectoryNode" />
+              <item name="data_processing" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="TerminalArrangementManager">
+    <option name="myTabStates">
+      <TerminalTabState tabName="Local" currentWorkingDirectory="$PROJECT_DIR$" commandHistoryFileName="artemis-ebay-parsing-history2" />
+    </option>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="58645000" />
+  </component>
+  <component name="ToolWindowManager">
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.10644637" />
+      <window_info id="Structure" order="1" side_tool="true" />
+      <window_info id="Bookmarks" order="2" side_tool="true" />
+      <window_info id="Commit" order="3" weight="0.22399783" />
+      <window_info id="Learn" order="4" />
+      <window_info id="Pull Requests" order="5" weight="0.33017337" />
+      <window_info id="Space Code Reviews" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.21899606" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Run" order="3" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4000984" />
+      <window_info anchor="bottom" id="TODO" order="5" />
+      <window_info anchor="bottom" id="Problems View" order="6" weight="0.33021653" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="Internal Method Tracing" order="8" />
+      <window_info anchor="bottom" id="File Transfer" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.36958662" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TypeScript" order="12" />
+      <window_info anchor="bottom" id="Endpoints" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Python Packages" order="14" weight="0.22982283" />
+      <window_info anchor="bottom" id="Python Console" order="15" visible="true" weight="0.3144685" />
+      <window_info anchor="bottom" id="Flow" order="16" />
+      <window_info anchor="bottom" id="Services" order="17" show_stripe_button="false" />
+      <window_info anchor="right" id="Space Automation" order="0" />
+      <window_info anchor="right" id="Database" order="1" weight="0.33017337" />
+      <window_info anchor="right" id="SciView" order="2" sideWeight="0.65531564" visible="true" weight="0.43201518" />
+      <window_info anchor="right" id="github.copilotToolWindow" order="3" sideWeight="0.50085324" weight="0.33017337" />
+      <window_info anchor="right" id="documentation.v2" order="4" side_tool="true" />
+      <window_info anchor="right" x="0" y="0" width="411" height="853" id="Documentation" order="5" sideWeight="0.3446844" side_tool="true" visible="true" weight="0.43201518" />
+    </layout>
+    <recentWindows>
+      <value>Python Console</value>
+      <value>SciView</value>
+      <value>Python Packages</value>
+      <value>Project</value>
+      <value>Commit</value>
+      <value>Debug</value>
+      <value>Version Control</value>
+      <value>Terminal</value>
+      <value>github.copilotToolWindow</value>
+      <value>Database</value>
+      <value>Problems View</value>
+      <value>Documentation</value>
+      <value>Pull Requests</value>
+    </recentWindows>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="592" y="197" width="800" height="719" key="#Plugins" timestamp="1649168568733">
+      <screen x="74" y="27" width="1846" height="1053" />
+    </state>
+    <state x="592" y="197" width="800" height="719" key="#Plugins/74.27.1846.1053@74.27.1846.1053" timestamp="1649168568733" />
+    <state x="470" y="215" width="1053" height="701" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1649433321873">
+      <screen x="74" y="27" width="1846" height="1053" />
+    </state>
+    <state x="470" y="215" width="1053" height="701" key="#com.intellij.execution.impl.EditConfigurationsDialog/74.27.1846.1053@74.27.1846.1053" timestamp="1649433321873" />
+    <state x="584" y="328" width="816" height="458" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1649351008360">
+      <screen x="74" y="27" width="1846" height="1053" />
+    </state>
+    <state x="584" y="328" width="816" height="458" key="#com.intellij.fileTypes.FileTypeChooser/74.27.1846.1053@74.27.1846.1053" timestamp="1649351008360" />
+    <state x="706" y="404" width="904" height="511" key="#xdebugger.evaluate" timestamp="1649712924243">
+      <screen x="74" y="27" width="1846" height="1053" />
+    </state>
+    <state x="706" y="404" width="904" height="511" key="#xdebugger.evaluate/74.27.1846.1053@74.27.1846.1053" timestamp="1649712924243" />
+    <state x="608" y="317" key="FileChooserDialogImpl" timestamp="1648834644428">
+      <screen x="74" y="27" width="1846" height="1053" />
+    </state>
+    <state x="608" y="317" key="FileChooserDialogImpl/74.27.1846.1053@74.27.1846.1053" timestamp="1648834644428" />
+    <state width="349" height="202" key="Git.Branch.Popup" timestamp="1649431286218">
+      <screen x="74" y="27" width="1846" height="1053" />
+    </state>
+    <state width="349" height="202" key="Git.Branch.Popup/74.27.1846.1053@74.27.1846.1053" timestamp="1649431286218" />
+    <state width="1800" height="378" key="GridCell.Tab.0.bottom" timestamp="1649713441549">
+      <screen x="74" y="27" width="1846" height="1053" />
+    </state>
+    <state width="1800" height="378" key="GridCell.Tab.0.bottom/74.27.1846.1053@74.27.1846.1053" timestamp="1649713441549" />
+    <state width="1800" height="378" key="GridCell.Tab.0.center" timestamp="1649713441549">
+      <screen x="74" y="27" width="1846" height="1053" />
+    </state>
+    <state width="1800" height="378" key="GridCell.Tab.0.center/74.27.1846.1053@74.27.1846.1053" timestamp="1649713441549" />
+    <state width="1800" height="378" key="GridCell.Tab.0.left" timestamp="1649713441549">
+      <screen x="74" y="27" width="1846" height="1053" />
+    </state>
+    <state width="1800" height="378" key="GridCell.Tab.0.left/74.27.1846.1053@74.27.1846.1053" timestamp="1649713441549" />
+    <state width="1800" height="378" key="GridCell.Tab.0.right" timestamp="1649713441549">
+      <screen x="74" y="27" width="1846" height="1053" />
+    </state>
+    <state width="1800" height="378" key="GridCell.Tab.0.right/74.27.1846.1053@74.27.1846.1053" timestamp="1649713441549" />
+    <state width="1800" height="378" key="GridCell.Tab.1.bottom" timestamp="1649713441549">
+      <screen x="74" y="27" width="1846" height="1053" />
+    </state>
+    <state width="1800" height="378" key="GridCell.Tab.1.bottom/74.27.1846.1053@74.27.1846.1053" timestamp="1649713441549" />
+    <state width="1800" height="378" key="GridCell.Tab.1.center" timestamp="1649713441549">
+      <screen x="74" y="27" width="1846" height="1053" />
+    </state>
+    <state width="1800" height="378" key="GridCell.Tab.1.center/74.27.1846.1053@74.27.1846.1053" timestamp="1649713441549" />
+    <state width="1800" height="378" key="GridCell.Tab.1.left" timestamp="1649713441549">
+      <screen x="74" y="27" width="1846" height="1053" />
+    </state>
+    <state width="1800" height="378" key="GridCell.Tab.1.left/74.27.1846.1053@74.27.1846.1053" timestamp="1649713441549" />
+    <state width="1800" height="378" key="GridCell.Tab.1.right" timestamp="1649713441549">
+      <screen x="74" y="27" width="1846" height="1053" />
+    </state>
+    <state width="1800" height="378" key="GridCell.Tab.1.right/74.27.1846.1053@74.27.1846.1053" timestamp="1649713441549" />
+    <state x="478" y="188" width="1037" height="737" key="SettingsEditor" timestamp="1649082464873">
+      <screen x="74" y="27" width="1846" height="1053" />
+    </state>
+    <state x="478" y="188" width="1037" height="737" key="SettingsEditor/74.27.1846.1053@74.27.1846.1053" timestamp="1649082464873" />
+    <state x="592" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1649713434695">
+      <screen x="74" y="27" width="1846" height="1053" />
+    </state>
+    <state x="592" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/74.27.1846.1053@74.27.1846.1053" timestamp="1649713434695" />
+    <state width="923" height="526" key="XDebugger.FullValuePopup" timestamp="1649172558696">
+      <screen x="74" y="27" width="1846" height="1053" />
+    </state>
+    <state width="923" height="526" key="XDebugger.FullValuePopup/74.27.1846.1053@74.27.1846.1053" timestamp="1649172558696" />
+    <state x="767" y="470" width="459" height="173" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1649795985677">
+      <screen x="74" y="27" width="1846" height="1053" />
+    </state>
+    <state x="767" y="470" width="459" height="173" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/74.27.1846.1053@74.27.1846.1053" timestamp="1649795985677" />
+    <state x="520" y="256" width="943" height="602" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1649350067585">
+      <screen x="74" y="27" width="1846" height="1053" />
+    </state>
+    <state x="520" y="256" width="943" height="602" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/74.27.1846.1053@74.27.1846.1053" timestamp="1649350067585" />
+    <state x="660" y="259" width="676" height="687" key="search.everywhere.popup" timestamp="1649706061007">
+      <screen x="74" y="27" width="1846" height="1053" />
+    </state>
+    <state x="660" y="259" width="676" height="687" key="search.everywhere.popup/74.27.1846.1053@74.27.1846.1053" timestamp="1649706061007" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>len(synth_title)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>list(zip(entities_shuffled, entity_types))</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>row['set'].split(' ')</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>entities[0:1]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>bool('False')</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>bool('True')</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>row['Player']</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>correct / len(df_compare)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>df_evaluation[df_evaluation['SetYear'].str.contains('2020')][0:1000]['Auctiontitle']</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>df_evaluation[df_evaluation['SetYear'].str.contains('2020')][0:1000]['Auctiontitle'].unique()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>df_evaluation['Auctiontitle'].unique()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>df_evaluation['AuctionTitle'].unique()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>df_evaluation['AuctionTitles'].unique()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>allEntities[0]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../venv/lib/python3.10/site-packages/pandas/core/frame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="3510" selection-start-line="3510" selection-end-line="3510" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/Basketball_Sample_Data_Auction_Title_and_Matched_Title.csv">
+      <provider editor-type-id="csv-data-editor">
+        <state>
+          <format>
+            <csv-format name="CSV" id="Comma-separated (CSV)_id">
+              <data>
+                <record-format prefix="" suffix="" nullText="" quotationPolicy="as needed" valueSeparator="," recordSeparator="&#10;">
+                  <quotation>
+                    <quotes left="&quot;" right="&quot;" leftEscaped="&quot;&quot;" rightEscaped="&quot;&quot;" />
+                    <quotes left="'" right="'" leftEscaped="''" rightEscaped="''" />
+                  </quotation>
+                </record-format>
+              </data>
+              <header>
+                <record-format prefix="" suffix="" nullText="" quotationPolicy="as needed" valueSeparator="," recordSeparator="&#10;">
+                  <quotation>
+                    <quotes left="&quot;" right="&quot;" leftEscaped="&quot;&quot;" rightEscaped="&quot;&quot;" />
+                    <quotes left="'" right="'" leftEscaped="''" rightEscaped="''" />
+                  </quotation>
+                </record-format>
+              </header>
+            </csv-format>
+          </format>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="LargeFileEditorProvider">
+        <state caret-page-number="0" caret-page-symbol-offset="0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../venv/lib/python3.10/site-packages/fastcluster.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2268" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../venv/lib/python3.10/site-packages/pandas/core/generic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="5582" selection-start-line="5582" selection-end-line="5582" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../venv/lib/python3.10/site-packages/dedupe/convenience.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-93">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link_dataframes_training.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2238" selection-start-column="2238" selection-end-column="2238" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ebay_titles.csv">
+      <provider editor-type-id="csv-data-editor">
+        <state>
+          <format>
+            <csv-format name="CSV" id="Comma-separated (CSV)_id">
+              <data>
+                <record-format prefix="" suffix="" nullText="" quotationPolicy="as needed" valueSeparator="," recordSeparator="&#10;">
+                  <quotation>
+                    <quotes left="&quot;" right="&quot;" leftEscaped="&quot;&quot;" rightEscaped="&quot;&quot;" />
+                    <quotes left="'" right="'" leftEscaped="''" rightEscaped="''" />
+                  </quotation>
+                </record-format>
+              </data>
+            </csv-format>
+          </format>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PARSONS.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../venv/lib/python3.10/site-packages/pandas/core/indexes/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="5844" selection-start-line="5844" selection-end-line="5844" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ebay_parsing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="267" column="20" selection-start-line="267" selection-start-column="20" selection-end-line="267" selection-end-column="20" />
+          <folding>
+            <element signature="e#290#299#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../venv/lib/python3.10/site-packages/pandas/io/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="788" selection-start-line="788" selection-end-line="788" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../venv/lib/python3.10/site-packages/pandas/core/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="556" selection-start-line="556" selection-end-line="556" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_processing/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../venv/lib/python3.10/site-packages/pandas_dedupe/utility_functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_processing/synthetic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="155" selection-start-line="155" selection-end-line="155" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../venv/lib/python3.10/site-packages/pandas_dedupe/link_dataframes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="75" column="31" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/naive_ebay_record_linkage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="112" column="52" lean-forward="true" selection-start-line="112" selection-start-column="52" selection-end-line="112" selection-end-column="52" />
+          <folding>
+            <element signature="e#112#121#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dedupe_prototype.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="268" selection-start-line="268" selection-end-line="268" />
+          <folding>
+            <element signature="e#6#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -1,0 +1,252 @@
+2340*0.75
+-. . -..- - / . -. - .-. -.--
+2340*0.85
+-. . -..- - / . -. - .-. -.--
+mean_squared_error(vZ_labels.flat, vZ_predictions.flat, squared=False)
+-. . -..- - / . -. - .-. -.--
+hf = h5py.File('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-ml/bes_data/sample_data/turbulence_data/bes_signals_175490.hdf5')
+-. . -..- - / . -. - .-. -.--
+hf = h5py.File('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-ml/bes_data/sample_data/turbulence_data/bes_signals_149992.hdf5')
+-. . -..- - / . -. - .-. -.--
+hf = h5py.File('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-work/regime_classification/data/bes_signals_149995.hdf5')
+-. . -..- - / . -. - .-. -.--
+list(hf)
+-. . -..- - / . -. - .-. -.--
+len(hf['time'])
+-. . -..- - / . -. - .-. -.--
+time = np.array(hf['time'])
+-. . -..- - / . -. - .-. -.--
+signals = np.array(hf['signals'])
+-. . -..- - / . -. - .-. -.--
+time[(time >= 2550) & (time < 3480)]
+-. . -..- - / . -. - .-. -.--
+len(time[(time >= 2550) & (time < 3480)])
+-. . -..- - / . -. - .-. -.--
+3480-2550
+-. . -..- - / . -. - .-. -.--
+time[(time >= 2550) & (time < 3480)][::10]
+-. . -..- - / . -. - .-. -.--
+len(time[(time >= 2550) & (time < 3480)][::10])
+-. . -..- - / . -. - .-. -.--
+len(time[(time >= 2550) & (time < 3480)][::20])
+-. . -..- - / . -. - .-. -.--
+len(time[(time >= 2550) & (time < 3480)][::50])
+-. . -..- - / . -. - .-. -.--
+len(time[(time >= 2550) & (time < 3480)][::40])
+-. . -..- - / . -. - .-. -.--
+time[(time >= 2550) & (time < 3480)][::40]
+-. . -..- - / . -. - .-. -.--
+idx = np.arange(len(time))
+-. . -..- - / . -. - .-. -.--
+idx[(time >= 2550) & (time < 3480)][::40]
+-. . -..- - / . -. - .-. -.--
+new_idx = idx[(time >= 2550) & (time < 3480)][::40]
+-. . -..- - / . -. - .-. -.--
+new_time = time[(time >= 2550) & (time < 3480)][::40]
+-. . -..- - / . -. - .-. -.--
+new_sig = signals[:, new_idx]
+-. . -..- - / . -. - .-. -.--
+new_sig
+-. . -..- - / . -. - .-. -.--
+with h5py.File('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-ml/bes_data/sample_data/turbulence_data/bes_signals_149995.hdf5') as f:
+    f.create_dataset('signals', data=new_sig)
+    f.create_dataset('time', data=new_time)
+    
+-. . -..- - / . -. - .-. -.--
+with h5py.File('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-ml/bes_data/sample_data/turbulence_data/bes_signals_149995.hdf5', 'w') as f:
+    f.create_dataset('signals', data=new_sig)
+    f.create_dataset('time', data=new_time)
+    
+-. . -..- - / . -. - .-. -.--
+from pathlib import Path
+-. . -..- - / . -. - .-. -.--
+Path('..')
+-. . -..- - / . -. - .-. -.--
+Path('..').resolve()
+-. . -..- - / . -. - .-. -.--
+154+128
+-. . -..- - / . -. - .-. -.--
+x = [1,2,3]
+-. . -..- - / . -. - .-. -.--
+x[0:3]
+-. . -..- - / . -. - .-. -.--
+x[3]
+-. . -..- - / . -. - .-. -.--
+None ^ None
+-. . -..- - / . -. - .-. -.--
+import h5py
+-. . -..- - / . -. - .-. -.--
+import numpy as np
+-. . -..- - / . -. - .-. -.--
+with h5py.File('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-work/velocimetry/data/velocimetry_data_171495.hdf5') as hf:
+    list(hf)
+    
+-. . -..- - / . -. - .-. -.--
+with h5py.File('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-work/velocimetry/data/velocimetry_data_171495.hdf5') as hf:
+    print(list(hf))
+    
+-. . -..- - / . -. - .-. -.--
+with h5py.File('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-work/velocimetry/data/velocimetry_data_171495.hdf5') as hf:
+    print(list(hf['signals']))
+    
+-. . -..- - / . -. - .-. -.--
+with h5py.File('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-work/velocimetry/data/velocimetry_data_shot_171472_labeled.hdf5') as hf:
+    print(list(hf['signals']))
+    
+-. . -..- - / . -. - .-. -.--
+with h5py.File('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-work/velocimetry/data/velocimetry_data_shot_171472_labeled.hdf5') as hf:
+    print(np.array(hf['signals']))
+    
+-. . -..- - / . -. - .-. -.--
+with h5py.File('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-work/velocimetry/data/velocimetry_data_shot_171472_labeled.hdf5') as hf:
+    list(hf)
+    
+-. . -..- - / . -. - .-. -.--
+with h5py.File('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-work/velocimetry/data/velocimetry_data_shot_171472_labeled.hdf5') as hf:
+    print(list(hf))
+    
+    
+    
+-. . -..- - / . -. - .-. -.--
+with h5py.File('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-work/velocimetry/data/velocimetry_data_shot_171472_labeled.hdf5') as hf:
+    print(hf['vZ'][0])
+    
+-. . -..- - / . -. - .-. -.--
+with h5py.File('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-work/velocimetry/data/velocimetry_data_shot_171472_labeled.hdf5') as hf:
+    print(hf['vZ'][0].shape)
+    
+-. . -..- - / . -. - .-. -.--
+4096/8
+-. . -..- - / . -. - .-. -.--
+4096/2
+-. . -..- - / . -. - .-. -.--
+2048/8
+-. . -..- - / . -. - .-. -.--
+x := 5
+-. . -..- - / . -. - .-. -.--
+f:=5
+-. . -..- - / . -. - .-. -.--
+8*26*26
+-. . -..- - / . -. - .-. -.--
+8*12*12
+-. . -..- - / . -. - .-. -.--
+runfile('/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-ml/bes_ml/squarenet/train.py', wdir='/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-ml/bes_ml/squarenet')
+-. . -..- - / . -. - .-. -.--
+import torch
+-. . -..- - / . -. - .-. -.--
+torch.cuda.is_available()
+-. . -..- - / . -. - .-. -.--
+plt.plot(np.array(shot['signals']).mean(0))
+-. . -..- - / . -. - .-. -.--
+plt.plot(np.array(shot['signals'])[0, :])
+-. . -..- - / . -. - .-. -.--
+plt.plot(vR_labels[:, 0, 0])
+-. . -..- - / . -. - .-. -.--
+plt.show()
+-. . -..- - / . -. - .-. -.--
+plt.plot(signals[:, 0])
+-. . -..- - / . -. - .-. -.--
+plt.plot(labels[:, 0])
+-. . -..- - / . -. - .-. -.--
+plt.plot(signals[0][:,0])
+-. . -..- - / . -. - .-. -.--
+plt.plot(signals[1][:,0])
+-. . -..- - / . -. - .-. -.--
+plt.plot(signals[1][:,22])
+-. . -..- - / . -. - .-. -.--
+plt.plot(signals[1][:,21])
+-. . -..- - / . -. - .-. -.--
+plt.plot(signals[0][:,21])
+-. . -..- - / . -. - .-. -.--
+len(signals[0][:,21])
+-. . -..- - / . -. - .-. -.--
+len(signals[0][:,0])
+-. . -..- - / . -. - .-. -.--
+len(signals[0][:])
+-. . -..- - / . -. - .-. -.--
+plt.plot(signals[0][:])
+-. . -..- - / . -. - .-. -.--
+fig = plt.figure() # make figure
+
+# make axesimage object
+# the vmin and vmax here are very important to get the color map correct
+im = plt.imshow(signals[0].reshape((-1,8,8)), cmap=plt.get_cmap('jet'), vmin=0, vmax=255)
+
+# function to update figure
+def updatefig(j):
+    # set the data in the axesimage object
+    im.set_array(signals[0].reshape((-1,8,8))[j])
+    # return the artists set
+    return [im]
+# kick off the animation
+ani = animation.FuncAnimation(fig, updatefig, frames=range(20), 
+                              interval=50, blit=True)
+plt.show()
+-. . -..- - / . -. - .-. -.--
+plt.plot(signals[1][::100])
+-. . -..- - / . -. - .-. -.--
+plt.plot(signals[0][::100])
+-. . -..- - / . -. - .-. -.--
+all_set = self.velocimetry_dataset.load_datasets()
+-. . -..- - / . -. - .-. -.--
+len(self.velocimetry_dataset) == len(test_set)+len(train_set)+len(valid_set)
+-. . -..- - / . -. - .-. -.--
+len(self.velocimetry_dataset)
+-. . -..- - / . -. - .-. -.--
+len(test_set)+len(train_set)+len(valid_set)
+-. . -..- - / . -. - .-. -.--
+len(self.velocimetry_dataset) - len(test_set)+len(train_set)+len(valid_set)
+-. . -..- - / . -. - .-. -.--
+len(self.velocimetry_dataset) - (len(test_set)+len(train_set)+len(valid_set))
+-. . -..- - / . -. - .-. -.--
+68*3
+-. . -..- - / . -. - .-. -.--
+264/3
+-. . -..- - / . -. - .-. -.--
+plot.plot(hf2np_s[0, :])
+-. . -..- - / . -. - .-. -.--
+max(hf2np_s)
+-. . -..- - / . -. - .-. -.--
+hf2np_s.max()
+-. . -..- - / . -. - .-. -.--
+self.velocimetry_dataset.load_datasets()
+-. . -..- - / . -. - .-. -.--
+import matplotlib.pyplot as plt
+-. . -..- - / . -. - .-. -.--
+plt.plot(self.velocimetry_dataset.signals[0][::100])
+-. . -..- - / . -. - .-. -.--
+plt.plot(self.velocimetry_dataset.signals[1][::100])
+-. . -..- - / . -. - .-. -.--
+len(hf2np_s)
+-. . -..- - / . -. - .-. -.--
+plt.plot(hf2np_s[0, :])
+-. . -..- - / . -. - .-. -.--
+len(hf['signals'])
+-. . -..- - / . -. - .-. -.--
+hf['signals'].shape
+-. . -..- - / . -. - .-. -.--
+np.array(hf['signals'][151200:])
+-. . -..- - / . -. - .-. -.--
+np.array(hf['signals'][0, 151200:])
+-. . -..- - / . -. - .-. -.--
+np.array(hf['signals'][0, 151200:]).max()
+-. . -..- - / . -. - .-. -.--
+np.array(hf['signals'][:, 151200:]).max()
+-. . -..- - / . -. - .-. -.--
+np.array(hf['signals'][:]).max()
+-. . -..- - / . -. - .-. -.--
+np.array(hf['signals'][:, :]).max()
+-. . -..- - / . -. - .-. -.--
+plt.plot(np.array(hf['signals'][:, ::100]))
+-. . -..- - / . -. - .-. -.--
+plt.plot(np.array(hf['signals'][:, ::10]))
+-. . -..- - / . -. - .-. -.--
+np.array(hf['signals'][:, ::10]).shape
+-. . -..- - / . -. - .-. -.--
+np.array(hf['signals'][0, ::10]).shape
+-. . -..- - / . -. - .-. -.--
+plt.plot(np.array(hf['signals'][0, ::10]))
+-. . -..- - / . -. - .-. -.--
+plt.plot(np.array(hf['signals'][0:64, ::10]))
+-. . -..- - / . -. - .-. -.--
+plt.plot(np.array(hf['signals'][:, ::10]).T)

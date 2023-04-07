@@ -1,0 +1,2395 @@
+df_evaluation['Auctiontitle'] = df_evaluation['Auctiontitle'].progress_apply(lambda x: x.strip())
+eval_titles = df_evaluation[df_evaluation['SetYear'].str.contains('2020')][0:1000]['Auctiontitle'].unique()
+eval_titles = [x.strip() for x in eval_titles]
+eval_titles = [x for x in eval_titles if 'WNBA' not in x]
+len(eval_titles)
+
+-. . -..- - / . -. - .-. -.--
+# from datetime import datetime
+import gc
+# from itertools import *
+import itertools
+import random
+# from pathlib import Path
+# from collections import Counter
+from pprint import pprint
+import re
+
+### external libraries
+import pandas as pd
+import numpy as np
+# import tensorflow as tf
+# import matplotlib.pyplot as plt
+# import seaborn as sns
+from tqdm import tqdm
+
+### NLP extermnal libraries
+import spacy
+from spacy.util import minibatch, compounding
+from spacy.training import Example
+from nltk.tokenize import wordpunct_tokenize
+# from sentence_transformers import SentenceTransformer
+from thefuzz import fuzz
+from thefuzz import process
+import dedupe
+# import truecase
+
+-. . -..- - / . -. - .-. -.--
+### Data sets to load
+df_basketball = pd.read_csv('data/pricing_items_basketball_cleaned.csv')
+df_ebay = pd.read_csv('data/ebay_titles.csv')
+df_aka_players = pd.read_excel('data/Set_Aka_and_Player_Aka.xlsx', sheet_name=0)
+df_aka_sets = pd.read_excel('data/Set_Aka_and_Player_Aka.xlsx', sheet_name=1)
+
+-. . -..- - / . -. - .-. -.--
+nlp = spacy.load("en_core_web_sm")
+-. . -..- - / . -. - .-. -.--
+player_names_clean = list(df_basketball['player_names_clean'].unique())
+team_names_clean = list(df_basketball['team_names_clean'].unique())
+
+# Create a list of unique real brand names for matching when there are all-caps names or other case-mismatches
+all_brand_names = list(df_basketball['brand_name'].unique()) + \
+                  list(df_aka_sets['brand'].unique())
+all_brand_names.remove('')
+
+entityMatches = []
+
+for i, e in enumerate(allEntities[0:]):
+    print(i)
+    # pprint(e)
+    notFound = []
+
+    # Analyze date
+    startYear = np.NaN
+    endYear = np.NaN
+    if 'DATE' in allEntities[i].keys():
+        for dateVal in e['DATE']:
+            dateVal = dateVal.replace('/', '-').replace(' ', '-')
+            if bool(re.match("[0-9]{4,4}-[0-9]{2,2}", dateVal)):
+                startYear = float(dateVal.split('-')[0])
+                endYear = float(startYear + 1)
+            elif bool(re.match("[0-9]{4,4}", dateVal)):
+                startYear = float(dateVal)
+                endYear = float(startYear + 1)
+            elif bool(re.search("[0-9]{4,4}-[0-9]{2,2}", allEntities[i]['title'])):
+                startYear = float(re.search("[0-9]{4,4}-[0-9]{2,2}", allEntities[i]['title']).group(0).split('-')[0])
+                endYear = float(startYear + 1)
+            elif bool(re.search("[0-9]{4,4}", allEntities[i]['title'])):
+                print(allEntities[i]['title'])
+                startYear = float(re.search("[0-9]{4,4}", allEntities[i]['title']).group(0))
+                endYear = float(startYear + 1)
+            else:
+                print('DATE: Unusual pattern:{}'.format(dateVal))
+    elif bool(re.search("[0-9]{4,4}-[0-9]{2,2}", allEntities[i]['title'])):
+        startYear = float(re.search("[0-9]{4,4}-[0-9]{2,2}", allEntities[i]['title']).group(0).split('-')[0])
+        endYear = float(startYear + 1)
+    elif bool(re.search("[0-9]{4,4}", allEntities[i]['title'])):
+        startYear = float(re.search("[0-9]{4,4}", allEntities[i]['title']).group(0))
+        endYear = float(startYear + 1)
+    else:
+        notFound.append('set_year_start')
+        notFound.append('set_year_end')
+
+    # Analyze brand
+    brandName = [np.NaN]
+    if 'BRAND_NAME' in allEntities[i].keys():
+        # use a fuzzy match from the real list, in case there are casing issues
+        brandName = [process.extractOne(x, all_brand_names)[0] for x in e['BRAND_NAME']]
+    else:
+        notFound.append('brand_name')
+
+    # Analyze manufacturer
+    manufacturer = np.NaN
+    if 'MANUFACTURER' in allEntities[i].keys():
+        manufacturer = e['MANUFACTURER']
+    else:
+        notFound.append('manufacturer')
+
+    # Rookie check
+    isRookie = False
+    rookieConfidence = 0.75
+    if 'ROOKIE' in allEntities[i].keys():
+        if len(e['ROOKIE']) == 1:  # if only one match
+            isRookie, rookieConfidence = True, fuzz.token_sort_ratio(e['ROOKIE'][0], "Rookie") / 100
+        else:  # more than one match
+            print('ROOKIE: Unusual length:{}'.format(len(e['ROOKIE'])))
+
+    else:
+        notFound.append('rookie_card')
+
+    # Autograph check
+    isAutograph = False
+    autographConfidence = 0.75
+    if 'AUTOGRAPH' in allEntities[i].keys():
+        isAutograph, autographConfidence = True, fuzz.token_sort_ratio(e['AUTOGRAPH'][0], "Autograph") / 100
+    else:
+        notFound.append('autographed')
+
+    # Memorabilia check
+    isMemorabilia = False
+    memorabiliaConfidence = 0.75
+    if 'MEMORABILIA' in allEntities[i].keys():
+        if len(e['MEMORABILIA']) == 1:  # if only one match
+            isMemorabilia, memorabiliaConfidence = True, fuzz.token_sort_ratio(e['MEMORABILIA'][0], "Memorabilia") / 100
+        else:  # more than one match
+            print('MEMORABILIA: Unusual length:{}'.format(len(e['MEMORABILIA'])))
+    else:
+        notFound.append('memorabilia')
+
+    # Analyze card num
+    cardNum = [np.NaN]
+    if 'CARD_NUM' in allEntities[i].keys():
+        cardNum = [x.replace('#', '') for x in e['CARD_NUM']]
+    else:
+        notFound.append('card_num')
+
+    # Analyze print num
+    printRun = [np.NaN]
+    if 'PRINT_RUN' in allEntities[i].keys():
+        # get the right pattern first, in case there's weird tokens like /25+Blue
+
+        printRun = [float(re.search('/[0-9]+', x).group(0).split('/')[1]) for x in e['PRINT_RUN']]
+        # printRun = [float(x.split('/')[1]) for x in e['PRINT_RUN']]
+    else:
+        notFound.append('print_run')
+
+    entityMatch = {
+        '_title': [e['title']],
+        'set_year_start': [startYear],
+        'set_year_end': [endYear],
+        #        'manufacturer_name': manufacturer,
+        'brand_name': brandName,
+        # 'rookie_card': [isRookie],
+        # 'rookie_confidence': [rookieConfidence],
+        'autographed': [isAutograph],
+        'autographed_confidence': [autographConfidence],
+        'memorabilia': [isMemorabilia],
+        'memorabilia_confidence': [memorabiliaConfidence],
+        'card_num': cardNum,
+        'print_run': printRun,
+        'not_found': notFound
+    }
+
+    entityMatches.append(entityMatch)
+    allEntities[i]['entityMatch'] = entityMatch
+
+    # pprint(e)
+    # print('\n\n')
+    # pprint(entityMatch)
+
+-. . -..- - / . -. - .-. -.--
+### Load variables from data sets
+
+# ebay_baseball_titles = list(df_ebay_baseball['Auctiontitle'].unique())
+ebay_titles = df_ebay['ebay_titles'].unique()
+df_evaluation = pd.read_csv('data/Basketball_Sample_Data_Auction_Title_and_Matched_Title.csv')
+
+df_evaluation['Auctiontitle'] = df_evaluation['Auctiontitle'].progress_apply(lambda x: x.strip())
+eval_titles = df_evaluation[df_evaluation['SetYear'].str.contains('2020')][0:1000]['Auctiontitle'].unique()
+eval_titles = [x.strip() for x in eval_titles]
+eval_titles = [x for x in eval_titles if 'WNBA' not in x]
+
+
+df_basketball['player_names_clean'].fillna('', inplace=True)
+df_basketball['team_names_clean'].fillna('', inplace=True)
+df_basketball['manufacturer_name'].fillna('', inplace=True)
+df_basketball['brand_name'].fillna('', inplace=True)
+df_aka_players['Player'].fillna('', inplace=True)
+df_aka_players['Aka'].fillna('', inplace=True)
+
+players = list(df_basketball['player_names_clean'].unique()) + \
+          list(df_aka_players['Player'].unique()) + \
+          list(df_aka_players['Aka'].unique()) + ['Lebron James']
+
+players = list(set(players))
+reverse_players = []
+
+# Add [firstname lastname] variation
+for player in players:
+    try:
+        reverse_player = (" ".join(player.split(", ")[::-1]))
+        reverse_players.append(reverse_player)
+    except AttributeError:
+        pass
+players = players + reverse_players
+
+players = list(set(players))
+players.remove('')
+
+
+# Add player pattern and make it case insensitive
+player_patterns = [
+    {'label': "PERSON", 'pattern': [
+        {"LOWER": str.lower(x)} for x in wordpunct_tokenize(y)
+    ]} for y in players if y
+]
+
+# Add team pattern
+teams = list(df_basketball['team_names_clean'].unique())
+teams.remove('')
+team_patterns = [
+    {'label': "TEAM", 'pattern': [
+        {"LOWER": str.lower(x)} for x in wordpunct_tokenize(y)
+    ]} for y in teams if y
+]
+
+# Add manufacturer pattern
+manufacturers = list(df_basketball['manufacturer_name'].unique())
+manufacturers.remove('')
+manufacturer_patterns = [
+    {'label': "MANUFACTURER", 'pattern': [
+        {"LOWER": str.lower(x)} for x in wordpunct_tokenize(y)
+    ]} for y in manufacturers
+]
+
+# Add brandname pattern
+brand_names = list(df_basketball['brand_name'].unique()) + \
+              list(df_aka_sets['brand'].unique())
+brand_names.remove('')
+brand_name_patterns = [
+    {'label': "BRAND_NAME", 'pattern': [
+        {"LOWER": str.lower(x)} for x in wordpunct_tokenize(y)
+    ]} for y in brand_names
+]
+
+# Add color pattern
+colors = [
+    'Silver',
+    'Blue',
+    'Red',
+    'Purple',
+    'Disco',
+    'White',
+    'Gold',
+    'Orange',
+    'Pride'
+    'Green',
+    'Pink',
+    'Black'
+]
+color_patterns = [
+    {'label': "COLOR", 'pattern': [
+        {"LOWER": str.lower(x)} for x in wordpunct_tokenize(y)
+    ]} for y in colors
+]
+
+# Add rookie pattern
+rookie_pattern = [
+    {'label': "ROOKIE", 'pattern': [{"LOWER":'rookie'}]}
+]
+
+# Add autograph pattern
+autograph_pattern = [
+    {'label': "AUTOGRAPH", 'pattern': [{"LOWER": {"REGEX":'autograph|auto|signatures'}}]}
+]
+
+# Add memobrabilia pattern
+memorabilia_pattern = [
+    {'label': "MEMORABILIA", 'pattern': [{"LOWER": {"REGEX":'memorab[a-zA-Z]+'}}]}
+]
+
+# Add card number pattern
+card_num_pattern = [
+    {'label': "CARD_NUM", 'pattern': [{"TEXT": "#"}, {"LIKE_NUM": True}]}
+]
+
+# Add print run pattern
+print_run_pattern = [
+    {'label': "PRINT_RUN", 'pattern': [{"TEXT": {"REGEX":"/[0-9]+"}}]}
+    #{'label': "PRINT_RUN", 'pattern': [{"TEXT": "/"}, {"LIKE_NUM": True}]}
+]
+
+# Code spacy with patterns
+ruler = nlp.add_pipe("entity_ruler", before="ner")
+ruler.add_patterns(player_patterns + team_patterns + manufacturer_patterns + \
+                   brand_name_patterns + color_patterns + rookie_pattern + autograph_pattern + \
+                   memorabilia_pattern +  print_run_pattern + card_num_pattern)
+
+-. . -..- - / . -. - .-. -.--
+def preprocess(title):
+    '''
+    Same very minimal pre-processing to make sure spaCy patterns work
+    '''
+    # Swap slash in date with hypen so that print run and date don't get confused
+    title = re.sub('([0-9]{4})/([0-9]{2})', r'\1-\2', title)
+    return title
+
+
+##############################################################################
+##### Cell 5 #################################################################
+##############################################################################
+allEntities = []
+for title in eval_titles[0:]:
+    tempDict = {
+        'title': title
+    }
+    title = preprocess(title)
+    doc = nlp(title)
+
+    tempDict.update({key: list(set(map(lambda x: str(x), g))) for key, g in
+                     itertools.groupby(sorted(doc.ents, key=lambda x: x.label_), lambda x: x.label_)})
+    tempDict['allMatchedTokens'] = [item for sublist in [list(set(map(lambda x: str(x), g))) for key, g in
+                                                         itertools.groupby(sorted(doc.ents, key=lambda x: x.label_),
+                                                                           lambda x: x.label_)] for item in sublist]
+    allEntities.append(tempDict)
+
+-. . -..- - / . -. - .-. -.--
+allEntities = []
+for title in eval_titles[0:]:
+    tempDict = {
+        'title': title
+    }
+    title = preprocess(title)
+    doc = nlp(title)
+
+    tempDict.update({key: list(set(map(lambda x: str(x), g))) for key, g in
+                     itertools.groupby(sorted(doc.ents, key=lambda x: x.label_), lambda x: x.label_)})
+    tempDict['allMatchedTokens'] = [item for sublist in [list(set(map(lambda x: str(x), g))) for key, g in
+                                                         itertools.groupby(sorted(doc.ents, key=lambda x: x.label_),
+                                                                           lambda x: x.label_)] for item in sublist]
+    allEntities.append(tempDict)
+
+-. . -..- - / . -. - .-. -.--
+player_names_clean = list(df_basketball['player_names_clean'].unique())
+team_names_clean = list(df_basketball['team_names_clean'].unique())
+
+# Create a list of unique real brand names for matching when there are all-caps names or other case-mismatches
+all_brand_names = list(df_basketball['brand_name'].unique()) + \
+                  list(df_aka_sets['brand'].unique())
+all_brand_names.remove('')
+
+entityMatches = []
+
+for i, e in enumerate(allEntities[0:]):
+    print(i)
+    # pprint(e)
+    notFound = []
+
+    # Analyze date
+    startYear = np.NaN
+    endYear = np.NaN
+    if 'DATE' in allEntities[i].keys():
+        for dateVal in e['DATE']:
+            dateVal = dateVal.replace('/', '-').replace(' ', '-')
+            if bool(re.match("[0-9]{4,4}-[0-9]{2,2}", dateVal)):
+                startYear = float(dateVal.split('-')[0])
+                endYear = float(startYear + 1)
+            elif bool(re.match("[0-9]{4,4}", dateVal)):
+                startYear = float(dateVal)
+                endYear = float(startYear + 1)
+            elif bool(re.search("[0-9]{4,4}-[0-9]{2,2}", allEntities[i]['title'])):
+                startYear = float(re.search("[0-9]{4,4}-[0-9]{2,2}", allEntities[i]['title']).group(0).split('-')[0])
+                endYear = float(startYear + 1)
+            elif bool(re.search("[0-9]{4,4}", allEntities[i]['title'])):
+                print(allEntities[i]['title'])
+                startYear = float(re.search("[0-9]{4,4}", allEntities[i]['title']).group(0))
+                endYear = float(startYear + 1)
+            else:
+                print('DATE: Unusual pattern:{}'.format(dateVal))
+    elif bool(re.search("[0-9]{4,4}-[0-9]{2,2}", allEntities[i]['title'])):
+        startYear = float(re.search("[0-9]{4,4}-[0-9]{2,2}", allEntities[i]['title']).group(0).split('-')[0])
+        endYear = float(startYear + 1)
+    elif bool(re.search("[0-9]{4,4}", allEntities[i]['title'])):
+        startYear = float(re.search("[0-9]{4,4}", allEntities[i]['title']).group(0))
+        endYear = float(startYear + 1)
+    else:
+        notFound.append('set_year_start')
+        notFound.append('set_year_end')
+
+    # Analyze brand
+    brandName = [np.NaN]
+    if 'BRAND_NAME' in allEntities[i].keys():
+        # use a fuzzy match from the real list, in case there are casing issues
+        brandName = [process.extractOne(x, all_brand_names)[0] for x in e['BRAND_NAME']]
+    else:
+        notFound.append('brand_name')
+
+    # Analyze manufacturer
+    manufacturer = np.NaN
+    if 'MANUFACTURER' in allEntities[i].keys():
+        manufacturer = e['MANUFACTURER']
+    else:
+        notFound.append('manufacturer')
+
+    # Rookie check
+    isRookie = False
+    rookieConfidence = 0.75
+    if 'ROOKIE' in allEntities[i].keys():
+        if len(e['ROOKIE']) == 1:  # if only one match
+            isRookie, rookieConfidence = True, fuzz.token_sort_ratio(e['ROOKIE'][0], "Rookie") / 100
+        else:  # more than one match
+            print('ROOKIE: Unusual length:{}'.format(len(e['ROOKIE'])))
+
+    else:
+        notFound.append('rookie_card')
+
+    # Autograph check
+    isAutograph = False
+    autographConfidence = 0.75
+    if 'AUTOGRAPH' in allEntities[i].keys():
+        isAutograph, autographConfidence = True, fuzz.token_sort_ratio(e['AUTOGRAPH'][0], "Autograph") / 100
+    else:
+        notFound.append('autographed')
+
+    # Memorabilia check
+    isMemorabilia = False
+    memorabiliaConfidence = 0.75
+    if 'MEMORABILIA' in allEntities[i].keys():
+        if len(e['MEMORABILIA']) == 1:  # if only one match
+            isMemorabilia, memorabiliaConfidence = True, fuzz.token_sort_ratio(e['MEMORABILIA'][0], "Memorabilia") / 100
+        else:  # more than one match
+            print('MEMORABILIA: Unusual length:{}'.format(len(e['MEMORABILIA'])))
+    else:
+        notFound.append('memorabilia')
+
+    # Analyze card num
+    cardNum = [np.NaN]
+    if 'CARD_NUM' in allEntities[i].keys():
+        cardNum = [x.replace('#', '') for x in e['CARD_NUM']]
+    else:
+        notFound.append('card_num')
+
+    # Analyze print num
+    printRun = [np.NaN]
+    if 'PRINT_RUN' in allEntities[i].keys():
+        # get the right pattern first, in case there's weird tokens like /25+Blue
+
+        printRun = [float(re.search('/[0-9]+', x).group(0).split('/')[1]) for x in e['PRINT_RUN']]
+        # printRun = [float(x.split('/')[1]) for x in e['PRINT_RUN']]
+    else:
+        notFound.append('print_run')
+
+    entityMatch = {
+        '_title': [e['title']],
+        'set_year_start': [startYear],
+        'set_year_end': [endYear],
+        #        'manufacturer_name': manufacturer,
+        'brand_name': brandName,
+        # 'rookie_card': [isRookie],
+        # 'rookie_confidence': [rookieConfidence],
+        'autographed': [isAutograph],
+        'autographed_confidence': [autographConfidence],
+        'memorabilia': [isMemorabilia],
+        'memorabilia_confidence': [memorabiliaConfidence],
+        'card_num': cardNum,
+        'print_run': printRun,
+        'not_found': notFound
+    }
+
+    entityMatches.append(entityMatch)
+    allEntities[i]['entityMatch'] = entityMatch
+
+-. . -..- - / . -. - .-. -.--
+allEntities[0]['entityMatch']
+-. . -..- - / . -. - .-. -.--
+allEntities[1]['entityMatch']
+-. . -..- - / . -. - .-. -.--
+runfile('/home/jazimmerman/PycharmProjects/plainspoken/beckett/ebay_parsing/artemis-ebay-parsing/ebay_parsing.py', wdir='/home/jazimmerman/PycharmProjects/plainspoken/beckett/ebay_parsing/artemis-ebay-parsing')
+-. . -..- - / . -. - .-. -.--
+# from datetime import datetime
+import gc
+# from itertools import *
+import itertools
+import random
+# from pathlib import Path
+# from collections import Counter
+from pprint import pprint
+import re
+
+### external libraries
+import pandas as pd
+import numpy as np
+# import tensorflow as tf
+# import matplotlib.pyplot as plt
+# import seaborn as sns
+from tqdm import tqdm
+tqdm.pandas()
+
+### NLP extermnal libraries
+import spacy
+from spacy.util import minibatch, compounding
+from spacy.training import Example
+from nltk.tokenize import wordpunct_tokenize
+# from sentence_transformers import SentenceTransformer
+from thefuzz import fuzz
+from thefuzz import process
+import dedupe
+# import truecase
+
+-. . -..- - / . -. - .-. -.--
+### Load variables from data sets
+
+# ebay_baseball_titles = list(df_ebay_baseball['Auctiontitle'].unique())
+ebay_titles = df_ebay['ebay_titles'].unique()
+df_evaluation = pd.read_csv('data/Basketball_Sample_Data_Auction_Title_and_Matched_Title.csv')
+
+df_evaluation['Auctiontitle'] = df_evaluation['Auctiontitle'].progress_apply(lambda x: x.strip())
+eval_titles = df_evaluation[df_evaluation['SetYear'].str.contains('2020')][0:1000]['Auctiontitle'].unique()
+eval_titles = [x.strip() for x in eval_titles]
+eval_titles = [x for x in eval_titles if 'WNBA' not in x]
+
+
+df_basketball['player_names_clean'].fillna('', inplace=True)
+df_basketball['team_names_clean'].fillna('', inplace=True)
+df_basketball['manufacturer_name'].fillna('', inplace=True)
+df_basketball['brand_name'].fillna('', inplace=True)
+df_aka_players['Player'].fillna('', inplace=True)
+df_aka_players['Aka'].fillna('', inplace=True)
+
+players = list(df_basketball['player_names_clean'].unique()) + \
+          list(df_aka_players['Player'].unique()) + \
+          list(df_aka_players['Aka'].unique()) + ['Lebron James']
+
+players = list(set(players))
+reverse_players = []
+
+# Add [firstname lastname] variation
+for player in players:
+    try:
+        reverse_player = (" ".join(player.split(", ")[::-1]))
+        reverse_players.append(reverse_player)
+    except AttributeError:
+        pass
+players = players + reverse_players
+
+players = list(set(players))
+players.remove('')
+
+-. . -..- - / . -. - .-. -.--
+title = df_ebay.iloc[0]['ebay_titles']
+sents = nlp(title)
+
+-. . -..- - / . -. - .-. -.--
+sents
+-. . -..- - / . -. - .-. -.--
+# Add player pattern and make it case insensitive
+player_patterns = [
+    {'label': "PERSON", 'pattern': [
+        {"LOWER": str.lower(x)} for x in wordpunct_tokenize(y)
+    ]} for y in players if y
+]
+
+# Add team pattern
+teams = list(df_basketball['team_names_clean'].unique())
+teams.remove('')
+team_patterns = [
+    {'label': "TEAM", 'pattern': [
+        {"LOWER": str.lower(x)} for x in wordpunct_tokenize(y)
+    ]} for y in teams if y
+]
+
+# Add manufacturer pattern
+manufacturers = list(df_basketball['manufacturer_name'].unique())
+manufacturers.remove('')
+manufacturer_patterns = [
+    {'label': "MANUFACTURER", 'pattern': [
+        {"LOWER": str.lower(x)} for x in wordpunct_tokenize(y)
+    ]} for y in manufacturers
+]
+
+# Add brandname pattern
+brand_names = list(df_basketball['brand_name'].unique()) + \
+              list(df_aka_sets['brand'].unique())
+brand_names.remove('')
+brand_name_patterns = [
+    {'label': "BRAND_NAME", 'pattern': [
+        {"LOWER": str.lower(x)} for x in wordpunct_tokenize(y)
+    ]} for y in brand_names
+]
+
+# Add color pattern
+colors = [
+    'Silver',
+    'Blue',
+    'Red',
+    'Purple',
+    'Disco',
+    'White',
+    'Gold',
+    'Orange',
+    'Pride'
+    'Green',
+    'Pink',
+    'Black'
+]
+color_patterns = [
+    {'label': "COLOR", 'pattern': [
+        {"LOWER": str.lower(x)} for x in wordpunct_tokenize(y)
+    ]} for y in colors
+]
+
+# Add rookie pattern
+rookie_pattern = [
+    {'label': "ROOKIE", 'pattern': [{"LOWER":'rookie'}]}
+]
+
+# Add autograph pattern
+autograph_pattern = [
+    {'label': "AUTOGRAPH", 'pattern': [{"LOWER": {"REGEX":'autograph|auto|signatures'}}]}
+]
+
+# Add memobrabilia pattern
+memorabilia_pattern = [
+    {'label': "MEMORABILIA", 'pattern': [{"LOWER": {"REGEX":'memorab[a-zA-Z]+'}}]}
+]
+
+# Add card number pattern
+card_num_pattern = [
+    {'label': "CARD_NUM", 'pattern': [{"TEXT": "#"}, {"LIKE_NUM": True}]}
+]
+
+# Add print run pattern
+print_run_pattern = [
+    {'label': "PRINT_RUN", 'pattern': [{"TEXT": {"REGEX":"/[0-9]+"}}]}
+    #{'label': "PRINT_RUN", 'pattern': [{"TEXT": "/"}, {"LIKE_NUM": True}]}
+]
+
+# Code spacy with patterns
+ruler = nlp.add_pipe("entity_ruler", before="ner")
+ruler.add_patterns(player_patterns + team_patterns + manufacturer_patterns + \
+                   brand_name_patterns + color_patterns + rookie_pattern + autograph_pattern + \
+                   memorabilia_pattern +  print_run_pattern + card_num_pattern)
+
+-. . -..- - / . -. - .-. -.--
+title = df_ebay.iloc[0]['ebay_titles']
+sents = nlp(title)
+persons = [ee for ee in sents.ents if ee.label_ == 'PERSON']
+
+-. . -..- - / . -. - .-. -.--
+def preprocess(title):
+    '''
+    Same very minimal pre-processing to make sure spaCy patterns work
+    '''
+    # Swap slash in date with hypen so that print run and date don't get confused
+    title = re.sub('([0-9]{4})/([0-9]{2})', r'\1-\2', title)
+    return title
+
+
+def extract(title):
+    """Helper function to extract entities from a title"""
+    return nlp(preprocess(title))
+
+
+extracted_entities = zip(*df_ebay['ebay_titles'].map(extract))
+
+-. . -..- - / . -. - .-. -.--
+list(extracted_entities)
+-. . -..- - / . -. - .-. -.--
+[len(i) for i in extracted_entities]
+-. . -..- - / . -. - .-. -.--
+[len(i) for i in list(extracted_entities)]
+-. . -..- - / . -. - .-. -.--
+extracted_entities = list(extracted_entities)
+-. . -..- - / . -. - .-. -.--
+def preprocess(title):
+    '''
+    Same very minimal pre-processing to make sure spaCy patterns work
+    '''
+    # Swap slash in date with hypen so that print run and date don't get confused
+    title = re.sub('([0-9]{4})/([0-9]{2})', r'\1-\2', title)
+    return title
+
+
+def extract(title):
+    """Helper function to extract entities from a title"""
+    return nlp(preprocess(title))
+
+
+extracted_entities = list(zip(*df_ebay['ebay_titles'].map(extract)))
+
+-. . -..- - / . -. - .-. -.--
+def preprocess(title):
+    '''
+    Same very minimal pre-processing to make sure spaCy patterns work
+    '''
+    # Swap slash in date with hypen so that print run and date don't get confused
+    title = re.sub('([0-9]{4})/([0-9]{2})', r'\1-\2', title)
+    title = title.lower()
+    return title
+
+
+def extract(title):
+    """Helper function to extract entities from a title"""
+    return nlp(preprocess(title))
+
+
+extracted_entities = list(zip(*df_ebay['ebay_titles'].map(extract)))
+
+-. . -..- - / . -. - .-. -.--
+def preprocess(title):
+    '''
+    Same very minimal pre-processing to make sure spaCy patterns work
+    '''
+    # Swap slash in date with hypen so that print run and date don't get confused
+    title = re.sub('([0-9]{4})/([0-9]{2})', r'\1-\2', title)
+    title = title.lower()
+    return title
+
+
+def extract(title):
+    """Helper function to extract entities from a title"""
+    return nlp(preprocess(title))
+
+
+extracted_entities = df_ebay['ebay_titles'].map(extract)
+
+-. . -..- - / . -. - .-. -.--
+extract(df_ebay.iloc[0]['ebay_titles'])
+-. . -..- - / . -. - .-. -.--
+ex = extract(df_ebay.iloc[0]['ebay_titles'])
+-. . -..- - / . -. - .-. -.--
+def preprocess(title):
+    '''
+    Same very minimal pre-processing to make sure spaCy patterns work
+    '''
+    # Swap slash in date with hypen so that print run and date don't get confused
+    title = re.sub('([0-9]{4})/([0-9]{2})', r'\1-\2', title)
+    title = title.lower()
+    return title
+
+
+def extract(title):
+    """Helper function to extract entities from a title"""
+    title = preprocess(title)
+    sents = nlp(title)
+    labels = nlp.pipe_labels.get('ner')
+    title_extracted_entities = {ee.label_: ee.text for ee in sents.ents}
+    title_all_entities = {lab: title_extracted_entities.get(lab) for lab in labels}
+    return pd.Series(title_all_entities)
+
+
+extracted_entities = df_ebay['ebay_titles'].apply(extract)
+
+-. . -..- - / . -. - .-. -.--
+# from datetime import datetime
+import gc
+# from itertools import *
+import itertools
+import random
+# from pathlib import Path
+# from collections import Counter, defaultdict
+from pprint import pprint
+import re
+
+### external libraries
+import pandas as pd
+import numpy as np
+# import tensorflow as tf
+# import matplotlib.pyplot as plt
+# import seaborn as sns
+from tqdm import tqdm
+tqdm.pandas()
+
+### NLP extermnal libraries
+import spacy
+from spacy.util import minibatch, compounding
+from spacy.training import Example
+from nltk.tokenize import wordpunct_tokenize
+# from sentence_transformers import SentenceTransformer
+from thefuzz import fuzz
+from thefuzz import process
+import dedupe
+# import truecase
+
+-. . -..- - / . -. - .-. -.--
+### Load variables from data sets ###
+
+# ebay_baseball_titles = list(df_ebay_baseball['Auctiontitle'].unique())
+ebay_titles = df_ebay['ebay_titles'].unique()
+df_evaluation = pd.read_csv('data/Basketball_Sample_Data_Auction_Title_and_Matched_Title.csv')
+
+df_evaluation['Auctiontitle'] = df_evaluation['Auctiontitle'].progress_apply(lambda x: x.strip())
+eval_titles = df_evaluation[df_evaluation['SetYear'].str.contains('2020')][0:1000]['Auctiontitle'].unique()
+eval_titles = [x.strip() for x in eval_titles]
+eval_titles = [x for x in eval_titles if 'WNBA' not in x]
+
+
+df_basketball['player_names_clean'].fillna('', inplace=True)
+df_basketball['team_names_clean'].fillna('', inplace=True)
+df_basketball['manufacturer_name'].fillna('', inplace=True)
+df_basketball['brand_name'].fillna('', inplace=True)
+df_aka_players['Player'].fillna('', inplace=True)
+df_aka_players['Aka'].fillna('', inplace=True)
+
+players = list(df_basketball['player_names_clean'].unique()) + \
+          list(df_aka_players['Player'].unique()) + \
+          list(df_aka_players['Aka'].unique()) + ['Lebron James']
+
+players = list(set(players))
+reverse_players = []
+
+# Add [firstname lastname] variation
+for player in players:
+    try:
+        reverse_player = (" ".join(player.split(", ")[::-1]))
+        reverse_players.append(reverse_player)
+    except AttributeError:
+        pass
+players = players + reverse_players
+
+players = list(set(players))
+players.remove('')
+
+-. . -..- - / . -. - .-. -.--
+def preprocess(title):
+    '''
+    Same very minimal pre-processing to make sure spaCy patterns work
+    '''
+    # Swap slash in date with hypen so that print run and date don't get confused
+    title = re.sub('([0-9]{4})/([0-9]{2})', r'\1-\2', title)
+    title = title.lower()
+    return title
+
+
+def extract(title):
+    """Helper function to extract entities from a title"""
+    title = preprocess(title)
+    sents = nlp(title)
+    labels = nlp.pipe_labels.get('ner')
+
+    title_extracted_entities = defaultdict(list)
+    for ee in sents.ents:
+        # Add entities to dict of lists if not in there already
+        title_extracted_entities[ee.label_].append(ee.text)
+
+    title_all_entities = {lab: title_extracted_entities.get(lab) for lab in labels}
+    return pd.Series(title_all_entities)
+
+
+extracted_entities = df_ebay['ebay_titles'].apply(extract)
+
+-. . -..- - / . -. - .-. -.--
+def preprocess(title):
+    '''
+    Same very minimal pre-processing to make sure spaCy patterns work
+    '''
+    # Swap slash in date with hypen so that print run and date don't get confused
+    title = re.sub('([0-9]{4})/([0-9]{2})', r'\1-\2', title)
+    title = title.lower()
+    return title
+
+
+def extract(title):
+    """Helper function to extract entities from a title"""
+    title = preprocess(title)
+    sents = nlp(title)
+    labels = nlp.pipe_labels.get('ner')
+
+    title_extracted_entities = defaultdict(list)
+    for ee in sents.ents:
+        # Add entities to dict of lists if not in there already
+        title_extracted_entities[ee.label_].append(ee.text)
+
+    title_all_entities = {lab: title_extracted_entities.get(lab) for lab in labels}
+    return pd.Series(title_all_entities)
+
+
+extracted_entities = df_ebay['ebay_titles'].apply(extract)
+extracted_entities['ebay_titles'] = df_ebay['ebay_titles']
+
+-. . -..- - / . -. - .-. -.--
+def preprocess(title):
+    '''
+    Same very minimal pre-processing to make sure spaCy patterns work
+    '''
+    # Swap slash in date with hypen so that print run and date don't get confused
+    title = re.sub('([0-9]{4})/([0-9]{2})', r'\1-\2', title)
+    title = title.lower()
+    return title
+
+
+def extract(title):
+    """Helper function to extract entities from a title"""
+    title = preprocess(title)
+    sents = nlp(title)
+    labels = nlp.pipe_labels.get('ner')
+
+    title_extracted_entities = defaultdict(list)
+    for ee in sents.ents:
+        # Add entities to dict of lists if not in there already
+        title_extracted_entities[ee.label_].append(ee.text)
+
+    title_all_entities = {lab: title_extracted_entities.get(lab) for lab in labels}
+    return pd.Series(title_all_entities)
+
+
+extracted_entities = df_evaluation['Auctiontitle'].apply(extract)
+extracted_entities['Auctiontitle'] = df_evaluation['Auctiontitle']
+extracted_entities['MatchTitle'] = df_evaluation['MatchTitle']
+
+-. . -..- - / . -. - .-. -.--
+##############################################################################
+##### Cell 1 #################################################################
+##############################################################################
+### Standard library
+# from datetime import datetime
+import gc
+# from itertools import *
+import itertools
+import random
+# from pathlib import Path
+# from collections import Counter
+from pprint import pprint
+import re
+
+### external libraries
+import pandas as pd
+import numpy as np
+# import tensorflow as tf
+# import matplotlib.pyplot as plt
+# import seaborn as sns
+from tqdm import tqdm
+tqdm.pandas()
+
+### NLP extermnal libraries
+import spacy
+from spacy.util import minibatch, compounding
+from spacy.training import Example
+from nltk.tokenize import wordpunct_tokenize
+# from sentence_transformers import SentenceTransformer
+from thefuzz import fuzz
+from thefuzz import process
+# import truecase
+
+### Feature engineering
+# from sklearn.preprocessing import OneHotEncoder, StandardScaler, LabelEncoder
+# from sklearn.compose import ColumnTransformer
+# from sklearn.model_selection import train_test_split
+
+### Model evaluation
+# from sklearn.metrics import confusion_matrix, accuracy_score, precision_score, recall_score, f1_score, roc_curve, roc_auc_score
+# from sklearn.metrics.pairwise import cosine_similarity
+
+
+### Model building
+# from xgboost import XGBClassifier
+
+# Jupyter display settings
+# %matplotlib inline
+pd.set_option('display.max_columns', 1000)
+pd.set_option('display.max_rows', 1000)
+
+### NLP models
+# model = SentenceTransformer('bert-base-nli-mean-tokens')
+nlp = spacy.load("en_core_web_sm")
+
+### Data sets to load
+df_basketball = pd.read_csv('data/pricing_items_basketball_cleaned.csv')
+df_ebay = pd.read_csv('data/ebay_titles.csv')
+df_aka_players = pd.read_excel('data/Set_Aka_and_Player_Aka.xlsx', sheet_name=0)
+df_aka_sets = pd.read_excel('data/Set_Aka_and_Player_Aka.xlsx', sheet_name=1)
+# df_ebay_baseball = pd.read_excel('data/Sample Data of Parser.xlsx')
+
+# ebay_baseball_titles = list(df_ebay_baseball['Auctiontitle'].unique())
+ebay_titles = df_ebay['ebay_titles'].unique()
+df_evaluation = pd.read_csv('data/Basketball_Sample_Data_Auction_Title_and_Matched_Title.csv')
+
+
+##############################################################################
+##### Cell 2 #################################################################
+##############################################################################
+
+-. . -..- - / . -. - .-. -.--
+runfile('/home/jazimmerman/PycharmProjects/plainspoken/beckett/ebay_parsing/artemis-ebay-parsing/dedupe.py', wdir='/home/jazimmerman/PycharmProjects/plainspoken/beckett/ebay_parsing/artemis-ebay-parsing')
+-. . -..- - / . -. - .-. -.--
+extracted_entities[['Auctiontitle'], ['MatchTitle']]
+-. . -..- - / . -. - .-. -.--
+extracted_entities.loc[['Auctiontitle'], ['MatchTitle']]
+-. . -..- - / . -. - .-. -.--
+extracted_entities.iloc[:, ['Auctiontitle'], ['MatchTitle']]
+-. . -..- - / . -. - .-. -.--
+extracted_entities.iloc[:, ['Auctiontitle' ,'MatchTitle']]
+-. . -..- - / . -. - .-. -.--
+extracted_entities.loc[:, ['Auctiontitle' ,'MatchTitle']]
+-. . -..- - / . -. - .-. -.--
+df_basketball.ebay_title == extracted_entities.Auctiontitle
+-. . -..- - / . -. - .-. -.--
+df_basketball.ebay_title
+-. . -..- - / . -. - .-. -.--
+df_basketball.ebay_title.reset_index() == extracted_entities.Auctiontitle.reset_index()
+-. . -..- - / . -. - .-. -.--
+df_basketball.ebay_title.reset_index()
+-. . -..- - / . -. - .-. -.--
+df_basketball.reset_index().ebay_title == extracted_entities.reset_index().Auctiontitle
+-. . -..- - / . -. - .-. -.--
+df_basketball.reset_index().ebay_title
+-. . -..- - / . -. - .-. -.--
+extracted_entities[extracted_entities['DATE'].len > 1]
+-. . -..- - / . -. - .-. -.--
+extracted_entities[extracted_entities['DATE'][0].len > 1]
+-. . -..- - / . -. - .-. -.--
+extracted_entities[len(extracted_entities['DATE']) > 1]
+-. . -..- - / . -. - .-. -.--
+extracted_entities[extracted_entities['DATE'].str.len > 1]
+-. . -..- - / . -. - .-. -.--
+extracted_entities[extracted_entities['DATE'].str.len() > 1]
+-. . -..- - / . -. - .-. -.--
+extracted_entities[extracted_entities['DATE'].str.len() > 1]['DATE']
+-. . -..- - / . -. - .-. -.--
+extracted_entities[extracted_entities['DATE'].str.len() > 1]['DATE'].len()
+-. . -..- - / . -. - .-. -.--
+extracted_entities[extracted_entities['DATE'].str.len() > 1]['DATE'].len
+-. . -..- - / . -. - .-. -.--
+extracted_entities[extracted_entities['DATE'].str.len() > 1]['DATE'].size
+-. . -..- - / . -. - .-. -.--
+extracted_entities[extracted_entities['DATE'] is not Null]['DATE'].size
+-. . -..- - / . -. - .-. -.--
+extracted_entities[extracted_entities['DATE'] is not None]['DATE'].size
+-. . -..- - / . -. - .-. -.--
+extracted_entities[extracted_entities['DATE'] is not None]['DATE']
+-. . -..- - / . -. - .-. -.--
+extracted_entities[extracted_entities['DATE'].str is not None]['DATE']
+-. . -..- - / . -. - .-. -.--
+extracted_entities[extracted_entities[['DATE']] is not None]
+-. . -..- - / . -. - .-. -.--
+extracted_entities[['DATE']].dropna()
+-. . -..- - / . -. - .-. -.--
+extracted_entities[['DATE']].dropna().apply(len)
+-. . -..- - / . -. - .-. -.--
+extracted_entities[['DATE']].dropna().apply(len, axis=1)
+-. . -..- - / . -. - .-. -.--
+extracted_entities['DATE'].apply(len, axis=1)
+-. . -..- - / . -. - .-. -.--
+extracted_entities['DATE'].apply(len)
+-. . -..- - / . -. - .-. -.--
+extracted_entities['DATE'].dropna().apply(len)
+-. . -..- - / . -. - .-. -.--
+extracted_entities['DATE'].dropna().apply(len) > 1
+-. . -..- - / . -. - .-. -.--
+extracted_entities[extracted_entities['DATE'].dropna().apply(len) > 1]
+-. . -..- - / . -. - .-. -.--
+extracted_entities[extracted_entities['DATE'].apply(len) > 1]
+-. . -..- - / . -. - .-. -.--
+extracted_entities[extracted_entities['DATE'].apply(lambda x: len if x is not None else 0) > 1]
+-. . -..- - / . -. - .-. -.--
+extracted_entities[extracted_entities['DATE'].apply(lambda x: len(x) if x is not None else 0) > 1]
+-. . -..- - / . -. - .-. -.--
+extracted_entities[extracted_entities['DATE'].apply(lambda x: len(x) if x is not None else 0) > 1]['DATE']
+-. . -..- - / . -. - .-. -.--
+def preprocess(title):
+    '''
+    Same very minimal pre-processing to make sure spaCy patterns work
+    '''
+    # Swap slash in date with hypen so that print run and date don't get confused
+    title = re.sub('([0-9]{4})/([0-9]{2})', r'\1-\2', title)
+    title = title.lower()
+    return title
+
+
+def extract(title):
+    """Helper function to extract entities from a title"""
+    title = preprocess(title)
+    sents = nlp(title)
+    labels = nlp.pipe_labels.get('ner')
+
+    title_extracted_entities = defaultdict(list)
+    for ee in sents.ents:
+        # Add entities to dict of lists if not in there already
+        title_extracted_entities[ee.label_].append(ee.text)
+
+    title_all_entities = {lab: title_extracted_entities.get(lab) for lab in labels}
+    return pd.Series(title_all_entities)
+
+
+tqdm.pandas(desc="Extracting entities from auction titles.")
+extracted_entities = df_eval['Auctiontitle'].progress_apply(extract)
+# add ebay titles and ground truth matched title to dataframe
+extracted_entities['Auctiontitle'] = df_eval['Auctiontitle']
+extracted_entities['MatchTitle'] = df_eval['MatchTitle']
+
+# expand lists in dataframe to include all permutations of lists
+
+for col in extracted_entities.columns:
+    extracted_entities = extracted_entities.explode(col)
+
+-. . -..- - / . -. - .-. -.--
+def preprocess(title):
+    '''
+    Same very minimal pre-processing to make sure spaCy patterns work
+    '''
+    # Swap slash in date with hypen so that print run and date don't get confused
+    title = re.sub('([0-9]{4})/([0-9]{2})', r'\1-\2', title)
+    title = title.lower()
+    return title
+
+
+def extract(title):
+    """Helper function to extract entities from a title"""
+    title = preprocess(title)
+    sents = nlp(title)
+    labels = nlp.pipe_labels.get('ner')
+
+    title_extracted_entities = defaultdict(list)
+    for ee in sents.ents:
+        # Add entities to dict of lists if not in there already
+        title_extracted_entities[ee.label_].append(ee.text)
+
+    title_all_entities = {lab: title_extracted_entities.get(lab) for lab in labels}
+    return pd.Series(title_all_entities)
+
+
+tqdm.pandas(desc="Extracting entities from auction titles.")
+extracted_entities = df_eval['Auctiontitle'].progress_apply(extract)
+# add ebay titles and ground truth matched title to dataframe
+extracted_entities['Auctiontitle'] = df_eval['Auctiontitle']
+extracted_entities['MatchTitle'] = df_eval['MatchTitle']
+
+# expand lists in dataframe to include all permutations of lists
+
+-. . -..- - / . -. - .-. -.--
+# from datetime import datetime
+import gc
+# from itertools import *
+import itertools
+import random
+# from pathlib import Path
+# from collections import Counter, defaultdict
+from collections import defaultdict
+from pprint import pprint
+import re
+
+### external libraries
+import pandas as pd
+import numpy as np
+# import tensorflow as tf
+# import matplotlib.pyplot as plt
+# import seaborn as sns
+from tqdm import tqdm
+tqdm.pandas()
+
+### NLP extermnal libraries
+import spacy
+from spacy.util import minibatch, compounding
+from spacy.training import Example
+from nltk.tokenize import wordpunct_tokenize
+# from sentence_transformers import SentenceTransformer
+from thefuzz import fuzz
+from thefuzz import process
+import dedupe
+# import truecase
+
+-. . -..- - / . -. - .-. -.--
+### Load spacy model
+nlp = spacy.load("en_core_web_sm")
+
+### Data sets to load
+df_basketball = pd.read_csv('data/pricing_items_basketball_cleaned.csv')
+df_ebay = pd.read_csv('data/ebay_titles.csv')
+df_aka_players = pd.read_excel('data/Set_Aka_and_Player_Aka.xlsx', sheet_name=0)
+df_aka_sets = pd.read_excel('data/Set_Aka_and_Player_Aka.xlsx', sheet_name=1)
+
+-. . -..- - / . -. - .-. -.--
+### Load variables from data sets ###
+
+# ebay_baseball_titles = list(df_ebay_baseball['Auctiontitle'].unique())
+ebay_titles = df_ebay['ebay_titles'].unique()
+df_evaluation = pd.read_csv('data/Basketball_Sample_Data_Auction_Title_and_Matched_Title.csv')
+
+tqdm.pandas(desc='Loading data sets')
+df_evaluation['Auctiontitle'] = df_evaluation['Auctiontitle'].progress_apply(lambda x: x.strip())
+eval_titles = df_evaluation[df_evaluation['SetYear'].str.contains('2020')][0:1000]['Auctiontitle'].unique()
+eval_titles = [x.strip() for x in eval_titles]
+eval_titles = [x for x in eval_titles if 'WNBA' not in x]
+
+df_eval = df_evaluation.iloc[df_evaluation[df_evaluation['SetYear'].str.contains('2020')][0:1000]['Auctiontitle'].index][['Auctiontitle', 'MatchTitle']]
+df_eval.apply(lambda x: x.str.strip())
+df_eval = df_eval[~df_eval['Auctiontitle'].str.contains('WNBA')]
+
+df_basketball['player_names_clean'].fillna('', inplace=True)
+df_basketball['team_names_clean'].fillna('', inplace=True)
+df_basketball['manufacturer_name'].fillna('', inplace=True)
+df_basketball['brand_name'].fillna('', inplace=True)
+df_aka_players['Player'].fillna('', inplace=True)
+df_aka_players['Aka'].fillna('', inplace=True)
+
+players = list(df_basketball['player_names_clean'].unique()) + \
+          list(df_aka_players['Player'].unique()) + \
+          list(df_aka_players['Aka'].unique()) + ['Lebron James']
+
+players = list(set(players))
+reverse_players = []
+
+# Add [firstname lastname] variation
+for player in players:
+    try:
+        reverse_player = (" ".join(player.split(", ")[::-1]))
+        reverse_players.append(reverse_player)
+    except AttributeError:
+        pass
+players = players + reverse_players
+
+players = list(set(players))
+players.remove('')
+
+-. . -..- - / . -. - .-. -.--
+# expand lists in dataframe to include all permutations of lists
+ex_ent = extracted_entities.copy()
+for col in ex_ent.columns:
+    ex_ent = ex_ent.explode(col)
+
+-. . -..- - / . -. - .-. -.--
+# join year_start and year_end to make a single year column in df_basketball
+
+df_basketball['year_start'] = df_basketball['year_start'].astype(str)
+df_basketball['year_end'] = df_basketball['year_end'].astype(str)
+df_basketball['year'] = df_basketball['year_start'] + '-' + df_basketball['year_end'][-2:]
+
+-. . -..- - / . -. - .-. -.--
+# join year_start and year_end to make a single year column in df_basketball
+pd.options.display.float_format = '{:,.0f}'.format
+df_basketball['year_start'] = df_basketball['year_start'].astype(str)
+df_basketball['year_end'] = df_basketball['year_end'].astype(str)
+df_basketball['year'] = df_basketball['year_start'] + '-' + df_basketball['year_end'][-2:]
+
+-. . -..- - / . -. - .-. -.--
+# join year_start and year_end to make a single year column in df_basketball
+df_basketball['year_start'] = df_basketball['year_start'].astype('Int64').astype('str')
+df_basketball['year_end'] = df_basketball['year_end'].astype('Int64').astype('str')
+df_basketball['year'] = df_basketball['year_start'] + '-' + df_basketball['year_end'][-2:]
+
+-. . -..- - / . -. - .-. -.--
+# join year_start and year_end to make a single year column in df_basketball
+df_basketball['year_start'] = df_basketball['year_start'].astype('Int64').astype('str')
+df_basketball['year_end'] = df_basketball['year_end'].astype('Int64').astype('str')
+df_basketball['year'] = df_basketball['year_start'] + '-' + df_basketball['year_end']
+
+-. . -..- - / . -. - .-. -.--
+df_basketball['year'] = df_basketball['year_start'] + '-' + df_basketball['year_end']
+-. . -..- - / . -. - .-. -.--
+df_basketball['year'] = df_basketball['year_end'][-2:]
+-. . -..- - / . -. - .-. -.--
+df_basketball['year'] = df_basketball['year_start'] + '-' + df_basketball['year_end'][-2:]
+-. . -..- - / . -. - .-. -.--
+df_basketball['year_end'][-2:]
+-. . -..- - / . -. - .-. -.--
+df_basketball['year_end'][:, -2:]
+-. . -..- - / . -. - .-. -.--
+df_basketball['year_end'][:][-2:]
+-. . -..- - / . -. - .-. -.--
+df_basketball['year_end'].str[-2:]
+-. . -..- - / . -. - .-. -.--
+df_basketball['year'] = df_basketball['year_start'] + '-' + df_basketball['year_end'].str[-2:]
+-. . -..- - / . -. - .-. -.--
+df_basketball['year_end'].str
+-. . -..- - / . -. - .-. -.--
+df_basketball['year_end'].str()
+-. . -..- - / . -. - .-. -.--
+df_basketball['year_end'].str[:]
+-. . -..- - / . -. - .-. -.--
+df_basketball['set_year_end'].str[:]
+-. . -..- - / . -. - .-. -.--
+df_basketball['set_year_end'].std[:]
+-. . -..- - / . -. - .-. -.--
+# join year_start and year_end to make a single year column in df_basketball
+df_basketball['year'] = df_basketball['year_start'].astype('Int64').astype('str') \
+                        + '-' \
+                        + df_basketball['year_end'].astype('Int64').astype('str').str[-2:]
+-. . -..- - / . -. - .-. -.--
+del ex_ent
+-. . -..- - / . -. - .-. -.--
+# expand lists in dataframe to include all permutations of lists
+extracted_entities_ex = extracted_entities.copy()
+for col in extracted_entities_ex.columns:
+    extracted_entities_ex = extracted_entities_ex.explode(col)
+
+-. . -..- - / . -. - .-. -.--
+extracted_entities_ex.isna()
+-. . -..- - / . -. - .-. -.--
+extracted_entities_ex['ROOKIE'].isna()
+-. . -..- - / . -. - .-. -.--
+extracted_entities_ex[['MEMORABILIA'], ['AUTOGRAPH'], ['ROOKIE']]
+-. . -..- - / . -. - .-. -.--
+extracted_entities_ex[['MEMORABILIA', 'AUTOGRAPH', 'ROOKIE']]
+-. . -..- - / . -. - .-. -.--
+extracted_entities_ex[['MEMORABILIA', 'AUTOGRAPH', 'ROOKIE']].applymap(notna)
+-. . -..- - / . -. - .-. -.--
+extracted_entities_ex[['MEMORABILIA', 'AUTOGRAPH', 'ROOKIE']].applymap(pd.notna)
+-. . -..- - / . -. - .-. -.--
+extracted_entities_ex.groupby('index').sum()
+-. . -..- - / . -. - .-. -.--
+extracted_entities_ex.index
+-. . -..- - / . -. - .-. -.--
+dedupe.__file__
+-. . -..- - / . -. - .-. -.--
+import re
+from collections import defaultdict
+
+### external libraries
+import pandas as pd
+from tqdm import tqdm
+
+### NLP extermnal libraries
+import spacy
+from nltk.tokenize import wordpunct_tokenize
+from pandas_dedupe import link_dataframes
+
+-. . -..- - / . -. - .-. -.--
+### Load variables from data sets ###
+
+df_evaluation = pd.read_csv('data/Basketball_Sample_Data_Auction_Title_and_Matched_Title.csv')
+
+tqdm.pandas(desc='Loading data sets')
+df_evaluation['Auctiontitle'] = df_evaluation['Auctiontitle'].progress_apply(lambda x: x.strip())
+eval_titles = df_evaluation[df_evaluation['SetYear'].str.contains('2020')][0:1000]['Auctiontitle'].unique()
+eval_titles = [x.strip() for x in eval_titles]
+eval_titles = [x for x in eval_titles if 'WNBA' not in x]
+
+df_eval = df_evaluation.iloc[df_evaluation[df_evaluation['SetYear'].str.contains('2020')][0:1000]['Auctiontitle'].index][['Auctiontitle', 'MatchTitle']]
+df_eval.apply(lambda x: x.str.strip())
+df_eval = df_eval[~df_eval['Auctiontitle'].str.contains('WNBA')]
+
+df_basketball['player_names_clean'].fillna('', inplace=True)
+df_basketball['team_names_clean'].fillna('', inplace=True)
+df_basketball['manufacturer_name'].fillna('', inplace=True)
+df_basketball['brand_name'].fillna('', inplace=True)
+df_aka_players['Player'].fillna('', inplace=True)
+df_aka_players['Aka'].fillna('', inplace=True)
+
+players = list(df_basketball['player_names_clean'].unique()) + \
+          list(df_aka_players['Player'].unique()) + \
+          list(df_aka_players['Aka'].unique()) + ['Lebron James']
+
+players = list(set(players))
+reverse_players = []
+
+# Add [firstname lastname] variation
+for player in players:
+    try:
+        reverse_player = (" ".join(player.split(", ")[::-1]))
+        reverse_players.append(reverse_player)
+    except AttributeError:
+        pass
+players = players + reverse_players
+
+players = list(set(players))
+players.remove('')
+
+-. . -..- - / . -. - .-. -.--
+### Training of SpaCy model ###
+
+# Add player pattern and make it case insensitive
+player_patterns = [
+    {'label': "PERSON", 'pattern': [
+        {"LOWER": str.lower(x)} for x in wordpunct_tokenize(y)
+    ]} for y in players if y
+]
+
+# Add team pattern
+teams = list(df_basketball['team_names_clean'].unique())
+teams.remove('')
+team_patterns = [
+    {'label': "TEAM", 'pattern': [
+        {"LOWER": str.lower(x)} for x in wordpunct_tokenize(y)
+    ]} for y in teams if y
+]
+
+# Add manufacturer pattern
+manufacturers = list(df_basketball['manufacturer_name'].unique())
+manufacturers.remove('')
+manufacturer_patterns = [
+    {'label': "MANUFACTURER", 'pattern': [
+        {"LOWER": str.lower(x)} for x in wordpunct_tokenize(y)
+    ]} for y in manufacturers
+]
+
+# Add brandname pattern
+brand_names = list(df_basketball['brand_name'].unique()) + \
+              list(df_aka_sets['brand'].unique())
+brand_names.remove('')
+brand_name_patterns = [
+    {'label': "BRAND_NAME", 'pattern': [
+        {"LOWER": str.lower(x)} for x in wordpunct_tokenize(y)
+    ]} for y in brand_names
+]
+
+# Add color pattern
+colors = [
+    'Silver',
+    'Blue',
+    'Red',
+    'Purple',
+    'Disco',
+    'White',
+    'Gold',
+    'Orange',
+    'Pride'
+    'Green',
+    'Pink',
+    'Black'
+]
+color_patterns = [
+    {'label': "COLOR", 'pattern': [
+        {"LOWER": str.lower(x)} for x in wordpunct_tokenize(y)
+    ]} for y in colors
+]
+
+# Add rookie pattern
+rookie_pattern = [
+    {'label': "ROOKIE", 'pattern': [{"LOWER":'rookie'}]}
+]
+
+# Add autograph pattern
+autograph_pattern = [
+    {'label': "AUTOGRAPH", 'pattern': [{"LOWER": {"REGEX":'autograph|auto|signatures'}}]}
+]
+
+# Add memobrabilia pattern
+memorabilia_pattern = [
+    {'label': "MEMORABILIA", 'pattern': [{"LOWER": {"REGEX":'memorab[a-zA-Z]+'}}]}
+]
+
+# Add card number pattern
+card_num_pattern = [
+    {'label': "CARD_NUM", 'pattern': [{"TEXT": "#"}, {"LIKE_NUM": True}]}
+]
+
+# Add print run pattern
+print_run_pattern = [
+    {'label': "PRINT_RUN", 'pattern': [{"TEXT": {"REGEX":"/[0-9]+"}}]}
+    #{'label': "PRINT_RUN", 'pattern': [{"TEXT": "/"}, {"LIKE_NUM": True}]}
+]
+
+# Code spacy with patterns
+ruler = nlp.add_pipe("entity_ruler", before="ner")
+ruler.add_patterns(player_patterns + team_patterns + manufacturer_patterns + \
+                   brand_name_patterns + color_patterns + rookie_pattern + autograph_pattern + \
+                   memorabilia_pattern +  print_run_pattern + card_num_pattern)
+
+-. . -..- - / . -. - .-. -.--
+def preprocess(title):
+    '''
+    Same very minimal pre-processing to make sure spaCy patterns work
+    '''
+    # Swap slash in date with hypen so that print run and date don't get confused
+    title = re.sub('([0-9]{4})/([0-9]{2})', r'\1-\2', title)
+    title = title.lower()
+    return title
+
+
+def extract(title):
+    """Helper function to extract entities from a title"""
+    title = preprocess(title)
+    sents = nlp(title)
+    labels = nlp.pipe_labels.get('ner')
+
+    title_extracted_entities = defaultdict(list)
+    for ee in sents.ents:
+        # Add entities to dict of lists if not in there already
+        title_extracted_entities[ee.label_].append(ee.text)
+
+    title_all_entities = {lab: title_extracted_entities.get(lab) for lab in labels}
+    return pd.Series(title_all_entities)
+
+
+tqdm.pandas(desc="Extracting entities from auction titles.")
+extracted_entities = df_eval['Auctiontitle'].progress_apply(extract)
+# add ebay titles and ground truth matched title to dataframe
+extracted_entities['Auctiontitle'] = df_eval['Auctiontitle']
+extracted_entities['MatchTitle'] = df_eval['MatchTitle']
+
+-. . -..- - / . -. - .-. -.--
+# expand lists in dataframe to include all permutations of lists
+extracted_entities_ex = extracted_entities.copy()
+for col in extracted_entities_ex.columns:
+    extracted_entities_ex = extracted_entities_ex.explode(col, ignore_index=True)
+
+-. . -..- - / . -. - .-. -.--
+join_fields = ['year', 'brand_name', 'player_names_clean', 'team_names_clean', 'autographed', 'memorabilia', 'rookie_card']
+
+df_joined = link_dataframes(df_basketball, extracted_entities_ex_renamed, join_fields)
+
+-. . -..- - / . -. - .-. -.--
+n
+-. . -..- - / . -. - .-. -.--
+u
+-. . -..- - / . -. - .-. -.--
+f
+-. . -..- - / . -. - .-. -.--
+import pandas
+-. . -..- - / . -. - .-. -.--
+pd.read_json('link_dataframes_training.json')
+-. . -..- - / . -. - .-. -.--
+import pandas as pd
+-. . -..- - / . -. - .-. -.--
+df_matched = pd.read_json('link_dataframes_training.json')
+-. . -..- - / . -. - .-. -.--
+import re
+from collections import defaultdict
+
+### external libraries
+import pandas as pd
+from tqdm import tqdm
+
+### NLP extermnal libraries
+import spacy
+from nltk.tokenize import wordpunct_tokenize
+from pandas_dedupe import link_dataframes
+
+if __name__ == '__main__':
+    #%%
+
+    ### Load spacy model
+    nlp = spacy.load("en_core_web_sm")
+
+    ### Data sets to load
+    df_basketball = pd.read_csv('data/pricing_items_basketball_cleaned.csv')
+    df_aka_players = pd.read_excel('data/Set_Aka_and_Player_Aka.xlsx', sheet_name=0)
+    df_aka_sets = pd.read_excel('data/Set_Aka_and_Player_Aka.xlsx', sheet_name=1)
+
+
+
+    #%%
+
+    ### Load variables from data sets ###
+
+    df_evaluation = pd.read_csv('data/Basketball_Sample_Data_Auction_Title_and_Matched_Title.csv')
+
+    tqdm.pandas(desc='Loading data sets')
+    df_evaluation['Auctiontitle'] = df_evaluation['Auctiontitle'].progress_apply(lambda x: x.strip())
+    eval_titles = df_evaluation[df_evaluation['SetYear'].str.contains('2020')][0:1000]['Auctiontitle'].unique()
+    eval_titles = [x.strip() for x in eval_titles]
+    eval_titles = [x for x in eval_titles if 'WNBA' not in x]
+
+    df_eval = df_evaluation.iloc[df_evaluation[df_evaluation['SetYear'].str.contains('2020')][0:1000]['Auctiontitle'].index][['Auctiontitle', 'MatchTitle']]
+    df_eval.apply(lambda x: x.str.strip())
+    df_eval = df_eval[~df_eval['Auctiontitle'].str.contains('WNBA')]
+
+    df_basketball['player_names_clean'].fillna('', inplace=True)
+    df_basketball['team_names_clean'].fillna('', inplace=True)
+    df_basketball['manufacturer_name'].fillna('', inplace=True)
+    df_basketball['brand_name'].fillna('', inplace=True)
+    df_aka_players['Player'].fillna('', inplace=True)
+    df_aka_players['Aka'].fillna('', inplace=True)
+
+    players = list(df_basketball['player_names_clean'].unique()) + \
+              list(df_aka_players['Player'].unique()) + \
+              list(df_aka_players['Aka'].unique()) + ['Lebron James']
+
+    players = list(set(players))
+    reverse_players = []
+
+    # Add [firstname lastname] variation
+    for player in players:
+        try:
+            reverse_player = (" ".join(player.split(", ")[::-1]))
+            reverse_players.append(reverse_player)
+        except AttributeError:
+            pass
+    players = players + reverse_players
+
+    players = list(set(players))
+    players.remove('')
+
+    #%%
+
+    ### Training of SpaCy model ###
+
+    # Add player pattern and make it case insensitive
+    player_patterns = [
+        {'label': "PERSON", 'pattern': [
+            {"LOWER": str.lower(x)} for x in wordpunct_tokenize(y)
+        ]} for y in players if y
+    ]
+
+    # Add team pattern
+    teams = list(df_basketball['team_names_clean'].unique())
+    teams.remove('')
+    team_patterns = [
+        {'label': "TEAM", 'pattern': [
+            {"LOWER": str.lower(x)} for x in wordpunct_tokenize(y)
+        ]} for y in teams if y
+    ]
+
+    # Add manufacturer pattern
+    manufacturers = list(df_basketball['manufacturer_name'].unique())
+    manufacturers.remove('')
+    manufacturer_patterns = [
+        {'label': "MANUFACTURER", 'pattern': [
+            {"LOWER": str.lower(x)} for x in wordpunct_tokenize(y)
+        ]} for y in manufacturers
+    ]
+
+    # Add brandname pattern
+    brand_names = list(df_basketball['brand_name'].unique()) + \
+                  list(df_aka_sets['brand'].unique())
+    brand_names.remove('')
+    brand_name_patterns = [
+        {'label': "BRAND_NAME", 'pattern': [
+            {"LOWER": str.lower(x)} for x in wordpunct_tokenize(y)
+        ]} for y in brand_names
+    ]
+
+    # Add color pattern
+    colors = [
+        'Silver',
+        'Blue',
+        'Red',
+        'Purple',
+        'Disco',
+        'White',
+        'Gold',
+        'Orange',
+        'Pride'
+        'Green',
+        'Pink',
+        'Black'
+    ]
+    color_patterns = [
+        {'label': "COLOR", 'pattern': [
+            {"LOWER": str.lower(x)} for x in wordpunct_tokenize(y)
+        ]} for y in colors
+    ]
+
+    # Add rookie pattern
+    rookie_pattern = [
+        {'label': "ROOKIE", 'pattern': [{"LOWER":'rookie'}]}
+    ]
+
+    # Add autograph pattern
+    autograph_pattern = [
+        {'label': "AUTOGRAPH", 'pattern': [{"LOWER": {"REGEX":'autograph|auto|signatures'}}]}
+    ]
+
+    # Add memobrabilia pattern
+    memorabilia_pattern = [
+        {'label': "MEMORABILIA", 'pattern': [{"LOWER": {"REGEX":'memorab[a-zA-Z]+'}}]}
+    ]
+
+    # Add card number pattern
+    card_num_pattern = [
+        {'label': "CARD_NUM", 'pattern': [{"TEXT": "#"}, {"LIKE_NUM": True}]}
+    ]
+
+    # Add print run pattern
+    print_run_pattern = [
+        {'label': "PRINT_RUN", 'pattern': [{"TEXT": {"REGEX":"/[0-9]+"}}]}
+        #{'label': "PRINT_RUN", 'pattern': [{"TEXT": "/"}, {"LIKE_NUM": True}]}
+    ]
+
+    # Code spacy with patterns
+    ruler = nlp.add_pipe("entity_ruler", before="ner")
+    ruler.add_patterns(player_patterns + team_patterns + manufacturer_patterns + \
+                       brand_name_patterns + color_patterns + rookie_pattern + autograph_pattern + \
+                       memorabilia_pattern +  print_run_pattern + card_num_pattern)
+
+    #%%
+
+    def preprocess(title):
+        '''
+        Same very minimal pre-processing to make sure spaCy patterns work
+        '''
+        # Swap slash in date with hypen so that print run and date don't get confused
+        title = re.sub('([0-9]{4})/([0-9]{2})', r'\1-\2', title)
+        title = title.lower()
+        return title
+
+
+    def extract(title):
+        """Helper function to extract entities from a title"""
+        title = preprocess(title)
+        sents = nlp(title)
+        labels = nlp.pipe_labels.get('ner')
+
+        title_extracted_entities = defaultdict(list)
+        for ee in sents.ents:
+            # Add entities to dict of lists if not in there already
+            title_extracted_entities[ee.label_].append(ee.text)
+
+        title_all_entities = {lab: title_extracted_entities.get(lab) for lab in labels}
+        return pd.Series(title_all_entities)
+
+
+    tqdm.pandas(desc="Extracting entities from auction titles.")
+    extracted_entities = df_eval['Auctiontitle'].progress_apply(extract)
+    # add ebay titles and ground truth matched title to dataframe
+    extracted_entities['Auctiontitle'] = df_eval['Auctiontitle']
+    extracted_entities['MatchTitle'] = df_eval['MatchTitle']
+
+
+
+    #%%
+    # expand lists in dataframe to include all permutations of lists
+    extracted_entities_ex = extracted_entities.copy()
+    for col in extracted_entities_ex.columns:
+        extracted_entities_ex = extracted_entities_ex.explode(col, ignore_index=True)
+
+    #%% Formatting datasets for comparison
+
+    # join year_start and year_end to make a single year column in df_basketball
+    df_basketball['year'] = df_basketball['year_start'].astype('Int64').astype('str') \
+                            + '-' \
+                            + df_basketball['year_end'].astype('Int64').astype('str').str[-2:]
+
+    # Change str/None to True/False in extracted_entities_ex columns
+    extracted_entities_ex[['MEMORABILIA', 'AUTOGRAPH', 'ROOKIE']] = \
+        extracted_entities_ex[['MEMORABILIA', 'AUTOGRAPH', 'ROOKIE']].applymap(pd.notna)
+
+    # Renaming columns for join
+    extracted_entities_ex_renamed = extracted_entities_ex.rename(columns={'AUTOGRAPH': 'autographed',
+                                                                          'MEMORABILIA': 'memorabilia',
+                                                                          'ROOKIE': 'rookie_card',
+                                                                          'BRAND_NAME': 'brand_name',
+                                                                          'PERSON': 'player_names_clean',
+                                                                          'TEAM': 'team_names_clean',
+                                                                          'DATE': 'year'})
+    #%% Do the join
+
+    join_fields = ['year', 'brand_name', 'player_names_clean', 'team_names_clean', 'autographed', 'memorabilia', 'rookie_card']
+
+
+    df_joined = link_dataframes(df_basketball, extracted_entities_ex_renamed, join_fields)
+
+-. . -..- - / . -. - .-. -.--
+extracted_entities[extracted_entities['PERSON'].isna()].shape
+-. . -..- - / . -. - .-. -.--
+df_joined[df_joined['title'] == df_joined['MatchTitle']]
+-. . -..- - / . -. - .-. -.--
+join_fields = ['year', 'brand_name', 'player_names_clean', 'team_names_clean', 'autographed', 'memorabilia', 'rookie_card']
+
+extracted_entities_ex_renamed = extracted_entities_ex_renamed[join_fields]
+df_basketball_join = df_basketball[join_fields]
+
+df_joined = link_dataframes(df_basketball, extracted_entities_ex_renamed, join_fields)
+
+-. . -..- - / . -. - .-. -.--
+join_fields = ['year', 'brand_name', 'player_names_clean', 'team_names_clean', 'autographed', 'memorabilia', 'rookie_card']
+
+extracted_entities_ex_renamed = extracted_entities_ex_renamed[join_fields]
+df_basketball_join = df_basketball[join_fields]
+
+df_joined = link_dataframes(df_basketball_join, extracted_entities_ex_renamed, join_fields)
+
+-. . -..- - / . -. - .-. -.--
+df_basketball['player_names_clean'].fillna('', inplace=True)
+df_basketball['team_names_clean'].fillna('', inplace=True)
+df_basketball['manufacturer_name'].fillna('', inplace=True)
+df_basketball['brand_name'].fillna('', inplace=True)
+df_aka_players['Player'].fillna('', inplace=True)
+df_aka_players['Aka'].fillna('', inplace=True)
+
+-. . -..- - / . -. - .-. -.--
+# join year_start and year_end to make a single year column in df_basketball
+df_basketball['year'] = df_basketball['year_start'].astype('Int64').astype('str') \
+                        + '-' \
+                        + df_basketball['year_end'].astype('Int64').astype('str').str[-2:]
+
+# Change str/None to True/False in extracted_entities_ex columns
+extracted_entities_ex[['MEMORABILIA', 'AUTOGRAPH', 'ROOKIE']] = \
+    extracted_entities_ex[['MEMORABILIA', 'AUTOGRAPH', 'ROOKIE']].applymap(pd.notna)
+
+# Renaming columns for join
+extracted_entities_ex_renamed = extracted_entities_ex.rename(columns={'AUTOGRAPH': 'autographed',
+                                                                      'MEMORABILIA': 'memorabilia',
+                                                                      'ROOKIE': 'rookie_card',
+                                                                      'BRAND_NAME': 'brand_name',
+                                                                      'PERSON': 'player_names_clean',
+                                                                      'TEAM': 'team_names_clean',
+                                                                      'DATE': 'year'})
+
+-. . -..- - / . -. - .-. -.--
+join_fields = ['year', 'brand_name', 'player_names_clean', 'team_names_clean', 'autographed', 'memorabilia', 'rookie_card']
+
+extracted_entities_ex_renamed = extracted_entities_ex_renamed[join_fields + ['MatchTitle']]
+df_basketball_join = df_basketball[join_fields + ['title']]
+
+df_joined = link_dataframes(df_basketball_join, extracted_entities_ex_renamed, join_fields)
+
+-. . -..- - / . -. - .-. -.--
+runfile('/home/jazimmerman/PycharmProjects/plainspoken/beckett/ebay_parsing/artemis-ebay-parsing/naive_ebay_record_linkage.py', wdir='/home/jazimmerman/PycharmProjects/plainspoken/beckett/ebay_parsing/artemis-ebay-parsing')
+-. . -..- - / . -. - .-. -.--
+import re
+from collections import defaultdict
+
+### external libraries
+import pandas as pd
+from tqdm import tqdm
+
+### NLP extermnal libraries
+import spacy
+from nltk.tokenize import wordpunct_tokenize
+from pandas_dedupe import link_dataframes
+
+if __name__ == '__main__':
+    #%%
+
+    ### Load spacy model
+    nlp = spacy.load("en_core_web_sm")
+
+    ### Data sets to load
+    df_basketball = pd.read_csv('data/pricing_items_basketball_cleaned.csv')
+    df_aka_players = pd.read_excel('data/Set_Aka_and_Player_Aka.xlsx', sheet_name=0)
+    df_aka_sets = pd.read_excel('data/Set_Aka_and_Player_Aka.xlsx', sheet_name=1)
+
+
+
+    #%%
+
+    ### Load variables from data sets ###
+
+    df_evaluation = pd.read_csv('data/Basketball_Sample_Data_Auction_Title_and_Matched_Title.csv')
+
+    tqdm.pandas(desc='Loading data sets')
+    df_evaluation['Auctiontitle'] = df_evaluation['Auctiontitle'].progress_apply(lambda x: x.strip())
+    eval_titles = df_evaluation[df_evaluation['SetYear'].str.contains('2020')][0:1000]['Auctiontitle'].unique()
+    eval_titles = [x.strip() for x in eval_titles]
+    eval_titles = [x for x in eval_titles if 'WNBA' not in x]
+
+    df_eval = df_evaluation.iloc[df_evaluation[df_evaluation['SetYear'].str.contains('2020')][0:1000]['Auctiontitle'].index][['Auctiontitle', 'MatchTitle']]
+    df_eval.apply(lambda x: x.str.strip())
+    df_eval = df_eval[~df_eval['Auctiontitle'].str.contains('WNBA')]
+
+    df_basketball['player_names_clean'].fillna('', inplace=True)
+    df_basketball['team_names_clean'].fillna('', inplace=True)
+    df_basketball['manufacturer_name'].fillna('', inplace=True)
+    df_basketball['brand_name'].fillna('', inplace=True)
+    df_aka_players['Player'].fillna('', inplace=True)
+    df_aka_players['Aka'].fillna('', inplace=True)
+
+    players = list(df_basketball['player_names_clean'].unique()) + \
+              list(df_aka_players['Player'].unique()) + \
+              list(df_aka_players['Aka'].unique()) + ['Lebron James']
+
+    players = list(set(players))
+    reverse_players = []
+
+    # Add [firstname lastname] variation
+    for player in players:
+        try:
+            reverse_player = (" ".join(player.split(", ")[::-1]))
+            reverse_players.append(reverse_player)
+        except AttributeError:
+            pass
+    players = players + reverse_players
+
+    players = list(set(players))
+    players.remove('')
+
+    #%%
+
+    ### Training of SpaCy model ###
+
+    # Add player pattern and make it case insensitive
+    player_patterns = [
+        {'label': "PERSON", 'pattern': [
+            {"LOWER": str.lower(x)} for x in wordpunct_tokenize(y)
+        ]} for y in players if y
+    ]
+
+    # Add team pattern
+    teams = list(df_basketball['team_names_clean'].unique())
+    teams.remove('')
+    team_patterns = [
+        {'label': "TEAM", 'pattern': [
+            {"LOWER": str.lower(x)} for x in wordpunct_tokenize(y)
+        ]} for y in teams if y
+    ]
+
+    # Add manufacturer pattern
+    manufacturers = list(df_basketball['manufacturer_name'].unique())
+    manufacturers.remove('')
+    manufacturer_patterns = [
+        {'label': "MANUFACTURER", 'pattern': [
+            {"LOWER": str.lower(x)} for x in wordpunct_tokenize(y)
+        ]} for y in manufacturers
+    ]
+
+    # Add brandname pattern
+    brand_names = list(df_basketball['brand_name'].unique()) + \
+                  list(df_aka_sets['brand'].unique())
+    brand_names.remove('')
+    brand_name_patterns = [
+        {'label': "BRAND_NAME", 'pattern': [
+            {"LOWER": str.lower(x)} for x in wordpunct_tokenize(y)
+        ]} for y in brand_names
+    ]
+
+    # Add color pattern
+    colors = [
+        'Silver',
+        'Blue',
+        'Red',
+        'Purple',
+        'Disco',
+        'White',
+        'Gold',
+        'Orange',
+        'Pride'
+        'Green',
+        'Pink',
+        'Black'
+    ]
+    color_patterns = [
+        {'label': "COLOR", 'pattern': [
+            {"LOWER": str.lower(x)} for x in wordpunct_tokenize(y)
+        ]} for y in colors
+    ]
+
+    # Add rookie pattern
+    rookie_pattern = [
+        {'label': "ROOKIE", 'pattern': [{"LOWER":'rookie'}]}
+    ]
+
+    # Add autograph pattern
+    autograph_pattern = [
+        {'label': "AUTOGRAPH", 'pattern': [{"LOWER": {"REGEX":'autograph|auto|signatures'}}]}
+    ]
+
+    # Add memobrabilia pattern
+    memorabilia_pattern = [
+        {'label': "MEMORABILIA", 'pattern': [{"LOWER": {"REGEX":'memorab[a-zA-Z]+'}}]}
+    ]
+
+    # Add card number pattern
+    card_num_pattern = [
+        {'label': "CARD_NUM", 'pattern': [{"TEXT": "#"}, {"LIKE_NUM": True}]}
+    ]
+
+    # Add print run pattern
+    print_run_pattern = [
+        {'label': "PRINT_RUN", 'pattern': [{"TEXT": {"REGEX":"/[0-9]+"}}]}
+        #{'label': "PRINT_RUN", 'pattern': [{"TEXT": "/"}, {"LIKE_NUM": True}]}
+    ]
+
+    # Code spacy with patterns
+    ruler = nlp.add_pipe("entity_ruler", before="ner")
+    ruler.add_patterns(player_patterns + team_patterns + manufacturer_patterns + \
+                       brand_name_patterns + color_patterns + rookie_pattern + autograph_pattern + \
+                       memorabilia_pattern +  print_run_pattern + card_num_pattern)
+
+    #%%
+
+    def preprocess(title):
+        '''
+        Same very minimal pre-processing to make sure spaCy patterns work
+        '''
+        # Swap slash in date with hypen so that print run and date don't get confused
+        title = re.sub('([0-9]{4})/([0-9]{2})', r'\1-\2', title)
+        title = title.lower()
+        return title
+
+
+    def extract(title):
+        """Helper function to extract entities from a title"""
+        title = preprocess(title)
+        sents = nlp(title)
+        labels = nlp.pipe_labels.get('ner')
+
+        title_extracted_entities = defaultdict(list)
+        for ee in sents.ents:
+            # Add entities to dict of lists if not in there already
+            title_extracted_entities[ee.label_].append(ee.text)
+
+        title_all_entities = {lab: title_extracted_entities.get(lab) for lab in labels}
+        return pd.Series(title_all_entities)
+
+
+    tqdm.pandas(desc="Extracting entities from auction titles.")
+    extracted_entities = df_eval['Auctiontitle'].progress_apply(extract)
+    # add ebay titles and ground truth matched title to dataframe
+    extracted_entities['Auctiontitle'] = df_eval['Auctiontitle']
+    extracted_entities['MatchTitle'] = df_eval['MatchTitle']
+
+
+
+    #%%
+    # expand lists in dataframe to include all permutations of lists
+    extracted_entities_ex = extracted_entities.copy()
+    for col in extracted_entities_ex.columns:
+        extracted_entities_ex = extracted_entities_ex.explode(col, ignore_index=True)
+
+    #%% Formatting datasets for comparison
+
+    # join year_start and year_end to make a single year column in df_basketball
+    df_basketball['year'] = df_basketball['year_start'].astype('Int64').astype('str') \
+                            + '-' \
+                            + df_basketball['year_end'].astype('Int64').astype('str').str[-2:]
+
+    # Change str/None to True/False in extracted_entities_ex columns
+    extracted_entities_ex[['MEMORABILIA', 'AUTOGRAPH', 'ROOKIE']] = \
+        extracted_entities_ex[['MEMORABILIA', 'AUTOGRAPH', 'ROOKIE']].applymap(pd.notna)
+
+    # Renaming columns for join
+    extracted_entities_ex_renamed = extracted_entities_ex.rename(columns={'AUTOGRAPH': 'autographed',
+                                                                          'MEMORABILIA': 'memorabilia',
+                                                                          'ROOKIE': 'rookie_card',
+                                                                          'BRAND_NAME': 'brand_name',
+                                                                          'PERSON': 'player_names_clean',
+                                                                          'TEAM': 'team_names_clean',
+                                                                          'DATE': 'year'})
+    #%% Do the join
+
+    join_fields = ['year', 'brand_name', 'player_names_clean', 'team_names_clean', 'autographed', 'memorabilia', 'rookie_card']
+
+    extracted_entities_ex_renamed = extracted_entities_ex_renamed[join_fields + ['MatchTitle']]
+    df_basketball_join = df_basketball[join_fields + ['title']]
+
+    df_joined = link_dataframes(df_basketball_join, extracted_entities_ex_renamed, join_fields)
+
+-. . -..- - / . -. - .-. -.--
+### Load spacy model
+nlp = spacy.load("en_core_web_sm")
+
+### Data sets to load
+df_basketball = pd.read_csv('data/pricing_items_basketball_cleaned.csv')
+df_aka_players = pd.read_excel('data/Set_Aka_and_Player_Aka.xlsx', sheet_name=0)
+df_aka_sets = pd.read_excel('data/Set_Aka_and_Player_Aka.xlsx', sheet_name=1)
+
+-. . -..- - / . -. - .-. -.--
+import pandas as pd
+import numpy as np
+from tqdm import tqdm
+import re
+
+-. . -..- - / . -. - .-. -.--
+df_evaluation = pd.read_csv('data/Basketball_Sample_Data_Auction_Title_and_Matched_Title.csv')
+-. . -..- - / . -. - .-. -.--
+reverse_players = lambda x: ' '.join(reversed(x.replace(' ', '').split(',')))
+new_df = pd.DataFrame(df_evaluation['Player'].apply(reverse_players))
+
+-. . -..- - / . -. - .-. -.--
+reverse_players = lambda x: ' '.join(reversed(x.replace(' ', '').split(',')))
+new_df = df_evaluation[['Player']].apply(reverse_players)
+
+-. . -..- - / . -. - .-. -.--
+reverse_players = lambda x: ' '.join(reversed(x.replace(' ', '').split(',')))
+new_df = df_evaluation[['Player']].str.apply(reverse_players)
+
+-. . -..- - / . -. - .-. -.--
+reverse_players = lambda x: ' '.join(reversed(x.replace(' ', '').split(',')))
+new_df = pd.DataFrame(df_evaluation['Player'].str.apply(reverse_players))
+
+-. . -..- - / . -. - .-. -.--
+reverse_players = lambda x: ' '.join(reversed(x.replace(' ', '').split(',')))
+new_df = pd.DataFrame(df_evaluation['Player'].str.applymap(reverse_players))
+
+-. . -..- - / . -. - .-. -.--
+reverse_players = lambda x: ' '.join(reversed(x.replace(' ', '').split(',')))
+new_df = pd.DataFrame(df_evaluation['Player'].str.map(reverse_players))
+
+-. . -..- - / . -. - .-. -.--
+reverse_players = lambda x: ' '.join(reversed(x.replace(' ', '').split(',')))
+new_df = pd.DataFrame(df_evaluation['Player'].applymap(reverse_players))
+
+-. . -..- - / . -. - .-. -.--
+reverse_players = lambda x: ' '.join(reversed(x.replace(' ', '').split(',')))
+new_df = pd.DataFrame(df_evaluation['Player'].map(reverse_players))
+
+-. . -..- - / . -. - .-. -.--
+reverse_players = lambda x: ' '.join(reversed(x.replace(' ', '').split(',')))
+new_df = pd.DataFrame(df_evaluation['Player'].astype(str).map(reverse_players))
+
+-. . -..- - / . -. - .-. -.--
+reverse_players = lambda x: ' '.join(reversed(x.replace(' ', '').split(',')))
+new_df = pd.DataFrame(df_evaluation['Player'].astype(str).map(reverse_players))
+new_df['Player'] = new_df['Player'].str.replace('[^a-zA-Z.]+', '')
+
+-. . -..- - / . -. - .-. -.--
+reverse_players = lambda x: ' '.join(reversed(x.replace(' ', '').split(',')))
+new_df = pd.DataFrame(df_evaluation['Player'].astype(str).map(reverse_players))
+new_df['Player'] = new_df['Player'].str.replace('[^a-zA-Z.]+', ' ')
+
+-. . -..- - / . -. - .-. -.--
+reverse_players = lambda x: ' '.join(reversed(x.replace(' ', '').split(',')))
+new_df = pd.DataFrame(df_evaluation['Player'].astype(str).map(reverse_players))
+#new_df['Player'] = new_df['Player'].str.replace('[^a-zA-Z.]+', ' ')
+
+-. . -..- - / . -. - .-. -.--
+reverse_players = lambda x: ' '.join(reversed(x.replace(' ', '').split(',')))
+new_df = pd.DataFrame(df_evaluation['Player'].astype(str).map(reverse_players))
+new_df['Player'] = new_df['Player'].str.replace('[^a-zA-Z. ]+', ' ')
+
+-. . -..- - / . -. - .-. -.--
+reverse_players = lambda x: ' '.join(reversed(x.replace(' ', '').split(',')))
+new_df = pd.DataFrame(df_evaluation['Player'].astype(str).map(reverse_players))
+new_df['Player'] = new_df['Player'].str.replace('[^a-zA-Z. ]+', '')
+
+-. . -..- - / . -. - .-. -.--
+reverse_players = lambda x: ' '.join(reversed(x.replace(' ', '').split(',')))
+new_df = pd.DataFrame(df_evaluation['Player'].astype(str).map(reverse_players))
+new_df['Player'] = new_df['Player'].str.replace('[^a-zA-Z.\s]+', '')
+
+-. . -..- - / . -. - .-. -.--
+reverse_players = lambda x: ' '.join(reversed(x.replace('[^a-zA-Z.\s]+', '').split(',')))
+new_df = pd.DataFrame(df_evaluation['Player'].astype(str).map(reverse_players))
+
+-. . -..- - / . -. - .-. -.--
+reverse_players = lambda x: ' '.join(reversed(x.replace('[^a-zA-Z.]+', '').split(',')))
+new_df = pd.DataFrame(df_evaluation['Player'].astype(str).map(reverse_players))
+
+-. . -..- - / . -. - .-. -.--
+reverse_players = lambda x: ' '.join(reversed(re.sub('[^a-zA-Z.]+', '', str(x)).split(',')))
+new_df = pd.DataFrame(df_evaluation['Player'].map(reverse_players))
+
+-. . -..- - / . -. - .-. -.--
+reverse_players = lambda x: ' '.join(reversed(re.sub('[^a-zA-Z.,]+', '', str(x)).split(',')))
+new_df = pd.DataFrame(df_evaluation['Player'].map(reverse_players))
+
+-. . -..- - / . -. - .-. -.--
+reverse_players = lambda x: ' '.join(reversed(re.sub('[^a-zA-Z.,]+', '', str(x)).split(',')))
+new_df = pd.DataFrame(df_evaluation['Player'].map(reverse_players)).unique()
+
+-. . -..- - / . -. - .-. -.--
+reverse_players = lambda x: ' '.join(reversed(re.sub('[^a-zA-Z.,]+', '', str(x)).split(',')))
+new_df = pd.DataFrame(df_evaluation['Player'].map(reverse_players)).unique
+
+-. . -..- - / . -. - .-. -.--
+reverse_players = lambda x: ' '.join(reversed(re.sub('[^a-zA-Z.,]+', '', str(x)).split(',')))
+new_df = pd.DataFrame(df_evaluation['Player'].map(reverse_players)).drop_duplicates()
+
+-. . -..- - / . -. - .-. -.--
+#reverse players from 'last, first' to 'first last'
+reverse_players = lambda x: ' '.join(reversed(re.sub('[^a-zA-Z.,]+', '', str(x)).split(',')))
+new_df = pd.DataFrame(df_evaluation['Player'].map(reverse_players)).drop_duplicates()
+
+def split_year(x):
+    x = str(x).split('-')
+    start = x[0]
+    end = '19' if x[1] > 22 else '20' + x[1]
+    return start, end
+
+new_df['start_year'], new_df['end_year'] = zip(*df_evaluation['SetYear'].map(split_year))
+
+-. . -..- - / . -. - .-. -.--
+#reverse players from 'last, first' to 'first last'
+reverse_players = lambda x: ' '.join(reversed(re.sub('[^a-zA-Z.,]+', '', str(x)).split(',')))
+new_df = pd.DataFrame(df_evaluation['Player'].map(reverse_players)).drop_duplicates()
+
+def split_year(x):
+    x = str(x).split('-')
+    start = x[0]
+    end = '19' if x[1] > '22' else '20' + x[1]
+    return start, end
+
+new_df['start_year'], new_df['end_year'] = zip(*df_evaluation['SetYear'].map(split_year))
+
+-. . -..- - / . -. - .-. -.--
+#reverse players from 'last, first' to 'first last'
+reverse_players = lambda x: ' '.join(reversed(re.sub('[^a-zA-Z.,]+', '', str(x)).split(',')))
+new_df = pd.DataFrame(df_evaluation['Player'].map(reverse_players)).drop_duplicates()
+
+def split_year(x):
+    x = str(x).split('-')
+    start = x[0]
+    end = '19' if int(x[1]) > 22 else '20' + x[1]
+    return start, end
+
+new_df['start_year'], new_df['end_year'] = zip(*df_evaluation['SetYear'].map(split_year))
+
+-. . -..- - / . -. - .-. -.--
+#reverse players from 'last, first' to 'first last'
+reverse_players = lambda x: ' '.join(reversed(re.sub('[^a-zA-Z.,]+', '', str(x)).split(',')))
+new_df = pd.DataFrame(df_evaluation['Player'].map(reverse_players)).drop_duplicates()
+
+def split_year(x):
+    x = str(x).split('-')
+    if len(x) == 1:
+        return x[0], str(int(x[0]) + 1)
+    start = x[0]
+    end = '19' if int(x[1]) > 22 else '20' + x[1]
+    return start, end
+
+new_df['start_year'], new_df['end_year'] = zip(*df_evaluation['SetYear'].map(split_year))
+
+-. . -..- - / . -. - .-. -.--
+#reverse players from 'last, first' to 'first last'
+reverse_players = lambda x: ' '.join(reversed(re.sub('[^a-zA-Z.,]+', '', str(x)).split(',')))
+new_df = pd.DataFrame(df_evaluation['Player'].map(reverse_players))
+
+def split_year(x):
+    x = str(x).split('-')
+    if len(x) == 1:
+        return x[0], str(int(x[0]) + 1)
+    start = x[0]
+    end = '19' if int(x[1]) > 22 else '20' + x[1]
+    return start, end
+
+new_df['start_year'], new_df['end_year'] = zip(*df_evaluation['SetYear'].map(split_year))
+
+-. . -..- - / . -. - .-. -.--
+#reverse players from 'last, first' to 'first last'
+reverse_players = lambda x: ' '.join(reversed(re.sub('[^a-zA-Z.,]+', '', str(x)).split(',')))
+new_df = pd.DataFrame(df_evaluation['Player'].map(reverse_players))
+
+def split_year(x):
+    x = str(x).split('-')
+    if len(x) == 1:
+        return x[0], str(int(x[0]) + 1)
+    start = x[0]
+    end = '19' + x[1] if int(x[1]) > 22 else '20' + x[1]
+    return start, end
+
+new_df['start_year'], new_df['end_year'] = zip(*df_evaluation['SetYear'].map(split_year))
+
+-. . -..- - / . -. - .-. -.--
+#reverse players from 'last, first' to 'first last'
+reverse_players = lambda x: ' '.join(reversed(re.sub('[^a-zA-Z.,]+', '', str(x)).split(',')))
+synth_df = pd.DataFrame(df_evaluation['Player'].map(reverse_players))
+
+def split_year(x):
+    x = str(x).split('-')
+    if len(x) == 1:
+        return x[0], str(int(x[0]) + 1)
+    start = x[0]
+    end = '19' + x[1] if int(x[1]) > 22 else '20' + x[1]
+    return start, end
+
+synth_df['startYear'], synth_df['endYear'] = zip(*df_evaluation['SetYear'].map(split_year))
+
+synth_df['cardNumber'] = df_evaluation['CardNumber']
+synth_df['set'] = df_evaluation['setName']
+synth_df['cardNumber'] = df_evaluation['CardNumber']
+synth_df['grade'] = df_evaluation['Grade']
+synth_df['gradedBy'] = df_evaluation['Gradedby']
+
+-. . -..- - / . -. - .-. -.--
+del new_df
+-. . -..- - / . -. - .-. -.--
+#reverse players from 'last, first' to 'first last'
+reverse_players = lambda x: ' '.join(reversed(re.sub('[^a-zA-Z.,]+', '', str(x)).split(',')))
+synth_df = pd.DataFrame(df_evaluation['Player'].map(reverse_players))
+
+def split_year(x):
+    x = str(x).split('-')
+    if len(x) == 1:
+        return x[0], str(int(x[0]) + 1)
+    start = x[0]
+    end = '19' + x[1] if int(x[1]) > 22 else '20' + x[1]
+    return start, end
+
+synth_df['startYear'], synth_df['endYear'] = zip(*df_evaluation['SetYear'].map(split_year))
+
+synth_df['cardNumber'] = df_evaluation['CardNumber']
+synth_df['set'] = df_evaluation['SetName']
+synth_df['cardNumber'] = df_evaluation['CardNumber']
+synth_df['grade'] = df_evaluation['Grade']
+synth_df['gradedBy'] = df_evaluation['Gradedby']
+
+-. . -..- - / . -. - .-. -.--
+random.randint(0, 3)
+-. . -..- - / . -. - .-. -.--
+import random
+-. . -..- - / . -. - .-. -.--
+random.randint(1, 5)
+-. . -..- - / . -. - .-. -.--
+#reverse players from 'last, first' to 'first last'
+reverse_players = lambda x: ' '.join(reversed(re.sub('[^a-zA-Z.,]+', '', str(x)).split(',')))
+synth_df = pd.DataFrame(df_evaluation['Player'].map(reverse_players))
+
+# Split YYYY-YY into YYYY and YYYY
+def split_year(x):
+    x = str(x).split('-')
+    if len(x) == 1:
+        return x[0], str(int(x[0]) + 1)
+    start = x[0]
+    end = '19' + x[1] if int(x[1]) > 22 else '20' + x[1]
+    return start, end
+
+synth_df['startYear'], synth_df['endYear'] = zip(*df_evaluation['SetYear'].map(split_year))
+
+synth_df['cardNumber'] = df_evaluation['CardNumber']
+synth_df['set'] = df_evaluation['SetName']
+synth_df['cardNumber'] = df_evaluation['CardNumber']
+synth_df['grade'] = df_evaluation['Grade']
+synth_df['gradedBy'] = df_evaluation['Gradedby']
+synth_df['printRun'] = df_evaluation['PrintRun']
+synth_df['sport'] = df_evaluation['sport']
+synth_df['rookie'] = df_evaluation['Rc'].notna()
+
+-. . -..- - / . -. - .-. -.--
+#reverse players from 'last, first' to 'first last'
+reverse_players = lambda x: ' '.join(reversed(re.sub('[^a-zA-Z.,]+', '', str(x)).split(',')))
+synth_df = pd.DataFrame(df_evaluation['Player'].map(reverse_players))
+
+# Split YYYY-YY into YYYY and YYYY
+def split_year(x):
+    x = str(x).split('-')
+    if len(x) == 1:
+        return x[0], str(int(x[0]) + 1)
+    start = x[0]
+    end = '19' + x[1] if int(x[1]) > 22 else '20' + x[1]
+    return start, end
+
+synth_df['startYear'], synth_df['endYear'] = zip(*df_evaluation['SetYear'].map(split_year))
+
+synth_df['cardNumber'] = df_evaluation['CardNumber']
+synth_df['set'] = df_evaluation['SetName']
+synth_df['cardNumber'] = df_evaluation['CardNumber']
+synth_df['grade'] = df_evaluation['Grade']
+synth_df['gradedBy'] = df_evaluation['Gradedby']
+synth_df['printRun'] = df_evaluation['PrintRun']
+synth_df['sport'] = df_evaluation['sport']
+synth_df['rookie'] = df_evaluation['Rc'].notna()
+
+synth_df = synth_df.astype(str)
+
+-. . -..- - / . -. - .-. -.--
+def synthesize(row):
+
+    # Randomly select data from the same set
+    entities = []
+
+    if row['Player']:
+        entities.append(row['Player'])
+
+    #define options for start and end year
+    rand_date = random.randint(0, 4)
+    if rand_date == 0:
+        date = row['startYear']+'-'+row['endYear']
+    elif rand_date == 1:
+        date = row['startYear']
+    elif rand_date == 2:
+        date = row['endYear']
+    elif rand_date == 3:
+        date = row['startYear']+'-'+row['endYear'][2:]
+    elif rand_date == 4:
+        date = row['startYear'][2:]+'-'+row['endYear'][2:]
+    entities.append(date)
+
+    #define options for card number
+    if row['cardNumber']:
+        rand_card = random.randint(0, 1)
+        if rand_card == 0:
+            card_num = row['cardNumber']
+        elif rand_card == 1:
+            card_num = '# '+ row['cardNumber']
+        if row['printRun']:
+            card_num += f' of {row["printRun"]}'
+
+        entities.append(card_num)
+
+    if row['grade'] and row['gradedBy']:
+        grade = row['gradedBy'] + ' ' + row['grade']
+        entities.append(grade)
+
+    # add sport to end  of set name 1/4 of time
+    if row['set']:
+        rand_sport = random.randint(0, 3)
+        if rand_sport <= 2 :
+            if rand_sport == 2:
+                set = row['set']
+            else:
+                set = row['set'].split(' ')[0:random.randint(1, len(row['set'].split(' '))-1)]
+        elif rand_sport == 3:
+            set = row['set'] + ' ' + row['sport']
+
+        entities.append(set)
+
+    # Add rookie status 2/3 of the time
+    if row['rookie']:
+        rand_rookie = random.randint(0, 2)
+        if rand_rookie >= 1:
+            rookie = random.choice(['Rookie Card', 'RC', 'Rookie', 'Rc'])
+            entities.append(rookie)
+
+    entities_shuffled = random.choice(entities)
+
+    synth_title = ' '.join(entities_shuffled)
+
+    return synth_title
+
+synth_df['synthetic'] = synth_df.apply(synthesize, axis=1)
+
+-. . -..- - / . -. - .-. -.--
+runfile('/home/jazimmerman/PycharmProjects/plainspoken/beckett/ebay_parsing/artemis-ebay-parsing/data_processing/synthetic.py', wdir='/home/jazimmerman/PycharmProjects/plainspoken/beckett/ebay_parsing/artemis-ebay-parsing/data_processing')
+-. . -..- - / . -. - .-. -.--
+runfile('/home/jazimmerman/PycharmProjects/plainspoken/beckett/ebay_parsing/artemis-ebay-parsing/dedupe_prototype.py', wdir='/home/jazimmerman/PycharmProjects/plainspoken/beckett/ebay_parsing/artemis-ebay-parsing')

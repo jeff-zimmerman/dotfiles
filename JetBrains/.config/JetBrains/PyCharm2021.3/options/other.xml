@@ -1,0 +1,123 @@
+<application>
+  <component name="AppInspectionProfilesVisibleTreeState">
+    <entry key="Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Angular</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="DynamicPluginEnabler">
+    <trackers>
+      <map>
+        <entry key="25tJk9ldlvW0GwJVsT0oyy25Fja">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="26YyI98ahipy6AKf2t01MaIwoP2">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="26hUUeZaHgMVRDj1M4PLbEuSXdu">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="26tNi1KzQBMbRTsldWI6xWTUWGG">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="271H5raKq9V8GvbgYKZmcpAvgw1">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="277RRgolYJSuw7QoRm4qfEbSL8y">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="27AT98MVlOmHMhM1b0Fp9wEfXHO">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="27CqheZ8QgGKmnRkcy4ZArf8qLX">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="27ehmXdvMRODxV44CXXewJKQ7xf">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+      </map>
+    </trackers>
+  </component>
+  <component name="NotRoamableUiSettings">
+    <option name="fontScale" value="1.0" />
+    <option name="fontSize" value="16" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="CWM_LOGGING_VERSION" value="1" />
+    <property name="DocumentationAutoUpdateEnabled" value="true" />
+    <property name="ExpandBeforeRunStepsPanel" value="true" />
+    <property name="FileTemplates.SelectedTemplate" value="HTML File" />
+    <property name="FindSplitterProportion" value="0.3299428" />
+    <property name="MarketplacePluginsSearchHistory" value="copilot" />
+    <property name="NonModalCommitCustomization.IsApplied" value="true" />
+    <property name="PluginConfigurable.selectionTab" value="1" />
+    <property name="PyCharm.InitialConfiguration" value="true" />
+    <property name="PyCharm.InitialConfiguration.V2" value="true" />
+    <property name="PyCharm.InitialConfiguration.V3" value="true" />
+    <property name="PyCharm.InitialConfiguration.V4" value="true" />
+    <property name="PyCharm.InitialConfiguration.V5" value="true" />
+    <property name="PyCharm.InitialConfiguration.V6" value="true" />
+    <property name="PyCharm.InitialConfiguration.V7" value="true" />
+    <property name="ShowDocumentationInToolWindow" value="true" />
+    <property name="appcds.runOnSecondStart" value="PY-213.7172.26-1e0f7cf51ffa6e4cff71acd86cebef326186e63ed9c29cd6eab2ecab34dd636a" />
+    <property name="ask.about.ctrl.y.shortcut.v2" value="true" />
+    <property name="bundled.plugins.list.saved.version" value="PY-213.7172.26" />
+    <property name="debugger.smart.chooser.counter" value="1" />
+    <property name="evlsprt3.213" value="3" />
+    <property name="experimentalFeature.terminal.shell.command.handling" value="false" />
+    <property name="file.chooser.recent.files" value="$USER_HOME$/PycharmProjects/bes-edgeml-models/bes-edgeml-models&#10;/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml-models/elm_prediction&#10;/home/jazimmerman/PycharmProjects/bes-edgeml-models/bes-edgeml_work&#10;/home/jazimmerman/PycharmProjects/plainspoken/beckett&#10;/home/jazimmerman/PycharmProjects/plainspoken/beckett/ebay_parsing/artemis-ebay-parsing&#10;/home/jazimmerman/PycharmProjects/plainspoken/beckett/ebay_parsing&#10;/home/jazimmerman/PycharmProjects/bes-edgeml-models&#10;/home/jazimmerman/PycharmProjects/plainspoken/beckett/card_grading&#10;/home/jazimmerman/PycharmProjects/plainspoken/beckett/web_scraper&#10;/home/jazimmerman/PycharmProjects/plainspoken/watchtower&#10;/home/jazimmerman/PycharmProjects/plainspoken/watchtower/watchtower&#10;/home/jazimmerman/PycharmProjects/plainspoken/beckett/card_grading/card_grading" />
+    <property name="file.gist.reindex.count" value="145" />
+    <property name="fileTypeChangedCounter" value="2" />
+    <property name="fileTypeDetectors" value="com.intellij.database.vfs.DbStorageFileType$Detector:com.intellij.docker.dockerFile.DockerFileTypeDetector:com.intellij.ide.scratch.ScratchFileServiceImpl$Detector:com.intellij.javascript.debugger.sourcemap.SourceMapFileType$MyFileTypeDetector:org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector" />
+    <property name="got.it.tooltip.cwm.invitation.notification" value="1" />
+    <property name="got.it.tooltip.python.console.command.queue.show" value="1" />
+    <property name="got.it.tooltip.reader.mode.got.it" value="1" />
+    <property name="gotit.previous.run" value="PY-213.7172.26" />
+    <property name="ide.memory.adjusted" value="true" />
+    <property name="ide.updates.previous.build.number" value="PY-213.7172.26" />
+    <property name="ift.learning.panel.opened.in" value="213.7172.26" />
+    <property name="input.method.disabler.muted" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/plainspoken/beckett/ebay_parsing" />
+    <property name="quick.doc.font.size.v3" value="LARGE" />
+    <property name="registry.to.advanced.settings.migration.build" value="PY-213.7172.26" />
+    <property name="tasks.pass.word.conversion.enforced" value="true" />
+    <property name="ts.lib.d.ts.version" value="4.5.4" />
+  </component>
+  <component name="TerminalCommandHistoryManager">
+    <command-history-files>
+      <command-history-file filename="ebay_parsing-history" project-path="$USER_HOME$/PycharmProjects/plainspoken/beckett/ebay_parsing/ebay_parsing" last-access-time="1648832605549" />
+      <command-history-file filename="bes-edgeml_work-history" project-path="$USER_HOME$/PycharmProjects/bes-edgeml-models/bes-edgeml_work" last-access-time="1649687179814" />
+      <command-history-file filename="watchtower-history1" project-path="$USER_HOME$/PycharmProjects/plainspoken/watchtower/watchtower" last-access-time="1648739798212" />
+      <command-history-file filename="card_grading-history" project-path="$USER_HOME$/PycharmProjects/plainspoken/beckett/card_grading/card_grading" last-access-time="1648757589540" />
+      <command-history-file filename="pythonProject-history1" project-path="$USER_HOME$/PycharmProjects/pythonProject" last-access-time="1648239358833" />
+      <command-history-file filename="bes-edgeml-models-history" project-path="$USER_HOME$/PycharmProjects/bes-edgeml-models/bes-edgeml-models" last-access-time="1649705335400" />
+      <command-history-file filename="artemis-ebay-parsing-history2" project-path="$USER_HOME$/PycharmProjects/plainspoken/beckett/ebay_parsing/artemis-ebay-parsing" last-access-time="1649706749041" />
+    </command-history-files>
+  </component>
+</application>
