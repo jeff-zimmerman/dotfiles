@@ -143,9 +143,22 @@
             </RecentProjectMetaInfo>
           </value>
         </entry>
+        <entry key="$USER_HOME$/PycharmProjects/SummitHoldings/scraping">
+          <value>
+            <RecentProjectMetaInfo frameTitle="scraping – hello_world.py" opened="true" projectWorkspaceId="2OHWIsc7AAemNpSgCGRG6Rkytzs">
+              <option name="activationTimestamp" value="1681218251453" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PY-231.8109.197" />
+              <option name="buildTimestamp" value="1680104572545" />
+              <frame x="197" y="27" width="1400" height="1000" extendedState="6" />
+              <option name="productionCode" value="PY" />
+              <option name="projectOpenTimestamp" value="1681217937157" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
       </map>
     </option>
-    <option name="lastOpenedProject" value="$USER_HOME$/PycharmProjects/ApplyBot/djangoProject" />
+    <option name="lastOpenedProject" value="$USER_HOME$/PycharmProjects/SummitHoldings/scraping" />
     <option name="lastProjectLocation" value="$USER_HOME$/PycharmProjects/ApplyBot" />
   </component>
 </application>

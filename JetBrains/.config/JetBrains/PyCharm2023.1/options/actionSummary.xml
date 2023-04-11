@@ -103,7 +103,7 @@
       <i c="1" l="1660141540694" />
     </e>
     <e n="EditorBackSpace">
-      <i c="26437" l="1680723030910" />
+      <i c="26446" l="1681218196877" />
     </e>
     <e n="EditorChooseLookupItem">
       <i c="74" l="1680297890790" />
@@ -184,7 +184,7 @@
       <i c="24" l="1673303722856" />
     </e>
     <e n="EditorPaste">
-      <i c="1796" l="1680298014934" />
+      <i c="1798" l="1681217904692" />
     </e>
     <e n="EditorPasteFromX11">
       <i c="403" l="1680289821805" />
@@ -238,13 +238,13 @@
       <i c="1" l="1675713025475" />
     </e>
     <e n="FileChooser.Delete">
-      <i c="1" l="1648489317528" />
+      <i c="3" l="1681218222808" />
     </e>
     <e n="FileChooser.GotoHome">
       <i c="1" l="1673277530784" />
     </e>
     <e n="FileChooser.NewFolder">
-      <i c="6" l="1679684663841" />
+      <i c="12" l="1681218228261" />
     </e>
     <e n="FileChooser.Refresh">
       <i c="1" l="1667225453722" />
@@ -424,7 +424,7 @@
       <i c="9" l="1673292177705" />
     </e>
     <e n="NewPythonFile">
-      <i c="31" l="1680292118209" />
+      <i c="32" l="1681218181168" />
     </e>
     <e n="NewPythonPackage">
       <i c="3" l="1664565494575" />
@@ -550,7 +550,7 @@
       <i c="333" l="1678313322558" />
     </e>
     <e n="ShowSettings">
-      <i c="50" l="1679684885657" />
+      <i c="52" l="1681218020716" />
     </e>
     <e n="ShowUmlDiagram">
       <i c="2" l="1662586160032" />
@@ -665,6 +665,9 @@
     </e>
     <e n="Vcs.UpdateProject">
       <i c="38" l="1679492700051" />
+    </e>
+    <e n="Vcs.VcsClone">
+      <i c="1" l="1681217588765" />
     </e>
     <e n="ViewBreakpoints">
       <i c="18" l="1680281975699" />
@@ -810,6 +813,9 @@
     <e n="com.intellij.ide.plugins.PluginManagerMain$2">
       <i c="2" l="1675712437584" />
     </e>
+    <e n="com.intellij.ide.plugins.PluginManagerMain$3">
+      <i c="1" l="1681217929611" />
+    </e>
     <e n="com.intellij.ide.plugins.newui.TabbedPaneHeaderComponent$3">
       <i c="3" l="1675712769410" />
     </e>
@@ -820,7 +826,7 @@
       <i c="2" l="1662586145086" />
     </e>
     <e n="com.intellij.notification.NotificationAction$Simple">
-      <i c="47" l="1679492705907" />
+      <i c="48" l="1681217914995" />
     </e>
     <e n="com.intellij.openapi.actionSystem.DefaultActionGroup">
       <i c="19" l="1680291473168" />
@@ -892,13 +898,13 @@
       <i c="4" l="1673302263942" />
     </e>
     <e n="com.intellij.ui.AnActionButton$AnActionButtonWrapper">
-      <i c="2" l="1667225364582" />
+      <i c="4" l="1681218104142" />
     </e>
     <e n="com.intellij.ui.AutoScrollFromSourceHandler$AutoScrollFromSourceAction">
       <i c="1" l="1662653654376" />
     </e>
     <e n="com.intellij.ui.CommonActionsPanel$AddButton">
-      <i c="10" l="1673282998537" />
+      <i c="11" l="1681217989682" />
     </e>
     <e n="com.intellij.ui.CommonActionsPanel$RemoveButton">
       <i c="4" l="1651593504254" />
@@ -1015,10 +1021,10 @@
       <i c="1" l="1651077022318" />
     </e>
     <e n="com.jetbrains.python.sdk.AddLocalInterpreterAction">
-      <i c="11" l="1679684654933" />
+      <i c="16" l="1681218211084" />
     </e>
     <e n="com.jetbrains.python.sdk.PySdkPopupFactory$InterpreterSettingsAction">
-      <i c="7" l="1667225357576" />
+      <i c="8" l="1681218204659" />
     </e>
     <e n="com.jetbrains.python.testing.PyRerunFailedTestsAction">
       <i c="26" l="1657914579516" />
@@ -1042,7 +1048,7 @@
       <i c="1" l="1675712625482" />
     </e>
     <e n="editRunConfigurations">
-      <i c="119" l="1676239635606" />
+      <i c="120" l="1681217985208" />
     </e>
     <e n="git4idea.ui.branch.GitBranchPopup$1">
       <i c="7" l="1663957212949" />
