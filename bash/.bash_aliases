@@ -18,14 +18,20 @@ alias vim="stty stop '' -ixoff ; vim"
 
 alias rm='rm -I --preserve-root'
 
+###
+# Aliases
+###
+alias ll='ls -al'
 alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
 
 alias top="htop"
 
-function chprompt (){
-    export PS1="\[\e]0;$1@$2: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]$1@$2\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$"
+###
+# Functions
+###
+chprompt (){
+    export PS1="\[\e]0;$1@$2: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]$1@$2\[\033[00m\]:\[\033[01;34m\]\w \$\[\033[00m\]"
 }
-
-function activate () {
+activate () {
     source $1/bin/activate
 }
