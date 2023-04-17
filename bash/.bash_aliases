@@ -1,7 +1,5 @@
 alias sudo='sudo '
 alias ssh='ssh '
-alias traverse='jz6896@traverse.princeton.edu'
-alias cybele='-p 2039 zimmermanj@cybele.gat.com'
 alias python='python3'
 
 alias cd='cd '
