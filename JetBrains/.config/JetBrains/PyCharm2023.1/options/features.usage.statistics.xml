@@ -5,7 +5,7 @@
     <feature id="navigation.goto.file.line" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="navigation.popup.symbol" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="switcher" count="0" last-shown="0" last-used="0" shown-count="0" />
-    <feature id="editing.completion.replace" count="2690" last-shown="1681218197170" last-used="1680294125464" shown-count="189" />
+    <feature id="editing.completion.replace" count="2690" last-shown="1681321108529" last-used="1680294125464" shown-count="192" />
     <feature id="codeassists.complete.statement" count="1" last-shown="0" last-used="1653502072889" shown-count="0" />
     <feature id="vcs.show.quick.list" count="6" last-shown="0" last-used="1675348297775" shown-count="0" />
     <feature id="editing.convert.line.separators" count="0" last-shown="0" last-used="0" shown-count="0" />
@@ -71,7 +71,7 @@
     <feature id="refactoring.introduceVariable" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="refactoring.extractMethod" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="codeassists.generate.code" count="0" last-shown="0" last-used="0" shown-count="0" />
-    <feature id="navigation.goto.declaration" count="610" last-shown="0" last-used="1680296552595" shown-count="0" />
+    <feature id="navigation.goto.declaration" count="611" last-shown="0" last-used="1681320641844" shown-count="0" />
     <feature id="jupyter.add.cell" count="27" last-shown="0" last-used="1680294121936" shown-count="0" />
     <feature id="editing.completion.finishByDotEtc" count="3" last-shown="0" last-used="1675477513471" shown-count="0" />
     <feature id="ui.open.project.tool.window" count="0" last-shown="0" last-used="0" shown-count="0" />

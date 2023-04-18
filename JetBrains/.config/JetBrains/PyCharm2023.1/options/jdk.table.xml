@@ -1374,14 +1374,16 @@
             <root url="file:///usr/local/lib/python3.11" type="simple" />
             <root url="file:///usr/local/lib/python3.11/lib-dynload" type="simple" />
             <root url="file://$USER_HOME$/PycharmProjects/ApplyBot/venv/lib/python3.11/site-packages" type="simple" />
-            <root url="file://$USER_HOME$/.cache/JetBrains/PyCharm2022.3/python_stubs/-1036027018" type="simple" />
+            <root url="file://$USER_HOME$/.cache/JetBrains/PyCharm2023.1/python_stubs/-1036027018" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/python-skeletons" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stdlib" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/gdb" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/six" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/boto" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/mock" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/pytz" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/toml" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/tqdm" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/annoy" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/babel" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/emoji" type="simple" />
@@ -1407,6 +1409,7 @@
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/pysftp" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/stripe" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/xxhash" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/zxcvbn" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/PyMySQL" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/appdirs" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/certifi" type="simple" />
@@ -1425,7 +1428,6 @@
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/colorama" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/croniter" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/docutils" type="simple" />
-            <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/filelock" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/html5lib" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/httplib2" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/jmespath" type="simple" />
@@ -1456,14 +1458,12 @@
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/cachetools" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/commonmark" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/dateparser" type="simple" />
-            <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/frozendict" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/jsonschema" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/pyfarmhash" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/setuptools" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/simplejson" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/JACK-Client" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/contextvars" type="simple" />
-            <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/dataclasses" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/entrypoints" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/flake8-2020" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/mysqlclient" type="simple" />
@@ -1484,10 +1484,10 @@
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/humanfriendly" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/python-gflags" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/beautifulsoup4" type="simple" />
-            <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/characteristic" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/flake8-bugbear" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/python-slugify" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/singledispatch" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/dj-database-url" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/flake8-builtins" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/flake8-simplify" type="simple" />
             <root url="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stubs/mypy-extensions" type="simple" />

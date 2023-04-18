@@ -1,3 +1,8 @@
 JetBrains/*/tasks/
 JetBrains/*/ssl
-JetBrains/.config/JetBrains/PyCharm2022.1/options/github-copilot.local.xml
+JetBrains/.config/JetBrains/PyCharm202.*/options/github-copilot.local.xml
+JetBrains/.config/JetBrains/PyCharm202.*/consoles/
+JetBrains/.config/JetBrains/PyCharm202.*/scratches/
+JetBrains/*.config/JetBrains/PyCharm202.*/ssl/cacerts
+JetBrains/*.config/JetBrains/PyCharm202.*/workspace/
+

@@ -13,4 +13,11 @@ DIR=$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )
 
 # Set up my_configs.vim to work with submodule
 ln -sf $DIR/my_configs.vim $DIR/.vim_runtime/my_configs.vim
-echo "symlink created!"
+if [ -d $DIR/.vim_runtime/my_plugins  ]; then
+    rm -rf $DIR/.vim_runtime/my_plugins
+fi
+ln -sf $DIR/my_plugins $DIR/.vim_runtime/my_plugins
+echo "symlinks created!"
+
+# run update_plugins.py
+python3 $DIR/.vim_runtime/update_plugins.py

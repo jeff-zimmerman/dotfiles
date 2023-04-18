@@ -2,3 +2,9 @@
 	path = vim/.vim_runtime
 	url = https://github.com/amix/vimrc.git
     ignore = untracked
+[submodule "vim/my_plugins/vimspector"]
+	path = vim/my_plugins/vimspector
+	url = https://github.com/puremourning/vimspector.git
+[submodule "vim/my_plugins/vimspectorpy"]
+	path = vim/my_plugins/vimspectorpy
+	url = https://github.com/sagi-z/vimspectorpy.git

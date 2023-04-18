@@ -104,19 +104,6 @@
             </RecentProjectMetaInfo>
           </value>
         </entry>
-        <entry key="$USER_HOME$/PycharmProjects/ApplyBot/ApplyBot">
-          <value>
-            <RecentProjectMetaInfo frameTitle="ApplyBot – linkedin.py" projectWorkspaceId="2K5vVbUBSivhwgdTelMWAP2Wl80">
-              <option name="activationTimestamp" value="1679513575446" />
-              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PY-223.8836.43" />
-              <option name="buildTimestamp" value="1678453274292" />
-              <frame x="70" y="27" width="1850" height="1053" extendedState="6" />
-              <option name="productionCode" value="PY" />
-              <option name="projectOpenTimestamp" value="1679513575625" />
-            </RecentProjectMetaInfo>
-          </value>
-        </entry>
         <entry key="$USER_HOME$/PycharmProjects/bes-edgeml-models/bes-ml">
           <value>
             <RecentProjectMetaInfo frameTitle="bes-ml – README.md" projectWorkspaceId="2D4zeiv5yciHP94w8MfGpsJisHO">
@@ -156,9 +143,22 @@
             </RecentProjectMetaInfo>
           </value>
         </entry>
+        <entry key="$USER_HOME$/PycharmProjects/ApplyBot/ApplyBot">
+          <value>
+            <RecentProjectMetaInfo frameTitle="ApplyBot – linkedin.py" opened="true" projectWorkspaceId="2K5vVbUBSivhwgdTelMWAP2Wl80">
+              <option name="activationTimestamp" value="1681327605673" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PY-231.8109.197" />
+              <option name="buildTimestamp" value="1680104565220" />
+              <frame x="70" y="27" width="1850" height="1053" extendedState="6" />
+              <option name="productionCode" value="PY" />
+              <option name="projectOpenTimestamp" value="1681320589240" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
       </map>
     </option>
-    <option name="lastOpenedProject" value="$USER_HOME$/PycharmProjects/SummitHoldings/scraping" />
+    <option name="lastOpenedProject" value="$USER_HOME$/PycharmProjects/ApplyBot/ApplyBot" />
     <option name="lastProjectLocation" value="$USER_HOME$/PycharmProjects/ApplyBot" />
   </component>
 </application>
