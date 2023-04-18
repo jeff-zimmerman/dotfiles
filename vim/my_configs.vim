@@ -50,6 +50,3 @@ nmap <Leader>dk <Plug>VimspectorRestart
 nmap <Leader>dh <Plug>VimspectorStepOut
 nmap <Leader>dl <Plug>VimspectorStepInto
 nmap <Leader>dj <Plug>VimspectorStepOver
-
-" vimspectorpy config - Python Debugging with Vimspector
-let g:vimspectorpy#launcher = "tmux"
