@@ -30,6 +30,7 @@ let g:indent_guides_guide_size = 1
 
 " Auto Fold Config
 silent! unmap F
+au FileType python unmap <buffer> F
 
 " CtrlP config
 silent! unmap <C-f>
