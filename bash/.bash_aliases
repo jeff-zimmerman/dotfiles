@@ -1,3 +1,6 @@
+###
+# Aliases
+###
 alias sudo='sudo '
 alias ssh='ssh '
 alias python='python3'
@@ -16,13 +19,13 @@ alias vim="stty stop '' -ixoff ; vim"
 
 alias rm='rm -I --preserve-root'
 
-###
-# Aliases
-###
 alias ll='ls -al'
 alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
 
 alias top="htop"
+
+alias pivpn-start='systemctl start wg-quick@jzimmerman'
+alias pivpn-stop='systemctl stop wg-quick@jzimmerman'
 
 ###
 # Functions
