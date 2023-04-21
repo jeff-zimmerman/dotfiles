@@ -1,0 +1,3 @@
+[submodule "my_plugins/jedi"]
+	path = my_plugins/jedi
+	url = https://github.com/davidhalter/jedi-vim.git
