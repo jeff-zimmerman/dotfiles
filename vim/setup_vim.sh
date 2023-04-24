@@ -15,7 +15,7 @@ DIR=$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )
 
 # add vimspector config
 echo "Copying vimspector config"
-cat > $DIR/my_plugins/vimspector/configurations/linux/python/python.json << EOF
+cat << EOF > $DIR/my_plugins/vimspector/configurations/linux/python/python.json
 
 { // This file was added by vimspector-py
   "$schema": "https://puremourning.github.io/vimspector/schema/vimspector.schema.json",
@@ -47,14 +47,13 @@ cat > $DIR/my_plugins/vimspector/configurations/linux/python/python.json << EOF
     }
   }
 }
-
 EOF
 
-# Set up my_configs.vim to work with submodule
-echo "Copying my_configs.vim to .vim_runtime"
+# set up my_configs.vim to work with submodule
+echo "copying my_configs.vim to .vim_runtime"
 install $DIR/my_configs.vim $DIR/.vim_runtime/my_configs.vim
-echo "Copying my_plugins to .vim_runtime"
-find my_plugins/ -type f -exec install -Dm 755 "{}" "$DIR/.vim_runtime/{}" \;
+echo "copying my_plugins to .vim_runtime"
+rsync -a $DIR/my_plugins/ $DIR/.vim_runtime/my_plugins/
 
 if getopts "u" opt; then
     echo "Updating plugins"
