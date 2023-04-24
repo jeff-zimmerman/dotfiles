@@ -2,6 +2,7 @@
 set nocompatible
 
 " map key chord `jk` to <Esc>.
+call arpeggio#load()
 Arpeggio inoremap jk <Esc>
 
 " add autosave
