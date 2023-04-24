@@ -13,6 +13,43 @@ DIR=$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )
 # Run normal installation script for vim_awesome
 /bin/bash $DIR/.vim_runtime/install_awesome_vimrc.sh
 
+# add vimspector config
+echo "Copying vimspector config"
+cat > $DIR/my_plugins/vimspector/configurations/linux/python/python.json << EOF
+
+{ // This file was added by vimspector-py
+  "$schema": "https://puremourning.github.io/vimspector/schema/vimspector.schema.json",
+  "configurations": {
+    "debug this file": {
+      "adapter": "debugpy",
+      "variables": {
+        "Python": {
+          "shell": "/bin/sh -c 'if [ -z \"${dollar}VIRTUAL_ENV\" ]; then echo $$(which python3); else echo \"${dollar}VIRTUAL_ENV/bin/python\"; fi'"
+        }
+      },
+      "configuration": {
+        "type": "python",
+        "autoselect": false,
+        "request": "launch",
+        "cwd": "${workspaceRoot}",
+        "stopOnEntry": false,
+        "justMyCode": false,
+        "python": "$Python",
+        "program": "${file}",
+        "args": [ "*${CommandLineArgs}" ]
+      },
+      "breakpoints": {
+        "exception": {
+          "caught": "N",
+          "uncaught": "Y"
+        }
+      }
+    }
+  }
+}
+
+EOF
+
 # Set up my_configs.vim to work with submodule
 echo "Copying my_configs.vim to .vim_runtime"
 install $DIR/my_configs.vim $DIR/.vim_runtime/my_configs.vim
