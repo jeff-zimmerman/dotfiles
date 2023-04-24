@@ -29,7 +29,7 @@ cat << EOF > $DIR/my_plugins/vimspector/configurations/linux/python/python.json
       },
       "configuration": {
         "type": "python",
-        "autoselect": false,
+        "autoselect": true,
         "request": "launch",
         "cwd": "${workspaceRoot}",
         "stopOnEntry": false,
