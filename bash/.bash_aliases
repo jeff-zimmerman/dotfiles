@@ -26,11 +26,13 @@ alias top="htop"
 
 alias pivpn-start='systemctl start wg-quick@jzimmerman'
 alias pivpn-stop='systemctl stop wg-quick@jzimmerman'
+alias pivpn-restart='systemctl restart wg-quick@jzimmerman'
+alias pivpn-status='systemctl status wg-quick@jzimmerman'
 
 ###
 # Functions
 ###
-chprompt (){
+chprompt () {
     export PS1="\[\e]0;$1@$2: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]$1@$2\[\033[00m\]:\[\033[01;34m\]\w \$\[\033[00m\]"
 }
 activate () {
