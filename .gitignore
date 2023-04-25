@@ -6,3 +6,24 @@ JetBrains/.config/JetBrains/PyCharm202.*/scratches/
 JetBrains/*.config/JetBrains/PyCharm202.*/ssl/cacerts
 JetBrains/*.config/JetBrains/PyCharm202.*/workspace/
 
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+*.egg
+*.egg-info/
+venv/
+dist/
+build/
+eggs/
+parts/
+bin/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+

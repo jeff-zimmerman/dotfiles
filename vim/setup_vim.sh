@@ -15,8 +15,9 @@ DIR=$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )
 
 # add vimspector config
 echo "Copying vimspector config"
-cat << EOF > $DIR/my_plugins/vimspector/configurations/linux/python/python.json
-
+# make directory if it doesn't exist
+mkdir -p $DIR/my_plugins/vimspector/configurations/linux/python
+cat << "EOF" > $DIR/my_plugins/vimspector/configurations/linux/python/python.json
 { // This file was added by vimspector-py
   "$schema": "https://puremourning.github.io/vimspector/schema/vimspector.schema.json",
   "configurations": {
