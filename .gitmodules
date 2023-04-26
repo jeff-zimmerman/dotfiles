@@ -2,12 +2,12 @@
 	path = vim/.vim_runtime
 	url = https://github.com/amix/vimrc.git
     ignore = untracked
-[submodule "vim/my_plugins/vimspector"]
-	path = vim/my_plugins/vimspector
+[submodule "vim/.vim_runtime/my_plugins/vimspector"]
+	path = vim/.vim_runtime/my_plugins/vimspector
 	url = https://github.com/puremourning/vimspector.git
-[submodule "vim/my_plugins/arpeggio"]
-	path = vim/my_plugins/arpeggio
+[submodule "vim/.vim_runtime/my_plugins/arpeggio"]
+	path = vim/.vim_runtime/my_plugins/arpeggio
 	url = https://github.com/kana/vim-arpeggio.git
-[submodule "my_plugins/jedi-vim"]
-	path = vim/my_plugins/jedi-vim
+[submodule "vim/.vim_runtime/my_plugins/jedi-vim"]
+	path = vim/.vim_runtime/my_plugins/jedi-vim
 	url = https://github.com/davidhalter/jedi-vim.git
