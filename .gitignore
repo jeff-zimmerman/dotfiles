@@ -6,6 +6,8 @@ JetBrains/.config/JetBrains/PyCharm202.*/scratches/
 JetBrains/*.config/JetBrains/PyCharm202.*/ssl/cacerts
 JetBrains/*.config/JetBrains/PyCharm202.*/workspace/
 
+vim/.vim_runtime/
+
 # Python
 *.pyc
 *.pyo
