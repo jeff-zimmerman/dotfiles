@@ -52,9 +52,9 @@ DIR=$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )
 
 # set up my_configs.vim to work with submodule
 echo "copying my_configs.vim to .vim_runtime"
-install $DIR/my_configs.vim $DIR/.vim_runtime/my_configs.vim
+ln -sf $DIR/my_configs.vim $DIR/.vim_runtime/my_configs.vim
 echo "linking after to .vim_runtime"
-ln -sf $DIR/.vim_runtime/after $DIR/after
+ln -sf $DIR/after $DIR/.vim_runtime/after
 # echo "copying my_plugins to .vim_runtime"
 # rsync -a $DIR/my_plugins/ $DIR/.vim_runtime/my_plugins/
 
