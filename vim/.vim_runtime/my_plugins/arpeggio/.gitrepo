@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/ingydotnet/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/kana/vim-arpeggio.git
+	branch = master
+	commit = 01c8fc1a72ef58e490ee0490c65ee313b1b6e843
+	parent = a349ebe02def7d8917382a69aec579aad9964b82
+	method = merge
+	cmdver = 0.4.6

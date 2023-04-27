@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/ingydotnet/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/sagi-z/vimspectorpy.git
+	branch = master
+	commit = a56aaeb6a61ddcd48d0900581115d89aa92d6f74
+	parent = 169ce2c9d4f0cccc9cb0c89881f7b669b88841e9
+	method = merge
+	cmdver = 0.4.6
