@@ -12,16 +12,9 @@ DIR=$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )
 
 # Install remotes
 cd $DIR/..
-echo "Installing vim-runtime"
-git subtree add --prefix $DIR/.vim_runtime/vim_runtime vim-runtime master --squash
-while read -r line; do
-    if [[ $line == "origin" ]]; then
-        continue
-    fi
-    echo "Installing $line"
-    git subtree -q add --prefix $DIR/.vim_runtime/my_plugins/$line $line master --squash || git subtree -q pull --prefix $dir/.vim_runtime/my_plugins/$line $line main --squash || git subtree -q add --prefix $DIR/.vim_runtime/my_plugins/$line $line main --squash || git subtree -q pull --prefix $dir/.vim_runtime/my_plugins/$line $line master --squash 2>/dev/null
-done <<< "$( git remote )" # get all remotes
-cd $DIR
+echo "Installing plugins"
+# TODO: Add call to install subrepo
+sed -i "my_plugins/d" $DIR/.vim_runtime/.gitignore
 
 # Run normal installation script for vim_awesome
 /bin/bash $DIR/.vim_runtime/install_awesome_vimrc.sh

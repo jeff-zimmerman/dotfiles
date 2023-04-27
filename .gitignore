@@ -6,8 +6,8 @@ JetBrains/.config/JetBrains/PyCharm202.*/scratches/
 JetBrains/*.config/JetBrains/PyCharm202.*/ssl/cacerts
 JetBrains/*.config/JetBrains/PyCharm202.*/workspace/
 
-!**/.gitrepo
 vim/.vim_runtime/
+!**/.gitrepo
 
 # Python
 *.pyc
