@@ -13,6 +13,7 @@ DIR=$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )
 # Install remotes
 cd $DIR/..
 echo "Installing plugins"
+source $DIR/../local/.local/lib/git-subrepo/.rc
 # TODO: Add call to install subrepo
 sed -i "my_plugins/d" $DIR/.vim_runtime/.gitignore
 
