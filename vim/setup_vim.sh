@@ -17,7 +17,7 @@ source $PWD/local/.local/lib/git-subrepo/.rc
 while read -r subdir; do
 	git commit -am --reuse-message=HEAD
 	git subrepo pull $(dirname $subdir) --force 
-done <<< "$( find $PWD/vim/.vim_runtime -name '.gitrepo' | sort -r | xargs realpath --relative-to=$PWD | xargs -I% printf $( '%s %s' $( git subrepo config $( dirname % ) remote | grep -oP 'https://.*\.git' ) $( dirname % ) ) )"
+done <<< "$( find $PWD/vim/.vim_runtime -name '.gitrepo' | sort -r | xargs realpath --relative-to=$PWD | xargs -I% printf '%s %s' $( git subrepo config $( dirname % ) remote | grep -oP 'https://.*\.git' ) $( dirname % ) )"
 
 # TODO: Add call to install subrepo
 sed -i "my_plugins/d" $DIR/.vim_runtime/.gitignore
