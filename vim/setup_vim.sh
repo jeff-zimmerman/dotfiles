@@ -31,6 +31,6 @@ if getopts "u" opt; then
     python3 $DIR/.vim_runtime/update_plugins.py
     # update vimspector
     # echo "Updating vimspector"
-    pip3 install virtualenv
+    sudo apt install python3-venv
     vim -c "VimspectorpyUpdate"
 fi
