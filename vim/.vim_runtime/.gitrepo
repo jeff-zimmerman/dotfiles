@@ -7,6 +7,6 @@
 	remote = https://github.com/amix/vimrc.git
 	branch = master
 	commit = 8bf90b12d004e5bf9be3bd69139fabef3d4361ac
-	parent = 8ffe75d7671e2702f04a71ecc2a21864211b4041
+	parent = 2d7f457af53897962aba6c87eec0faab048e4ae6
 	method = merge
 	cmdver = 0.4.6
