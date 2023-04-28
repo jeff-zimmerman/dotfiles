@@ -10,16 +10,6 @@ while [ -L "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symli
 done
 DIR=$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )
 
-# Install remotes
-cd $DIR/..
-echo "Installing plugins"
-source $PWD/local/.local/lib/git-subrepo/.rc
-while read -r subdir; do
-	git commit -am --reuse-message=HEAD
-	git subrepo pull $(dirname $subdir) --force 
-done <<< "$( find $PWD/vim/.vim_runtime -name '.gitrepo' | sort -r | xargs realpath --relative-to=$PWD | xargs -I% printf '%s %s' $( git subrepo config $( dirname % ) remote | grep -oP 'https://.*\.git' ) $( dirname % ) )"
-
-# TODO: Add call to install subrepo
 sed -i "my_plugins/d" $DIR/.vim_runtime/.gitignore
 
 # Run normal installation script for vim_awesome
@@ -29,9 +19,11 @@ sed -i "my_plugins/d" $DIR/.vim_runtime/.gitignore
 echo "linking my_configs.vim to .vim_runtime"
 ln -sf $DIR/my_configs.vim $DIR/.vim_runtime/my_configs.vim
 echo "linking after to .vim_runtime"
+rm -rf $DIR/.vim_runtime/after
 ln -sf $DIR/after $DIR/.vim_runtime/after
-# echo "copying my_plugins to .vim_runtime"
-# rsync -a $DIR/my_plugins/ $DIR/.vim_runtime/my_plugins/
+echo "linking my_plugins to .vim_runtime"
+rm -rf $DIR/.vim_runtime/my_plugins
+ln -sf $DIR/my_plugins $DIR/.vim_runtime/my_plugins
 
 if getopts "u" opt; then
     echo "Updating plugins"
