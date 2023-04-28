@@ -14,10 +14,10 @@ DIR=$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )
 cd $DIR/..
 echo "Installing plugins"
 source $PWD/local/.local/lib/git-subrepo/.rc
-while read -r line; do
+while read -r remote subdir; do
 	git commit -am --reuse-message=HEAD
-	git subrepo config $( dirname ${line} ) remote | grep -oP "https://.*\.git" | xargs -I% git subrepo clone % $( dirname ${line} ) --force 
-done <<< "$( find $PWD/vim/.vim_runtime -name '.gitrepo' | sort | xargs realpath --relative-to=$PWD )"
+	git subrepo clone $remote $subdir --force 
+done <<< "$( find $PWD/vim/.vim_runtime -name '.gitrepo' | sort | xargs realpath --relative-to=$PWD | xargs -I% echo $( git subrepo config $( dirname % ) remote | grep -oP 'https://.*\.git' ) $( dirname %i ) )"
 
 # TODO: Add call to install subrepo
 sed -i "my_plugins/d" $DIR/.vim_runtime/.gitignore
