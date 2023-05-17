@@ -1,10 +1,32 @@
 <application>
   <component name="ProjectManager">
     <defaultProject>
+      <component name="BookmarksManager">
+        <option name="groups">
+          <GroupState>
+            <option name="name" value="Default (Template) Project" />
+          </GroupState>
+        </option>
+      </component>
+      <component name="ProjectView">
+        <navigator proportions="" version="1" />
+        <panes />
+      </component>
       <component name="ProjectViewState">
         <option name="hideEmptyMiddlePackages" value="true" />
         <option name="showLibraryContents" value="true" />
         <option name="sortByType" value="true" />
+      </component>
+      <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "/home/jazimmerman/PycharmProjects/PubGPT/venv/bin"
+  }
+}]]></component>
+      <component name="WindowStateProjectService">
+        <state x="773" y="300" width="489" height="520" key="FileChooserDialogImpl" timestamp="1684267432855">
+          <screen x="70" y="27" width="1850" height="1053" />
+        </state>
+        <state x="773" y="300" width="489" height="520" key="FileChooserDialogImpl/70.27.1850.1053" timestamp="1684267432855" />
       </component>
     </defaultProject>
   </component>

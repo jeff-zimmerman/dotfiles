@@ -8,7 +8,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="-1">
-      <file current-in-tab="false">
+      <file>
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SHOW_PREVIEW" is_vertical_split="false">
@@ -18,20 +18,11 @@
           </provider>
         </entry>
       </file>
-      <file>
-        <entry file="file://$PROJECT_DIR$/hello_world.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="18" selection-start-column="18" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTypeUsageLocalSummary">
     <fileType name="Markdown">
-      <summary usageCount="2" lastUsed="1681217936972" />
+      <summary usageCount="4" lastUsed="1683652034469" />
     </fileType>
     <fileType name="Python">
       <summary usageCount="1" lastUsed="1681218189496" />
@@ -51,7 +42,7 @@
   </component>
   <component name="LanguageUsageStatistics">
     <language id="Markdown">
-      <summary usageCount="2" lastUsage="1681217936973" />
+      <summary usageCount="4" lastUsage="1683652034470" />
     </language>
     <language id="Python">
       <summary usageCount="1" lastUsage="1681218189496" />
@@ -85,19 +76,20 @@
     </panes>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="332000" />
+    <option name="totallyTimeSpent" value="530000" />
   </component>
   <component name="ToolWindowManager">
+    <editor active="true" />
     <layout>
       <window_info id="Bookmarks" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.3581081" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.35594594" />
       <window_info id="Learn" order="2" />
       <window_info id="Structure" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Python Packages" order="4" visible="true" weight="0.33021653" />
+      <window_info anchor="bottom" id="Python Packages" order="4" visible="true" weight="0.33218503" />
       <window_info anchor="bottom" id="TODO" order="5" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Python Console" order="7" />
@@ -110,7 +102,7 @@
       <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="SciView" />
       <window_info anchor="right" id="Notifications" side_tool="true" />
-      <unified_weights bottom="0.33021653" left="0.3581081" />
+      <unified_weights bottom="0.33218503" left="0.35594594" />
     </layout>
     <recentWindows>
       <value>Project</value>
@@ -139,18 +131,12 @@
     <state x="476" y="188" width="1037" height="737" key="SettingsEditor/70.27.1850.1053@70.27.1850.1053" timestamp="1681218251430" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/hello_world.py" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SHOW_PREVIEW" is_vertical_split="false">
           <first_editor />
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hello_world.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" selection-start-column="18" selection-end-column="18" />
         </state>
       </provider>
     </entry>

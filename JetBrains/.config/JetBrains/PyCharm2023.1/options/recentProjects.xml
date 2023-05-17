@@ -119,7 +119,7 @@
         </entry>
         <entry key="$USER_HOME$/PycharmProjects/ApplyBot/djangoProject">
           <value>
-            <RecentProjectMetaInfo frameTitle="djangoProject – urls.py" opened="true" projectWorkspaceId="2O1Kzd7dr2CxdSAguRIlOsAQhxU">
+            <RecentProjectMetaInfo frameTitle="djangoProject – urls.py" projectWorkspaceId="2O1Kzd7dr2CxdSAguRIlOsAQhxU">
               <option name="activationTimestamp" value="1680726600733" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
               <option name="build" value="PY-231.8109.197" />
@@ -132,33 +132,85 @@
         </entry>
         <entry key="$USER_HOME$/PycharmProjects/SummitHoldings/scraping">
           <value>
-            <RecentProjectMetaInfo frameTitle="scraping – hello_world.py" opened="true" projectWorkspaceId="2OHWIsc7AAemNpSgCGRG6Rkytzs">
-              <option name="activationTimestamp" value="1681218251453" />
+            <RecentProjectMetaInfo frameTitle="scraping – README.md" projectWorkspaceId="2OHWIsc7AAemNpSgCGRG6Rkytzs">
+              <option name="activationTimestamp" value="1683652041122" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PY-231.8109.197" />
-              <option name="buildTimestamp" value="1680104572545" />
-              <frame x="197" y="27" width="1400" height="1000" extendedState="6" />
+              <option name="build" value="PY-231.8770.66" />
+              <option name="buildTimestamp" value="1682611991709" />
+              <frame x="70" y="27" width="1850" height="1053" />
               <option name="productionCode" value="PY" />
-              <option name="projectOpenTimestamp" value="1681217937157" />
+              <option name="projectOpenTimestamp" value="1683652034682" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/PycharmProjects/autoGPT/autoGPT">
+          <value>
+            <RecentProjectMetaInfo frameTitle="autoGPT – README.md" projectWorkspaceId="2PbvUE0pZYQF6VtJPL0BKuCl9x0">
+              <option name="activationTimestamp" value="1683750753776" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PY-231.8770.66" />
+              <option name="buildTimestamp" value="1682611999577" />
+              <frame x="271" y="27" width="1400" height="1000" />
+              <option name="productionCode" value="PY" />
+              <option name="projectOpenTimestamp" value="1683750742050" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/PycharmProjects/autoGPT">
+          <value>
+            <RecentProjectMetaInfo frameTitle="autoGPT – pubgpt.py" projectWorkspaceId="2PePsbaaPNd2B5LxP6QqQ0or44C">
+              <option name="activationTimestamp" value="1683907467270" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PY-231.8770.66" />
+              <option name="buildTimestamp" value="1682612011733" />
+              <frame x="295" y="53" width="1400" height="1000" />
+              <option name="productionCode" value="PY" />
+              <option name="projectOpenTimestamp" value="1683907413896" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
         <entry key="$USER_HOME$/PycharmProjects/ApplyBot/ApplyBot">
           <value>
-            <RecentProjectMetaInfo frameTitle="ApplyBot – linkedin.py" opened="true" projectWorkspaceId="2K5vVbUBSivhwgdTelMWAP2Wl80">
-              <option name="activationTimestamp" value="1681327605673" />
+            <RecentProjectMetaInfo frameTitle="ApplyBot – config.py" projectWorkspaceId="2K5vVbUBSivhwgdTelMWAP2Wl80">
+              <option name="activationTimestamp" value="1683908077314" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PY-231.8109.197" />
-              <option name="buildTimestamp" value="1680104565220" />
-              <frame x="70" y="27" width="1850" height="1053" extendedState="6" />
+              <option name="build" value="PY-231.8770.66" />
+              <option name="buildTimestamp" value="1682612011733" />
+              <frame x="124" y="87" width="1654" height="941" />
               <option name="productionCode" value="PY" />
-              <option name="projectOpenTimestamp" value="1681320589240" />
+              <option name="projectOpenTimestamp" value="1683908048620" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/PycharmProjects/djangoProject">
+          <value>
+            <RecentProjectMetaInfo frameTitle="djangoProject – urls.py" opened="true" projectWorkspaceId="2PtDQT3gcQ2TAGipfRAm5fj7Dp9">
+              <option name="activationTimestamp" value="1684267467524" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PY-231.8770.66" />
+              <option name="buildTimestamp" value="1682612039905" />
+              <frame x="313" y="27" width="1400" height="1000" extendedState="6" />
+              <option name="productionCode" value="PY" />
+              <option name="projectOpenTimestamp" value="1684267468034" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/PycharmProjects/PubGPT/PubGPT">
+          <value>
+            <RecentProjectMetaInfo frameTitle="PubGPT – navigations.js" opened="true" projectWorkspaceId="2PtDZmvyK7djKHHzJ59xFx3LhmT">
+              <option name="activationTimestamp" value="1684273368951" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PY-231.8770.66" />
+              <option name="buildTimestamp" value="1682611987350" />
+              <frame x="309" y="27" width="1400" height="1000" extendedState="6" />
+              <option name="productionCode" value="PY" />
+              <option name="projectOpenTimestamp" value="1684267541627" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
       </map>
     </option>
-    <option name="lastOpenedProject" value="$USER_HOME$/PycharmProjects/ApplyBot/ApplyBot" />
-    <option name="lastProjectLocation" value="$USER_HOME$/PycharmProjects/ApplyBot" />
+    <option name="lastOpenedProject" value="$USER_HOME$/PycharmProjects/PubGPT/PubGPT" />
+    <option name="lastProjectLocation" value="$USER_HOME$/PycharmProjects/PubGPT" />
   </component>
 </application>

@@ -1,14 +1,14 @@
 <application>
   <component name="DimensionService">
     <location key="find.popup.0.0.1920.1080" x="378" y="162" />
-    <size key="GridCell.Tab.0.left.0.0.1920.1080" width="1804" height="371" />
-    <size key="GridCell.Tab.0.center.0.0.1920.1080" width="1804" height="371" />
-    <size key="GridCell.Tab.0.right.0.0.1920.1080" width="1804" height="371" />
-    <size key="GridCell.Tab.0.bottom.0.0.1920.1080" width="1804" height="371" />
-    <size key="GridCell.Tab.1.left.0.0.1920.1080" width="1804" height="291" />
-    <size key="GridCell.Tab.1.center.0.0.1920.1080" width="1804" height="291" />
-    <size key="GridCell.Tab.1.right.0.0.1920.1080" width="1804" height="291" />
-    <size key="GridCell.Tab.1.bottom.0.0.1920.1080" width="1804" height="291" />
+    <size key="GridCell.Tab.0.left.0.0.1920.1080" width="1804" height="307" />
+    <size key="GridCell.Tab.0.center.0.0.1920.1080" width="1804" height="307" />
+    <size key="GridCell.Tab.0.right.0.0.1920.1080" width="1804" height="307" />
+    <size key="GridCell.Tab.0.bottom.0.0.1920.1080" width="1804" height="307" />
+    <size key="GridCell.Tab.1.left.0.0.1920.1080" width="1804" height="314" />
+    <size key="GridCell.Tab.1.center.0.0.1920.1080" width="1804" height="314" />
+    <size key="GridCell.Tab.1.right.0.0.1920.1080" width="1804" height="314" />
+    <size key="GridCell.Tab.1.bottom.0.0.1920.1080" width="1804" height="314" />
     <size key="find.popup.0.0.1920.1080" width="940" height="570" />
   </component>
   <component name="ToolWindowLayout">{
@@ -49,20 +49,20 @@
   ]
 }</component>
   <component name="WindowManager">
-    <frame x="70" y="27" width="1850" height="1053" extendedState="6" />
+    <frame x="309" y="27" width="1400" height="1000" extendedState="6" />
   </component>
   <component name="WindowStateApplicationService">
-    <state x="664" y="244" width="424" height="521" key="FileChooserDialogImpl" timestamp="1673283252691">
+    <state x="778" y="311" width="576" height="491" key="FileChooserDialogImpl" timestamp="1684267413385">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="664" y="244" width="424" height="521" key="FileChooserDialogImpl/70.27.1850.1053" timestamp="1673283252691" />
-    <state width="684" height="102" key="ShowUsagesActions.dimensionServiceKey" timestamp="1680293237235">
+    <state x="778" y="311" width="576" height="491" key="FileChooserDialogImpl/70.27.1850.1053" timestamp="1684267413385" />
+    <state width="684" height="127" key="ShowUsagesActions.dimensionServiceKey" timestamp="1683924020738">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="684" height="102" key="ShowUsagesActions.dimensionServiceKey/70.27.1850.1053" timestamp="1680293237235" />
-    <state x="995" y="553" width="1850" height="1053" key="WELCOME_SCREEN" timestamp="1681320586481">
+    <state width="684" height="127" key="ShowUsagesActions.dimensionServiceKey/70.27.1850.1053" timestamp="1683924020738" />
+    <state x="995" y="553" width="1850" height="1053" key="WELCOME_SCREEN" timestamp="1684267508837">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="995" y="553" width="1850" height="1053" key="WELCOME_SCREEN/70.27.1850.1053" timestamp="1681320586481" />
+    <state x="995" y="553" width="1850" height="1053" key="WELCOME_SCREEN/70.27.1850.1053" timestamp="1684267508837" />
   </component>
 </application>

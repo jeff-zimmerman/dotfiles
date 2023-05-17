@@ -6,9 +6,9 @@ alias ssh='ssh '
 alias python='python3'
 
 alias cd='cd '
-alias ...='../../..'
-alias ....='../../../..'
-alias .....='../../../../..'
+alias ...='../..'
+alias ....='../../..'
+alias .....='../../../..'
 alias .4='../../../..'
 alias .5='../../../../..'
 

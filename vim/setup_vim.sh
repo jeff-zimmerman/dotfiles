@@ -21,6 +21,9 @@ ln -sf $DIR/my_configs.vim $DIR/.vim_runtime/my_configs.vim
 echo "linking after to .vim_runtime"
 rm -rf $DIR/.vim_runtime/after
 ln -sf $DIR/after $DIR/.vim_runtime/after
+echo "linking filetype.vim to .vim_runtime"
+rm -rf $DIR/.vim_runtime/filetype.vim
+ln -sf $DIR/filetype.vim $DIR/.vim_runtime/filetype.vim
 echo "linking my_plugins to .vim_runtime"
 rm -rf $DIR/.vim_runtime/my_plugins
 ln -sf $DIR/my_plugins $DIR/.vim_runtime/my_plugins

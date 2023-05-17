@@ -6,13 +6,6 @@
 	path = vim/my_plugins/jedi-vim
 	url = https://github.com/davidhalter/jedi-vim.git
     ignore = dirty
-[submodule "vim/my_plugins/origin"]
-	path = vim/my_plugins/origin
-	url = git@github.com:jeff-zimmerman/dotfiles.git
-[submodule "vim/my_plugins/vim-runtime"]
-	path = vim/my_plugins/vim-runtime
-	url = https://github.com/amix/vimrc.git
-    ignore = dirty
 [submodule "vim/my_plugins/vimspector"]
 	path = vim/my_plugins/vimspector
 	url = https://github.com/puremourning/vimspector.git
@@ -21,3 +14,12 @@
 	path = vim/my_plugins/vimspectorpy
 	url = https://github.com/sagi-z/vimspectorpy.git
     ignore = dirty
+[submodule "vim/my_plugins/vim-pandoc-syntax"]
+	path = vim/my_plugins/vim-pandoc-syntax
+	url = https://github.com/vim-pandoc/vim-pandoc-syntax.git
+[submodule "vim/my_plugins/vim-pandoc"]
+	path = vim/my_plugins/vim-pandoc
+	url = https://github.com/vim-pandoc/vim-pandoc.git
+[submodule "vim/my_plugins/quickscope"]
+	path = vim/my_plugins/quickscope
+	url = https://github.com/unblevable/quick-scope.git
