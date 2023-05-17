@@ -1,0 +1,360 @@
+<project version="4">
+  <component name="BookmarksManager">
+    <option name="groups">
+      <GroupState>
+        <option name="name" value="autoGPT" />
+      </GroupState>
+    </option>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="-1">
+      <file current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/autoGPT/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3483">
+              <caret line="129" selection-start-line="129" selection-end-line="129" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file>
+        <entry file="file://$PROJECT_DIR$/autoGPT/data/pubgpt.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="116" column="60" selection-start-line="116" selection-start-column="32" selection-end-line="116" selection-end-column="60" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTypeUsageLocalSummary">
+    <fileType name="JSON">
+      <summary usageCount="1" lastUsed="1683837010043" />
+    </fileType>
+    <fileType name="JSON-lines">
+      <summary usageCount="1" lastUsed="1683837006680" />
+    </fileType>
+    <fileType name="PLAIN_TEXT">
+      <summary usageCount="4" lastUsed="1683907413671" />
+    </fileType>
+    <fileType name="Python">
+      <summary usageCount="10" lastUsed="1683907413759" />
+    </fileType>
+    <fileType name="textmate">
+      <summary usageCount="1" lastUsed="1683826877938" />
+    </fileType>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>email</find>
+      <find>EMAIL</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/autoGPT/.env" />
+      <option value="$PROJECT_DIR$/autoGPT/data/scrape.py" />
+      <option value="$PROJECT_DIR$/autoGPT/data/pbigpt.py" />
+      <option value="$USER_HOME$/.ideavimrc" />
+      <option value="$PROJECT_DIR$/autoGPT/data/pubgpt.py" />
+    </changedPaths>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="LanguageUsageStatistics">
+    <language id="JSON">
+      <summary usageCount="1" lastUsage="1683837010043" />
+    </language>
+    <language id="JSON Lines">
+      <summary usageCount="1" lastUsage="1683837006680" />
+    </language>
+    <language id="Python">
+      <summary usageCount="10" lastUsage="1683907413759" />
+    </language>
+    <language id="TEXT">
+      <summary usageCount="4" lastUsage="1683907413672" />
+    </language>
+    <language id="textmate">
+      <summary usageCount="1" lastUsage="1683826877938" />
+    </language>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="autoGPT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/jazimmerman/PycharmProjects/autoGPT}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="autoGPT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/jazimmerman/PycharmProjects/autoGPT}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/jazimmerman/PycharmProjects/autoGPT/autoGPT}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="autoGPT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/jazimmerman/PycharmProjects/autoGPT}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/jazimmerman/PycharmProjects/autoGPT/autoGPT}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/jazimmerman/PycharmProjects/autoGPT/autoGPT/data}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="autoGPT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/jazimmerman/PycharmProjects/autoGPT}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/jazimmerman/PycharmProjects/autoGPT/autoGPT}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/jazimmerman/PycharmProjects/autoGPT/autoGPT/data}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/jazimmerman/PycharmProjects/autoGPT/autoGPT/data/data}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="autoGPT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/jazimmerman/PycharmProjects/autoGPT}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/jazimmerman/PycharmProjects/autoGPT/venv}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="autoGPT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/jazimmerman/PycharmProjects/autoGPT}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/jazimmerman/PycharmProjects/autoGPT/venv}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/jazimmerman/PycharmProjects/autoGPT/venv/bin}" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="RunConfigurationStartHistory">
+    <history>
+      <element setting="Python.pubgpt" />
+    </history>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.19062698" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="com.intellij.docker.runtimes.DockerServerRuntime@d3cf6c93" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="com.intellij.docker.runtimes.DockerServerRuntime@d3cf6c93" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.docker.runtimes.ComposeApplicationRuntimeImpl@9b7580da" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="com.intellij.docker.runtimes.DockerServerRuntime@d3cf6c93" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.docker.runtimes.ComposeApplicationRuntimeImpl@9b7580da" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="@f8e03637 id: auto-gpt, [SRV]" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="18521000" />
+  </component>
+  <component name="ToolWindowManager">
+    <layout>
+      <window_info id="Bookmarks" order="0" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.2232143" />
+      <window_info id="Learn" order="2" />
+      <window_info id="Structure" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33021653" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.4000984" />
+      <window_info anchor="bottom" id="Python Packages" order="4" />
+      <window_info anchor="bottom" id="TODO" order="5" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info anchor="bottom" id="Problems View" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="ExcelReader" order="10" />
+      <window_info anchor="bottom" x="116" y="560" width="1804" height="360" id="Services" order="11" weight="0.1855315" />
+      <window_info anchor="right" id="github.copilotToolWindow" />
+      <window_info anchor="right" id="Endpoints" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="SciView" />
+      <window_info anchor="right" id="Notifications" side_tool="true" />
+      <unified_weights bottom="0.4000984" left="0.2232143" />
+    </layout>
+    <recentWindows>
+      <value>Debug</value>
+      <value>Project</value>
+      <value>Run</value>
+      <value>Services</value>
+    </recentWindows>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="774" y="472" width="343" height="176" key="#Path_mapping" timestamp="1683815075741">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="774" y="472" width="343" height="176" key="#Path_mapping/70.27.1850.1053@70.27.1850.1053" timestamp="1683815075741" />
+    <state x="424" y="219" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1683828515958">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="424" y="219" key="#com.intellij.execution.impl.EditConfigurationsDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1683828515958" />
+    <state x="640" y="300" width="699" height="514" key="#xdebugger.evaluate" timestamp="1683836032114">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="640" y="300" width="699" height="514" key="#xdebugger.evaluate/70.27.1850.1053@70.27.1850.1053" timestamp="1683836032114" />
+    <state x="752" y="311" key="FileChooserDialogImpl" timestamp="1683907443368">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="752" y="311" key="FileChooserDialogImpl/70.27.1850.1053@70.27.1850.1053" timestamp="1683907443368" />
+    <state width="1804" height="378" key="GridCell.Tab.0.bottom" timestamp="1683837106139">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="378" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1683837106139" />
+    <state width="1804" height="378" key="GridCell.Tab.0.center" timestamp="1683837106139">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="378" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1683837106139" />
+    <state width="1804" height="378" key="GridCell.Tab.0.left" timestamp="1683837106139">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="378" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1683837106139" />
+    <state width="1804" height="378" key="GridCell.Tab.0.right" timestamp="1683837106139">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="378" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1683837106139" />
+    <state width="1804" height="378" key="GridCell.Tab.1.bottom" timestamp="1683837108540">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="378" key="GridCell.Tab.1.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1683837108540" />
+    <state width="1804" height="378" key="GridCell.Tab.1.center" timestamp="1683837108540">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="378" key="GridCell.Tab.1.center/70.27.1850.1053@70.27.1850.1053" timestamp="1683837108540" />
+    <state width="1804" height="378" key="GridCell.Tab.1.left" timestamp="1683837108540">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="378" key="GridCell.Tab.1.left/70.27.1850.1053@70.27.1850.1053" timestamp="1683837108540" />
+    <state width="1804" height="378" key="GridCell.Tab.1.right" timestamp="1683837108540">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="378" key="GridCell.Tab.1.right/70.27.1850.1053@70.27.1850.1053" timestamp="1683837108540" />
+    <state x="432" y="192" width="1346" height="730" key="SettingsEditor" timestamp="1683831378319">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="432" y="192" width="1346" height="730" key="SettingsEditor/70.27.1850.1053@70.27.1850.1053" timestamp="1683831378319" />
+    <state x="728" y="261" width="524" height="591" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1683835709656">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="728" y="261" width="524" height="591" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1683835709656" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>puburl + f&quot;/author/{author}&quot;</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>json.loads(response.choices[0].text.strip())</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>response.choices[0].text.strip()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>response.'choices' (140003008297648)[0].'text' (140003008318256).strip()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/autoGPT/data/file.txt" />
+    <entry file="file://$PROJECT_DIR$/autoGPT/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3483">
+          <caret line="129" selection-start-line="129" selection-end-line="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.ideavimrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.11/site-packages/openai/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1265" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.11/site-packages/openai/api_resources/fine_tune.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.11/site-packages/openai/api_resources/abstract/listable_api_resource.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.11/site-packages/selenium/webdriver/chromium/webdriver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="914">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.11/site-packages/selenium/webdriver/chrome/webdriver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3.11/json/decoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="352" selection-start-line="352" selection-end-line="352" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autoGPT/data/data/training_data.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autoGPT/data/data/training_data_formatted.jsonl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autoGPT/data/pubgpt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="116" column="60" selection-start-line="116" selection-start-column="32" selection-end-line="116" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
