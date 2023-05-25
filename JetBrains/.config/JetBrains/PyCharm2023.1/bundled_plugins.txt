@@ -104,7 +104,7 @@ com.jetbrains.python.sharedIndexes.downloadable|null
 
 com.jetbrains.python.sharedIndexes|null
 
-com.jetbrains.restClient|Other Tools
+com.jetbrains.restClient|Microservices
 
 com.jetbrains.sh|Languages
 

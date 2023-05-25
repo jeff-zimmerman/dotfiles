@@ -27,6 +27,31 @@
         <entry encoding="base64">XlwoLipcKWh0bWwgPSBcKHJlcXVlc3RzLmdldCh1cmwsIGhlYWRlcnM9c2VsZi5oZWFkZXJzKVwpLnRleHQ=</entry>
         <entry encoding="base64">XlwoLipcKWh0bWwgPSBcKHJlcXVlc3RzLmdldCguKilcKS50ZXh0</entry>
         <entry encoding="base64">UHViR1BU</entry>
+        <entry encoding="base64">QVVUSEVOVEk=</entry>
+        <entry encoding="base64">L0ZpcmViYXNlUm9vdC9Sb290L2dj</entry>
+        <entry encoding="base64">RmlyZWJhc2VSb290</entry>
+        <entry encoding="base64">RmlyZWJhc2VMb2dpbg==</entry>
+        <entry encoding="base64">aXNDYWxpZA==</entry>
+        <entry encoding="base64">aXNWYWxpZA==</entry>
+        <entry encoding="base64">XDxpbnN0YW5jZVw+</entry>
+        <entry encoding="base64">YXV0aFR5cGU=</entry>
+        <entry encoding="base64">Y29uc29sZS5sb2c=</entry>
+        <entry encoding="base64">dGhlbWU=</entry>
+        <entry encoding="base64">XDxpbml0aWFsVmFsdWVzXD4=</entry>
+        <entry encoding="base64">XDx1c2VBdXRoXD4=</entry>
+        <entry encoding="base64">c2V0U2Vzc2lvbg==</entry>
+        <entry encoding="base64">cHJpbnQ=</entry>
+        <entry encoding="base64">YWNjZXNz</entry>
+        <entry encoding="base64">YWNjZXNzVG9rZW4=</entry>
+        <entry encoding="base64">bWFwU3RhdGU=</entry>
+        <entry encoding="base64">XDxpc1ZhbGlkVG9rZW5cPg==</entry>
+        <entry encoding="base64">XDxoYW5kbGVDaGFuZ2VcPg==</entry>
+        <entry encoding="base64">amFzb24=</entry>
+        <entry encoding="base64">ZW1haWxvcnVzZXJuYW1l</entry>
+        <entry encoding="base64">YXV0b2NvbXBsZXRl</entry>
+        <entry encoding="base64">SldUX1I=</entry>
+        <entry encoding="base64">and0X3JlZ2lzdGVy</entry>
+        <entry encoding="base64">VXNlcg==</entry>
       </history-search>
       <history-cmd>
         <entry encoding="base64">c291cmNlIC9ob21lL2phemltbWVybWFuLy5pZGVhdmltcmM=</entry>
@@ -51,251 +76,347 @@
         <entry encoding="base64">JXMvXlwoLipcKWh0bWwgPSBcKHJlcXVlc3RzLmdldCh1cmwsIGhlYWRlcnM9c2VsZi5oZWFkZXJzKVwpLnRleHQvXDFodG1sID0gXDJcclwxaHRtbC5lbmNvZGluZyA9ICJ1dGYtOCJcclwxaHRtbCA9IGh0bWwudGV4dC9nYw==</entry>
         <entry encoding="base64">JXMvXlwoLipcKWh0bWwgPSBcKHJlcXVlc3RzLmdldCguKilcKS50ZXh0L1wxaHRtbCA9IFwyXHJcMWh0bWwuZW5jb2RpbmcgPSAidXRmLTgiXHJcMWh0bWwgPSBodG1sLnRleHQvZ2M=</entry>
         <entry encoding="base64">JXMvUHViR1BUL2NvbmZpZy9nYw==</entry>
+        <entry encoding="base64">Liw0OTw=</entry>
+        <entry encoding="base64">cyUvRmlyZWJhc2VSb290L1Jvb3QvZ2M=</entry>
+        <entry encoding="base64">JXMvRmlyZWJhc2VSb290L1Jvb3QvZ2M=</entry>
+        <entry encoding="base64">JXMvRmlyZWJhc2VMb2dpbi9Mb2dpbi9nYw==</entry>
+        <entry encoding="base64">MCwuZy9hdXRoVHlwZS9ub3JtIGRk</entry>
+        <entry encoding="base64">MCwkZy9zZXRTZXNzaW9uL25vcm0gZ2Nj</entry>
+        <entry encoding="base64">Zy9zZXRTZXNzaW9uL25vcm0gZ2Nj</entry>
+        <entry encoding="base64">Zy9zZXRTZXNzaW9uL2V4ZWMgIm5vcm0gZ2NjIg==</entry>
+        <entry encoding="base64">Zy9zZXRTZXNzaW9uL2V4ZWMgIm5vcm0gZ2NjIi8=</entry>
+        <entry encoding="base64">Zy9zZXRTZXNzaW9uL25vcm1hbCBnY2M=</entry>
+        <entry encoding="base64">Zy9zZXRTZXNzaW9uL25vcm1hbCEgZ2Nj</entry>
+        <entry encoding="base64">NjQsNzgvZA==</entry>
+        <entry encoding="base64">NjQsNzgvbm9ybSBkZA==</entry>
+        <entry encoding="base64">cmVn</entry>
+        <entry encoding="base64">JXMvZW1haWxvcnVzZXJuYW1lL3VzZXJuYW1lL2c=</entry>
+        <entry encoding="base64">JXMvZW1haWxvcnVzZXJuYW1lL3VzZXJuYW1lL2dj</entry>
+        <entry encoding="base64">JXMvand0X3JlZ2lzdGVyL3JlZ2lzdGVyL2dj</entry>
+        <entry encoding="base64">JXMvand0X3JlZ2lzdGVyL1JFR0lTVEVSL2dj</entry>
       </history-cmd>
       <history-expr />
       <history-input />
     </history>
   </component>
   <component name="VimJumpsSettings">
-    <jump line="257" column="29" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/pubgpt.py" />
-    <jump line="253" column="31" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/pubgpt.py" />
-    <jump line="259" column="29" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/pubgpt.py" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/data/aduffy/training_data_formatted_prepared.jsonl" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/.env" />
-    <jump line="243" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/pubgpt.py" />
-    <jump line="241" column="99" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/pubgpt.py" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/data/aduffy/training_data_formatted.csv" />
-    <jump line="242" column="45" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/pubgpt.py" />
-    <jump line="235" column="31" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/pubgpt.py" />
-    <jump line="278" column="24" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/pubgpt.py" />
-    <jump line="274" column="22" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/pubgpt.py" />
-    <jump line="345" column="45" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/pubgpt.py" />
-    <jump line="322" column="8" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/pubgpt.py" />
-    <jump line="321" column="17" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/pubgpt.py" />
-    <jump line="297" column="17" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/pubgpt.py" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/backend/backend/settings.py" />
-    <jump line="39" column="5" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/backend/backend/settings.py" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/backend/backend/apps/models.py" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/backend/backend/apps/admin.py" />
-    <jump line="7" column="14" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/backend/backend/scripts/pubgpt.py" />
-    <jump line="337" column="12" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/backend/backend/scripts/pubgpt.py" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/backend/backend/scripts/pubgpt.py" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/data/pgpt.py" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/djangoProject/djangoProject/settings.py" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/PubGPT/settings.py" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/PubGPT/urls.py" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/__init__.py" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/__init__.py" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/settings/settings.py" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/config/urls.py" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/media/.gitkeep" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/logs/.gitkeep" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/docs/.gitkeep" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/deployment/.gitkeep" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/requirements/.gitkeep" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/scripts/.gitkeep" />
-    <jump line="2" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/models.py" />
-    <jump line="13" column="13" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/models.py" />
-    <jump line="19" column="48" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/models.py" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/apps.py" />
-    <jump line="4" column="45" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/apps.py" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/config/settings.py" />
-    <jump line="51" column="18" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/config/settings.py" />
-    <jump line="53" column="12" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/config/settings.py" />
-    <jump line="6" column="13" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/config/urls.py" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/config/wsgi.py" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/config/asgi.py" />
-    <jump line="13" column="54" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/config/asgi.py" />
-    <jump line="13" column="54" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/config/wsgi.py" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/manage.py" />
-    <jump line="70" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/config/settings.py" />
-    <jump line="6" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/apps.py" />
-    <jump line="38" column="7" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/config/settings.py" />
-    <jump line="20" column="19" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/config/urls.py" />
-    <jump line="5" column="16" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/apps.py" />
-    <jump line="43" column="5" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/config/settings.py" />
-    <jump line="27" column="9" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/models.py" />
-    <jump line="20" column="77" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/models.py" />
-    <jump line="24" column="3" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/models.py" />
-    <jump line="33" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/models.py" />
-    <jump line="4" column="44" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/models.py" />
-    <jump line="21" column="54" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/models.py" />
-    <jump line="14" column="22" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/admin.py" />
-    <jump line="9" column="35" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/admin.py" />
-    <jump line="11" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/admin.py" />
-    <jump line="1" column="47" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/admin.py" />
-    <jump line="15" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/admin.py" />
-    <jump line="22" column="63" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/models.py" />
-    <jump line="19" column="52" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/admin.py" />
-    <jump line="17" column="37" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/models.py" />
-    <jump line="37" column="37" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/models.py" />
-    <jump line="31" column="13" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/models.py" />
-    <jump line="32" column="10" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/models.py" />
-    <jump line="8" column="28" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/models.py" />
-    <jump line="30" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/models.py" />
-    <jump line="12" column="42" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/admin.py" />
-    <jump line="5" column="117" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/admin.py" />
-    <jump line="7" column="56" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/models.py" />
-    <jump line="39" column="10" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/config/settings.py" />
-    <jump line="40" column="18" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/config/settings.py" />
-    <jump line="45" column="4" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/config/settings.py" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/views.py" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-react-pro-v3.7.0/jsconfig.json" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-react-pro-v3.7.0/src/app/components/MatxToolbarMenu.jsx" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-react-pro-v3.7.0/src/app/auth/Redirect.jsx" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-react-pro-v3.7.0/package.json" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-react-pro-v3.7.0/src/index.js" />
-    <jump line="12" column="57" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-react-pro-v3.7.0/src/index.js" />
-    <jump line="19" column="30" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-react-pro-v3.7.0/src/app/App.jsx" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/urls.py" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/serializers.py" />
-    <jump line="131" column="1" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/config/settings.py" />
-    <jump line="5" column="18" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-react-pro-v3.7.0/src/app/hooks/useAuth.js" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-react-pro-v3.7.0/src/app/contexts/FirebaseAuthContext.js" />
-    <jump line="0" column="51" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-react-pro-v3.7.0/src/app/hooks/useAuth.js" />
-    <jump line="83" column="54" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-react-pro-v3.7.0/docs/authentication.html" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-react-pro-v3.7.0/src/app/auth/AuthGuard.jsx" />
-    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-react-pro-v3.7.0/src/app/routes.jsx" />
-    <jump line="7" column="28" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-react-pro-v3.7.0/src/app/App.jsx" />
+    <jump line="59" column="4" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/contexts/OverallAuthContext.js" />
+    <jump line="7" column="34" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="122" column="20" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="137" column="20" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="140" column="37" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="125" column="36" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="148" column="11" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/contexts/OverallAuthContext.js" />
+    <jump line="48" column="130" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="174" column="30" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="133" column="22" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="9" column="18" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/models.py" />
+    <jump line="126" column="36" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="141" column="36" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="144" column="25" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="148" column="43" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="146" column="44" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="39" column="22" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="19" column="13" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/views.py" />
+    <jump line="92" column="3" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/authentication.py" />
+    <jump line="40" column="15" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="100" column="21" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="176" column="23" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="50" column="16" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="51" column="2" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="55" column="11" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="21" column="25" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/serializers.py" />
+    <jump line="1" column="22" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/serializers.py" />
+    <jump line="23" column="43" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/serializers.py" />
+    <jump line="22" column="26" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/serializers.py" />
+    <jump line="18" column="40" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/serializers.py" />
+    <jump line="87" column="20" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/views.py" />
+    <jump line="7" column="24" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/urls.py" />
+    <jump line="88" column="3" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/views.py" />
+    <jump line="1" column="64" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/urls.py" />
+    <jump line="3" column="23" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/serializers.py" />
+    <jump line="14" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/views.py" />
+    <jump line="256" column="16" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/login/OverallLogin.jsx" />
+    <jump line="105" column="28" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/contexts/OverallAuthContext.js" />
+    <jump line="132" column="36" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="0" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/FirebaseRegister.jsx" />
+    <jump line="89" column="42" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/views.py" />
+    <jump line="2" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/serializers.py" />
+    <jump line="86" column="21" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/views.py" />
+    <jump line="11" column="17" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/serializers.py" />
+    <jump line="7" column="25" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/serializers.py" />
+    <jump line="90" column="8" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/views.py" />
+    <jump line="94" column="85" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/views.py" />
+    <jump line="11" column="59" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/views.py" />
+    <jump line="9" column="53" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/views.py" />
+    <jump line="80" column="20" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/contexts/OverallAuthContext.js" />
+    <jump line="78" column="24" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/contexts/OverallAuthContext.js" />
+    <jump line="12" column="71" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/serializers.py" />
+    <jump line="90" column="12" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/contexts/OverallAuthContext.js" />
+    <jump line="91" column="26" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/contexts/OverallAuthContext.js" />
+    <jump line="98" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/login/OverallLogin.jsx" />
+    <jump line="106" column="6" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/login/OverallLogin.jsx" />
+    <jump line="96" column="84" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/views.py" />
+    <jump line="77" column="24" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/contexts/OverallAuthContext.js" />
+    <jump line="72" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/contexts/OverallAuthContext.js" />
+    <jump line="64" column="42" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="76" column="12" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="77" column="17" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="94" column="13" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/login/OverallLogin.jsx" />
+    <jump line="10" column="12" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="12" column="17" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="266" column="15" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/login/OverallLogin.jsx" />
+    <jump line="267" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/login/OverallLogin.jsx" />
+    <jump line="57" column="20" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="58" column="19" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="6" column="51" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/login/JwtLogin.jsx" />
+    <jump line="81" column="25" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/contexts/OverallAuthContext.js" />
+    <jump line="93" column="3" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/views.py" />
+    <jump line="83" column="23" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/contexts/OverallAuthContext.js" />
+    <jump line="84" column="54" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/contexts/OverallAuthContext.js" />
+    <jump line="89" column="41" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/contexts/OverallAuthContext.js" />
+    <jump line="67" column="46" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="72" column="15" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="68" column="26" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="70" column="25" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="69" column="73" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="111" column="3" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/login/OverallLogin.jsx" />
+    <jump line="74" column="35" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="75" column="8" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="105" column="12" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/login/OverallLogin.jsx" />
+    <jump line="95" column="16" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/login/OverallLogin.jsx" />
+    <jump line="88" column="12" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/contexts/OverallAuthContext.js" />
+    <jump line="96" column="17" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/login/OverallLogin.jsx" />
+    <jump line="62" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" />
+    <jump line="35" column="29" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/config/settings.py" />
+    <jump line="14" column="78" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/serializers.py" />
+    <jump line="8" column="0" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/authentication.py" />
+    <jump line="99" column="15" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/views.py" />
+    <jump line="104" column="8" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/authentication.py" />
+    <jump line="26" column="37" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/authentication.py" />
+    <jump line="100" column="40" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/authentication.py" />
+    <jump line="105" column="26" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/authentication.py" />
+    <jump line="36" column="28" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/config/settings.py" />
+    <jump line="60" column="54" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/views.py" />
+    <jump line="101" column="8" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/authentication.py" />
+    <jump line="102" column="26" filename="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/authentication.py" />
   </component>
   <component name="VimMarksSettings">
     <globalmarks />
     <localmarks>
-      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-react-pro-v3.7.0/src/app/hooks/useAuth.js" timestamp="1684272744988">
-        <mark key="&quot;" line="1" column="44" />
+      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/login/FirebaseLogin.jsx" timestamp="1684956517495">
+        <mark key="&quot;" line="92" column="15" />
       </file>
-      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-react-pro-v3.7.0/src/index.js" timestamp="1684272831349">
-        <mark key="&quot;" line="12" column="57" />
+      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/views.py" timestamp="1684976678785">
+        <mark key="a" line="27" column="13" />
+        <mark key="&quot;" line="60" column="35" />
+        <mark key="[" line="60" column="35" />
+        <mark key="]" line="95" column="0" />
+        <mark key="." line="95" column="0" />
       </file>
-      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/models.py" timestamp="1684272735242">
-        <mark key="&quot;" line="7" column="56" />
-        <mark key="[" line="7" column="56" />
-        <mark key="]" line="7" column="56" />
-        <mark key="." line="7" column="56" />
+      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/JwtRegister.jsx" timestamp="1684976191509">
+        <mark key="&quot;" line="7" column="34" />
+        <mark key="[" line="58" column="44" />
+        <mark key="]" line="76" column="42" />
+        <mark key="." line="76" column="0" />
+        <mark key="^" line="75" column="18" />
       </file>
-      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-react-pro-v3.7.0/.env" timestamp="1684272148077">
+      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/components/PubCreateLogo.jsx" timestamp="1684956525818">
         <mark key="&quot;" line="0" column="0" />
       </file>
-      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/admin.py" timestamp="1684272715287">
-        <mark key="&quot;" line="5" column="117" />
-        <mark key="'" line="13" column="55" />
-        <mark key="[" line="5" column="117" />
-        <mark key="]" line="5" column="118" />
-        <mark key="." line="5" column="117" />
-        <mark key="^" line="5" column="118" />
-      </file>
-      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/serializers.py" timestamp="1684272838807">
+      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/register/FirebaseRegister.jsx" timestamp="1684959809613">
         <mark key="&quot;" line="0" column="0" />
       </file>
-      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-react-pro-v3.7.0/jsconfig.json" timestamp="1684272143240">
+      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/models.py" timestamp="1684957621557">
+        <mark key="&quot;" line="9" column="18" />
+        <mark key="[" line="40" column="76" />
+        <mark key="]" line="40" column="88" />
+        <mark key="." line="40" column="87" />
+        <mark key="^" line="40" column="88" />
+      </file>
+      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/SessionRoutes.js" timestamp="1684957079594">
+        <mark key="&quot;" line="6" column="55" />
+        <mark key="[" line="6" column="57" />
+        <mark key="]" line="6" column="58" />
+        <mark key="." line="6" column="59" />
+        <mark key="^" line="6" column="59" />
+      </file>
+      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/components/index.js" timestamp="1684956521486">
+        <mark key="&quot;" line="16" column="32" />
+        <mark key="[" line="16" column="20" />
+        <mark key="]" line="16" column="33" />
+        <mark key="." line="16" column="32" />
+        <mark key="^" line="16" column="33" />
+      </file>
+      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/config.js" timestamp="1684956656071">
+        <mark key="&quot;" line="78" column="59" />
+        <mark key="[" line="77" column="0" />
+      </file>
+      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/login/OverallLogin.jsx" timestamp="1684975076935">
+        <mark key="&quot;" line="256" column="16" />
+        <mark key="'" line="182" column="34" />
+        <mark key="[" line="267" column="0" />
+        <mark key="]" line="267" column="0" />
+        <mark key="." line="267" column="0" />
+      </file>
+      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/contexts/JWTAuthContext.js" timestamp="1684959718897">
+        <mark key="&quot;" line="11" column="7" />
+        <mark key="[" line="15" column="19" />
+        <mark key="]" line="15" column="19" />
+        <mark key="." line="15" column="19" />
+        <mark key="^" line="17" column="39" />
+      </file>
+      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/navigations.js" timestamp="1684956563691">
         <mark key="&quot;" line="0" column="0" />
       </file>
-      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-react-pro-v3.7.0/src/config.js" timestamp="1684272652782">
-        <mark key="&quot;" line="0" column="0" />
+      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/routes.jsx" timestamp="1684956580867">
+        <mark key="&quot;" line="1" column="27" />
       </file>
-      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/config/settings.py" timestamp="1684271526032">
-        <mark key="'" line="57" column="12" />
-        <mark key="[" line="128" column="0" />
-        <mark key="]" line="45" column="3" />
-        <mark key="^" line="45" column="40" />
-        <mark key="." line="45" column="4" />
+      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/contexts/OverallAuthContext.js" timestamp="1684975969844">
+        <mark key="&quot;" line="68" column="12" />
+        <mark key="'" line="59" column="4" />
+        <mark key="[" line="88" column="0" />
+        <mark key="]" line="88" column="0" />
+        <mark key="^" line="88" column="42" />
+        <mark key="." line="88" column="0" />
       </file>
-      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/config/urls.py" timestamp="1684270002494">
-        <mark key="&quot;" line="20" column="19" />
+      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/serializers.py" timestamp="1684961296069">
+        <mark key="[" line="12" column="46" />
+        <mark key="]" line="14" column="51" />
+        <mark key="." line="14" column="50" />
+        <mark key="^" line="14" column="51" />
       </file>
-      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/views.py" timestamp="1684272837429">
-        <mark key="&quot;" line="0" column="0" />
+      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/hooks/useAuth.js" timestamp="1684956731336">
+        <mark key="&quot;" line="6" column="26" />
       </file>
-      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-react-pro-v3.7.0/src/app/contexts/FirebaseAuthContext.js" timestamp="1684273059469">
-        <mark key="&quot;" line="0" column="0" />
+      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/authentication.py" timestamp="1684976818625">
+        <mark key="&quot;" line="9" column="0" />
+        <mark key="'" line="106" column="8" />
+        <mark key="[" line="100" column="36" />
+        <mark key="]" line="100" column="36" />
+        <mark key="." line="100" column="36" />
       </file>
-      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-react-pro-v3.7.0/package.json" timestamp="1684272834193">
-        <mark key="&quot;" line="0" column="0" />
+      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/urls.py" timestamp="1684973403951">
+        <mark key="&quot;" line="1" column="64" />
+        <mark key="[" line="1" column="57" />
+        <mark key="]" line="6" column="68" />
+        <mark key="." line="6" column="67" />
+        <mark key="^" line="6" column="68" />
       </file>
-      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-react-pro-v3.7.0/src/app/components/MatxToolbarMenu.jsx" timestamp="1684272367998">
-        <mark key="&quot;" line="0" column="0" />
+      <file name="$USER_HOME$/PycharmProjects/PubGPT/venv/lib/python3.11/site-packages/django/db/models/manager.py" timestamp="1684957908849">
+        <mark key="&quot;" line="195" column="0" />
       </file>
-      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-react-pro-v3.7.0/src/app/auth/Redirect.jsx" timestamp="1684272823782">
-        <mark key="&quot;" line="0" column="0" />
-      </file>
-      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-react-pro-v3.7.0/src/app/auth/authRoles.js" timestamp="1684272347538">
-        <mark key="&quot;" line="0" column="0" />
-      </file>
-      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-react-pro-v3.7.0/src/app/contexts/Auth0Context.js" timestamp="1684272611750">
-        <mark key="&quot;" line="0" column="0" />
-      </file>
-      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-react-pro-v3.7.0/src/app/auth/AuthGuard.jsx" timestamp="1684272447188">
-        <mark key="&quot;" line="0" column="0" />
-      </file>
-      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-react-pro-v3.7.0/package-lock.json" timestamp="1684272139918">
-        <mark key="&quot;" line="0" column="0" />
-      </file>
-      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/backend/api/v1/urls.py" timestamp="1684272836347">
-        <mark key="&quot;" line="0" column="0" />
+      <file name="$USER_HOME$/PycharmProjects/PubGPT/PubGPT/apps/frontend/matx-v1.0.0/src/app/views/sessions/login/JwtLogin.jsx" timestamp="1684975394371">
+        <mark key="&quot;" line="6" column="51" />
+        <mark key="'" line="111" column="32" />
       </file>
     </localmarks>
   </component>
   <component name="VimRegisterSettings">
     <registers>
       <register name="&quot;" type="4">
-        <text encoding="base64">ZQ==</text>
+        <text encoding="base64">dXNlcm5hbWU9Tm9uZSwgcGFzc3dvcmQ=</text>
+      </register>
+      <register name="*" type="4">
+        <text encoding="base64">aHR0cHM6Ly9sb2dpbi5taWNyb3NvZnRvbmxpbmUuY29tL3t0ZW5hbnRfaWR9L3YyLjAvLndlbGwta25vd24vb3BlbmlkLWNvbmZpZ3VyYXRpb24=</text>
       </register>
       <register name="+" type="2">
         <text encoding="base64">aW1wb3J0IGNzdgppbXBvcnQgcmUKaW1wb3J0IG9zCmltcG9ydCBzaHV0aWwKaW1wb3J0IHRpbWUKZnJvbSBwYXRobGliIGltcG9ydCBQYXRoCmltcG9ydCBwZXhwZWN0CmltcG9ydCByZXF1ZXN0cwppbXBvcnQgZG90ZW52CmltcG9ydCBqc29uCmltcG9ydCBvcGVuYWkKZnJvbSB0cWRtIGltcG9ydCB0cWRtCmZyb20gYnM0IGltcG9ydCBCZWF1dGlmdWxTb3VwCgoKY2xhc3MgUHViR1BUOgogICAgZGVmIF9faW5pdF9fKHNlbGYpOgogICAgICAgIHNlbGYucHVicyA9IHt9CiAgICAgICAgc2VsZi5hcnRpY2xlcyA9IHt9CiAgICAgICAgc2VsZi5pc193cCA9IEZhbHNlCiAgICAgICAgc2VsZi5hdXRob3IgPSBOb25lCiAgICAgICAgc2VsZi5tb2RlbCA9IE5vbmUKICAgICAgICBzZWxmLmhlYWRlcnMgPSB7CiAgICAgICAgICAgICdVc2VyLUFnZW50JzogJ01vemlsbGEvNS4wIChNYWNpbnRvc2g7IEludGVsIE1hYyBPUyBYIDEwLjEyOyBydjo1NS4wKSBHZWNrby8yMDEwMDEwMSBGaXJlZm94LzU1LjAnLAogICAgICAgIH0KCiAgICAgICAgIyBMb2FkIHRoZSBPcGVuQUkgQVBJIGtleSBmcm9tIHRoZSAuZW52IGZpbGUKICAgICAgICBkb3RlbnYubG9hZF9kb3RlbnYoZG90ZW52LmZpbmRfZG90ZW52KCkpCiAgICAgICAgb3BlbmFpLmFwaV9rZXkgPSBkb3RlbnYuZG90ZW52X3ZhbHVlcyhkb3RlbnYuZmluZF9kb3RlbnYoKSkuZ2V0KCdPUEVOQUlfQVBJX0tFWScpCgogICAgZGVmIGdldF9tb2RlbChzZWxmLCBtb2RlbF9zdWZmaXg6IHN0cikgLT4gTm9uZToKICAgICAgICAiIiIKICAgICAgICBGdW5jdGlvbiB0byBnZXQgdGhlIG1vZGVsIHRvIGJlIHVzZWQgZm9yIHRoZSBHUFQtMyBlbmdpbmUuCiAgICAgICAgQXJnczoKICAgICAgICAgICAgbW9kZWxfc3VmZml4OiBTdWZmaXggdG8gYmUgc2VhcmNoZWQgaW4gdGhlIGxpc3Qgb2YgbW9kZWwgSURzCgogICAgICAgIFJldHVybnM6CiAgICAgICAgICAgIE5vbmUKICAgICAgICAiIiIKICAgICAgICByZXNwb25zZSA9IG9wZW5haS5Nb2RlbC5saXN0KCkKICAgICAgICBtb2RlbHMgPSByZXNwb25zZVsiZGF0YSJdCiAgICAgICAgbW9kX2xpc3QgPSBbXQogICAgICAgIGZvciBtb2RlbCBpbiBtb2RlbHM6CiAgICAgICAgICAgIGlmIG1vZGVsX3N1ZmZpeC5yZXBsYWNlKCcgJywgJy0nKSBpbiBtb2RlbFsiaWQiXToKICAgICAgICAgICAgICAgIG1vZF9saXN0LmFwcGVuZChtb2RlbFsiaWQiXSkKICAgICAgICBpZiBub3QgbW9kX2xpc3Q6CiAgICAgICAgICAgIHJhaXNlIEV4Y2VwdGlvbihmIk5vIGZpbmUtdHVuZWQgbW9kZWwgZm91bmQgd2l0aCB0aGUgc3VmZml4OiB7bW9kZWxfc3VmZml4fSIpCgogICAgICAgIG1vZF9saXN0LnNvcnQoKQogICAgICAgIHNlbGYubW9kZWwgPSBtb2RfbGlzdFstMV0KICAgICAgICByZXR1cm4gTm9uZQoKICAgIGRlZiBnZXRfd3Aoc2VsZiwgdXJsOiBzdHIpIC0+IGJvb2w6CiAgICAgICAgIiIiCiAgICAgICAgRnVuY3Rpb24gdG8gY2hlY2sgaWYgdGhlIHdlYnNpdGUgaXMgYSB3b3JkcHJlc3Mgd2Vic2l0ZS4KICAgICAgICBBcmdzOgogICAgICAgICAgICB1cmw6IFVSTCBvZiB0aGUgd2Vic2l0ZQoKICAgICAgICBSZXR1cm5zOgogICAgICAgICAgICBCb29sZWFuIHZhbHVlIGluZGljYXRpbmcgaWYgdGhlIHdlYnNpdGUgaXMgYSB3b3JkcHJlc3Mgd2Vic2l0ZS4KICAgICAgICAiIiIKICAgICAgICBodG1sID0gcmVxdWVzdHMuZ2V0KHVybCwgaGVhZGVycz1zZWxmLmhlYWRlcnMpCiAgICAgICAgaHRtbC5lbmNvZGluZyA9ICJ1dGYtOCIKICAgICAgICBodG1sID0gaHRtbC50ZXh0CgogICAgICAgIHNvdXAgPSBCZWF1dGlmdWxTb3VwKGh0bWwsICdodG1sLnBhcnNlcicpCiAgICAgICAgaWYgYW55KCJ3b3JkcHJlc3MiIGluIGkuZ2V0KCdjb250ZW50JykubG93ZXIoKSBmb3IgaSBpbiBzb3VwLmZpbmRfYWxsKCdtZXRhJywgYXR0cnM9eyduYW1lJzogJ2dlbmVyYXRvcid9KSk6CiAgICAgICAgICAgIHNlbGYuaXNfd3AgPSBUcnVlCgogICAgICAgIHJldHVybiBzZWxmLmlzX3dwCgogICAgZGVmIGdldF9wdWJzKHNlbGYsIHVybDogc3RyKSAtPiBkaWN0OgogICAgICAgICIiIgogICAgICAgIEZ1bmN0aW9uIHRvIGdldCBhIGxpc3Qgb2YgYWxsIHB1YmxpY2F0aW9ucyBpbiBhIGdpdmVuIHVybC4KICAgICAgICBBcmdzOgogICAgICAgICAgICB1cmw6IFVSTCBvZiB0aGUgd2Vic2l0ZSB3aXRoIGEgbGlzdCBvZiBwdWJsaWNhdGlvbnMKCiAgICAgICAgUmV0dXJuczoKICAgICAgICAgICAgTGlzdCBvZiBwdWJsaWNhdGlvbnMKICAgICAgICAiIiIKICAgICAgICBpZiBub3Qgc2VsZi5nZXRfd3AodXJsKToKICAgICAgICAgICAgcmFpc2UgIlNvcnJ5LCB0aGlzIG1ldGhvZCBjdXJyZW50bHkgb25seSB3b3JrcyBmb3Igd29yZHByZXNzIHNpdGVzLiIKCiAgICAgICAgaHRtbCA9IHJlcXVlc3RzLmdldCh1cmwsIGhlYWRlcnM9c2VsZi5oZWFkZXJzKQogICAgICAgIGh0bWwuZW5jb2RpbmcgPSAidXRmLTgiCiAgICAgICAgaHRtbCA9IGh0bWwudGV4dAogICAgICAgIHNvdXAgPSBCZWF1dGlmdWxTb3VwKGh0bWwsICdodG1sLnBhcnNlcicpCgogICAgICAgICMgcXVlcnkgRGF2aW5jaSB0byBmaW5kIHRoZSBsaW5rcyB0byBhbGwgcHVibGljYXRpb25zCiAgICAgICAgcXVlcnkgPSB7CiAgICAgICAgICAgICJwcm9tcHQiOiBmIlJldHVybiBhIGxpc3Qgb2YgYWxsIHB1YmxpY2F0aW9ucyB0aGF0IGFyZSBsaXN0ZWQgb24gdGhpcyB3ZWJzaXRlIGluIHRoZSBmb3JtYXQge3tcInB1YmxpY2F0aW9uX3RpdGxlXCI6IFwicHVibGljYXRpb25fdXJsXCJ9fToge3VybH0gYW5kIG1ha2Ugc3VyZSB0byBpbmNsdWRlIGJvdGggb3BlbmluZyBhbmQgY2xvc2luZyBicmFja2V0cy5cblxuIiwKICAgICAgICAgICAgInRlbXBlcmF0dXJlIjogMC43LAogICAgICAgICAgICAidG9wX3AiOiAxLAogICAgICAgICAgICAiZnJlcXVlbmN5X3BlbmFsdHkiOiAwLAogICAgICAgICAgICAicHJlc2VuY2VfcGVuYWx0eSI6IDAuNSwKICAgICAgICAgICAgInN0b3AiOiAiXG5cbiIKICAgICAgICB9CiAgICAgICAgc2VsZi5wdWJzID0gc2VsZi5xdWVyeV9kYXZpbmNpKHF1ZXJ5KQogICAgICAgIHJldHVybiBzZWxmLnB1YnMKCiAgICAjIGRlZiBxdWVyeV9kYXZpbmNpKHNlbGYsIHF1ZXJ5OiBkaWN0KSAtPiBkaWN0OgogICAgIyAgICAgcmVzcG9uc2UgPSBvcGVuYWkuQ29tcGxldGlvbi5jcmVhdGUoCiAgICAjICAgICAgICAgZW5naW5lPSJ0ZXh0LWRhdmluY2ktMDAzIiwKICAgICMgICAgICAgICBwcm9tcHQ9cXVlcnlbInByb21wdCJdLAogICAgIyAgICAgICAgIHRlbXBlcmF0dXJlPXF1ZXJ5LmdldCgidGVtcGVyYXR1cmUiLCAwLjcpLAogICAgIyAgICAgICAgIHRvcF9wPXF1ZXJ5LmdldCgidG9wX3AiLCAwLjEpLAogICAgIyAgICAgICAgIGZyZXF1ZW5jeV9wZW5hbHR5PXF1ZXJ5LmdldCgiZnJlcXVlbmN5X3BlbmFsdHkiLCAwKSwKICAgICMgICAgICAgICBwcmVzZW5jZV9wZW5hbHR5PXF1ZXJ5LmdldCgicHJlc2VuY2VfcGVuYWx0eSIsIDAuNSksCiAgICAjICAgICAgICAgc3RvcD1xdWVyeS5nZXQoInN0b3AiLCAiXG5cbiIpCiAgICAjICAgICApCiAgICAjCiAgICAjICAgICByZXNwb25zZSA9IHJlc3BvbnNlLmNob2ljZXNbMF0udGV4dC5zdHJpcCgpCiAgICAjICAgICB0cnk6CiAgICAjICAgICAgICAgcmVzcG9uc2UgPSBqc29uLmxvYWRzKHJlc3BvbnNlKQogICAgIyAgICAgZXhjZXB0IGpzb24uZGVjb2Rlci5KU09ORGVjb2RlRXJyb3I6CiAgICAjICAgICAgICAgcmVzcG9uc2UgPSBzZWxmLnF1ZXJ5X2RhdmluY2koCiAgICAjICAgICAgICAgICAgIHsicHJvbXB0IjogIkZvcm1hdCB0aGlzIHN0cmluZyBzbyBpdCB3aWxsIHdvcmsgd2l0aCBqc29uLmxvYWRzKCk6ICIgKyByZXNwb25zZSArICJcblxuIn0pCiAgICAjICAgICByZXR1cm4gcmVzcG9uc2UKCgogICAgZGVmIGdldF9hcnRpY2xlc19ieV9hdXRob3Ioc2VsZiwgYXV0aG9yOiBzdHIpIC0+IGRpY3Q6CiAgICAgICAgc2VsZi5hdXRob3IgPSBhdXRob3IKICAgICAgICBkZWYgZmlsdGVyX2FydGljbGVfdGFnKHRhZyk6CiAgICAgICAgICAgIHJldHVybiB0YWcuZ2V0KCd0aXRsZScpID09IHRhZy50ZXh0CiAgICAgICAgIyBDYW4gY29tcGlsZSBhIGxpc3Qgb2YgYWxsIHRhZ3MgYW5kIGF0dHJpYnV0ZXMgdGhhdCBhcmUgdXNlZCB0byBpZGVudGlmeSBhcnRpY2xlcyBvbiBhbnkgd2Vic2l0ZS4KICAgICAgICAjIFVzZSBvcmRlciBvZiBsaXN0IHRvIGRldGVybWluZSBwcmlvcml0eSBvZiB0YWdzIGFuZCBhdHRyaWJ1dGVzLgogICAgICAgIHRhZ3MgPSBbKGZpbHRlcl9hcnRpY2xlX3RhZywge30pLAogICAgICAgICAgICAgICAgKCdhcnRpY2xlJywgeydjbGFzcyc6ICdwb3N0J30pLAogICAgICAgICAgICAgICAgKCdhJywgeydyZWwnOiAnYm9va21hcmsnfSldCiAgICAgICAgZm9yIHB1Ym5hbWUsIHB1YnVybCBpbiBzZWxmLnB1YnMuaXRlbXMoKToKICAgICAgICAgICAgaWYgbm90IHNlbGYuZ2V0X3dwKHB1YnVybCk6CiAgICAgICAgICAgICAgICBwcmludCgiU29ycnksIHRoaXMgbWV0aG9kIGN1cnJlbnRseSBvbmx5IHdvcmtzIGZvciBXb3JkUHJlc3Mgc2l0ZXMuIikKICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgIGh0bWwgPSByZXF1ZXN0cy5nZXQocHVidXJsICsgZiIvYXV0aG9yL3tzZWxmLmF1dGhvcn0iLCBoZWFkZXJzPXNlbGYuaGVhZGVycykKICAgICAgICAgICAgaHRtbC5lbmNvZGluZyA9ICJ1dGYtOCIKICAgICAgICAgICAgaHRtbCA9IGh0bWwudGV4dAogICAgICAgICAgICBzb3VwID0gQmVhdXRpZnVsU291cChodG1sLCAnaHRtbC5wYXJzZXInKQogICAgICAgICAgICB0cnk6CiAgICAgICAgICAgICAgICB0b3RhbF9wYWdlcyA9IGludChyZS5maW5kYWxsKHIncGFnZSBcZCsgb2YgKFxkKyknLCBzb3VwLnRleHQsIHJlLklHTk9SRUNBU0UpWy0xXSkKICAgICAgICAgICAgZXhjZXB0IEluZGV4RXJyb3I6CiAgICAgICAgICAgICAgICB0b3RhbF9wYWdlcyA9IE5vbmUKICAgICAgICAgICAgdG90YWxfYXJ0aWNsZXMgPSAwCiAgICAgICAgICAgIHRhZ19mbGFnID0gRmFsc2UKICAgICAgICAgICAgdGFnLCBhdHRycyA9IE5vbmUsIE5vbmUKICAgICAgICAgICAgYXJ0aWNsZXMgPSBOb25lCiAgICAgICAgICAgIHBiYXIgPSB0cWRtKHRvdGFsPXRvdGFsX3BhZ2VzLCBsZWF2ZT1UcnVlLCBwb3NpdGlvbj0wLCBkZXNjPWYiR2V0dGluZyBhcnRpY2xlcyBmcm9tIHtwdWJuYW1lfSIsIHVuaXQ9InBhZ2UiKQogICAgICAgICAgICB3aGlsZSBUcnVlOgogICAgICAgICAgICAgICAgaWYgbm90IHRhZ19mbGFnOgogICAgICAgICAgICAgICAgICAgIGZvciB0YWcsIGF0dHJzIGluIHRhZ3M6CiAgICAgICAgICAgICAgICAgICAgICAgIGlmIGFydGljbGVzIDo9IHNvdXAuZmluZF9hbGwodGFnLCBhdHRycz1hdHRycywgc3RyaW5nPVRydWUpOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgdGFnX2ZsYWcgPSBUcnVlCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhawogICAgICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgICAgICBhcnRpY2xlcyA9IHNvdXAuZmluZF9hbGwodGFnLCBhdHRycz1hdHRycywgc3RyaW5nPVRydWUpCgogICAgICAgICAgICAgICAgZm9yIGFydCBpbiBhcnRpY2xlczoKICAgICAgICAgICAgICAgICAgICB0aXRsZSA9IGFydC50ZXh0LnN0cmlwKCkgaWYgbGVuKGxpc3QoYXJ0LmNoaWxkcmVuKSkgIT0gMCBlbHNlIGFydC5maW5kKCdhJykudGV4dC5zdHJpcCgpCiAgICAgICAgICAgICAgICAgICAgdXJsID0gYXJ0LmdldCgnaHJlZicpIGlmIGxlbihsaXN0KGFydC5jaGlsZHJlbikpICE9IDAgZWxzZSBhcnQuZmluZCgnYScpLmdldCgnaHJlZicpCiAgICAgICAgICAgICAgICAgICAgc2VsZi5hcnRpY2xlc1t0aXRsZV0gPSB1cmwKCiAgICAgICAgICAgICAgICB0b3RhbF9hcnRpY2xlcyArPSBsZW4oYXJ0aWNsZXMpCiAgICAgICAgICAgICAgICBwYmFyLnVwZGF0ZSgxKQoKICAgICAgICAgICAgICAgIG5leHRfdXJsID0gc291cC5maW5kKCdsaW5rJywgYXR0cnM9eydyZWwnOiAnbmV4dCd9KQogICAgICAgICAgICAgICAgaWYgbmV4dF91cmwgaXMgTm9uZToKICAgICAgICAgICAgICAgICAgICBicmVhawogICAgICAgICAgICAgICAgaHRtbCA9IHJlcXVlc3RzLmdldChuZXh0X3VybC5nZXQoJ2hyZWYnKSwgaGVhZGVycz1zZWxmLmhlYWRlcnMpCiAgICAgICAgICAgICAgICBodG1sLmVuY29kaW5nID0gInV0Zi04IgogICAgICAgICAgICAgICAgaHRtbCA9IGh0bWwudGV4dAogICAgICAgICAgICAgICAgc291cCA9IEJlYXV0aWZ1bFNvdXAoaHRtbCwgJ2h0bWwucGFyc2VyJykKCiAgICAgICAgICAgIHBiYXIuY2xvc2UoKQogICAgICAgICAgICBwcmludChmIkZvdW5kIHt0b3RhbF9hcnRpY2xlc30gYXJ0aWNsZXMgZnJvbSB7cHVibmFtZX0uIikKCiAgICAgICAgcmV0dXJuIHNlbGYuYXJ0aWNsZXMKCiAgICBkZWYgbWFrZV90cmFpbmluZ19kYXRhKHNlbGYsIGFydGljbGVzOiBkaWN0ID0gTm9uZSkgLT4gTm9uZToKICAgICAgICBpZiBhcnRpY2xlcyBpcyBOb25lOgogICAgICAgICAgICBhcnRpY2xlcyA9IHNlbGYuYXJ0aWNsZXMKCiAgICAgICAgIyBDb2xsZWN0IGFsbCBwcmV2aW91c2x5IHNjcmFwZWQgYXJ0aWNsZXMKICAgICAgICBwcmV2ID0gW10KICAgICAgICBpZiBvcy5wYXRoLmV4aXN0cyhmImRhdGEve3NlbGYuYXV0aG9yfS90cmFpbmluZ19kYXRhLmNzdiIpOgogICAgICAgICAgICB3aXRoIG9wZW4oZiJkYXRhL3tzZWxmLmF1dGhvcn0vdHJhaW5pbmdfZGF0YS5jc3YiLCAncicpIGFzIGY6CiAgICAgICAgICAgICAgICByZWFkZXIgPSBjc3YuRGljdFJlYWRlcihmKQogICAgICAgICAgICAgICAgZm9yIHJvdyBpbiByZWFkZXI6CiAgICAgICAgICAgICAgICAgICAgcHJldi5hcHBlbmQocm93Wyd1cmwnXSkKCiAgICAgICAgIyBEZWxldGUgdGhlIGF1dGhvcidzIGZvbGRlcgogICAgICAgIHNodXRpbC5ybXRyZWUoZiJkYXRhL3tzZWxmLmF1dGhvcn0iLCBpZ25vcmVfZXJyb3JzPVRydWUpCiAgICAgICAgb3MubWFrZWRpcnMoZiJkYXRhL3tzZWxmLmF1dGhvcn0iKQoKICAgICAgICB3aXRoIG9wZW4oZiJkYXRhL3tzZWxmLmF1dGhvcn0vdHJhaW5pbmdfZGF0YS5jc3YiLCAndysnKSBhcyBmOgogICAgICAgICAgICB3cml0ZXIgPSBjc3YuRGljdFdyaXRlcihmLCBmaWVsZG5hbWVzPVsndGl0bGUnLCAndXJsJywgJ3N1bW1hcnknLCAnYXJ0aWNsZSddLCBxdW90aW5nPWNzdi5RVU9URV9BTEwpCiAgICAgICAgICAgIHdyaXRlci53cml0ZWhlYWRlcigpCiAgICAgICAgICAgIGZvciB0aXRsZSwgdXJsIGluIGFydGljbGVzLml0ZW1zKCk6CiAgICAgICAgICAgICAgICBpZiB1cmwgaW4gcHJldjoKICAgICAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgICAgICAgICAgaHRtbCA9IHJlcXVlc3RzLmdldCh1cmwsIGhlYWRlcnM9c2VsZi5oZWFkZXJzKQogICAgICAgICAgICAgICAgaHRtbC5lbmNvZGluZyA9ICJ1dGYtOCIKICAgICAgICAgICAgICAgIGh0bWwgPSBodG1sLnRleHQKICAgICAgICAgICAgICAgIHNvdXAgPSBCZWF1dGlmdWxTb3VwKGh0bWwsICdodG1sLnBhcnNlcicpCiAgICAgICAgICAgICAgICBhcnRpY2xlX3RleHQgPSBzb3VwLmZpbmQoJ2FydGljbGUnKQogICAgICAgICAgICAgICAgaWYgYXJ0aWNsZV90ZXh0IGlzIE5vbmU6CiAgICAgICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAgICAgYXJ0aWNsZV90ZXh0ID0gIlxuIi5qb2luKFtpLnRleHQgZm9yIGkgaW4gYXJ0aWNsZV90ZXh0LmZpbmRfYWxsKFsncCcsICdoMScsICdoMicsICdoMyddKV0pCiAgICAgICAgICAgICAgICAjIHF1ZXJ5IHRleHQtZGF2aW5jaS0wMDMgd2l0aCBmdWxsIHRleHQgb2YgdGhlIGFydGljbGUgYW5kIHN1bW1hcml6ZSB0aGUgYXJ0aWNsZSBpbiAzIHNlbnRlbmNlcwogICAgICAgICAgICAgICAgcHJpbnQoZiJceDFiWzFLXHJTdW1tYXJpemluZyB7dGl0bGV9Li4uIiwgZW5kPScnLCBmbHVzaD1UcnVlKQogICAgICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAgICAgIHJlc3BvbnNlID0gb3BlbmFpLkNvbXBsZXRpb24uY3JlYXRlKAogICAgICAgICAgICAgICAgICAgICAgICBlbmdpbmU9InRleHQtZGF2aW5jaS0wMDMiLAogICAgICAgICAgICAgICAgICAgICAgICBwcm9tcHQ9ZiJwbGVhc2Ugc3VtbWFyaXplIHRoZSBmb2xsb3dpbmcgdGV4dCBpbiAzIHNlbnRlbmNlczpcblxue2FydGljbGVfdGV4dH1cblxuIyNcblxuIiwKICAgICAgICAgICAgICAgICAgICAgICAgdGVtcGVyYXR1cmU9MC43LAogICAgICAgICAgICAgICAgICAgICAgICBtYXhfdG9rZW5zPTUwMCwKICAgICAgICAgICAgICAgICAgICAgICAgdG9wX3A9MSwKICAgICAgICAgICAgICAgICAgICAgICAgZnJlcXVlbmN5X3BlbmFsdHk9MCwKICAgICAgICAgICAgICAgICAgICAgICAgcHJlc2VuY2VfcGVuYWx0eT0wLjUsCiAgICAgICAgICAgICAgICAgICAgICAgIG49MywKICAgICAgICAgICAgICAgICAgICAgICAgc3RvcD0iXG5cbiMjXG5cbiIKICAgICAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICAgICBleGNlcHQgb3BlbmFpLmVycm9yLkludmFsaWRSZXF1ZXN0RXJyb3I6CiAgICAgICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgICAgIGV4Y2VwdCBvcGVuYWkuZXJyb3IuUmF0ZUxpbWl0RXJyb3I6CiAgICAgICAgICAgICAgICAgICAgdGltZS5zbGVlcCg2MCkKCiAgICAgICAgICAgICAgICBzdW1tYXJ5ID0gcmVzcG9uc2UuY2hvaWNlc1swXS50ZXh0LnN0cmlwKCkKICAgICAgICAgICAgICAgIGRhdGEgPSB7J3RpdGxlJzogdGl0bGUsICd1cmwnOiB1cmwsICdzdW1tYXJ5Jzogc3VtbWFyeSwgJ2FydGljbGUnOiBhcnRpY2xlX3RleHR9CiAgICAgICAgICAgICAgICB3cml0ZXIud3JpdGVyb3coZGF0YSkKCiAgICAgICAgcmV0dXJuIE5vbmUKCiAgICBkZWYgZm9ybWF0X2RhdGEoc2VsZik6CiAgICAgICAgaWYgUGF0aChmImRhdGEve3NlbGYuYXV0aG9yfS90cmFpbmluZ19kYXRhX2Zvcm1hdHRlZC5jc3YiKS5leGlzdHMoKToKICAgICAgICAgICAgb3MucmVtb3ZlKGYiZGF0YS97c2VsZi5hdXRob3J9L3RyYWluaW5nX2RhdGFfZm9ybWF0dGVkLmNzdiIpCiAgICAgICAgd2l0aCBvcGVuKGYiZGF0YS97c2VsZi5hdXRob3J9L3RyYWluaW5nX2RhdGEuY3N2IiwgJ3InKSBhcyBmOgogICAgICAgICAgICByZWFkZXIgPSBjc3YuRGljdFJlYWRlcihmKQogICAgICAgICAgICB3aXRoIG9wZW4oZiJkYXRhL3tzZWxmLmF1dGhvcn0vdHJhaW5pbmdfZGF0YV9mb3JtYXR0ZWQuY3N2IiwgJ3crJykgYXMgZjI6CiAgICAgICAgICAgICAgICB3cml0ZXIgPSBjc3YuRGljdFdyaXRlcihmMiwgZmllbGRuYW1lcz1bJ3Byb21wdCcsICdjb21wbGV0aW9uJ10sIHF1b3Rpbmc9Y3N2LlFVT1RFX0FMTCkKICAgICAgICAgICAgICAgIHdyaXRlci53cml0ZWhlYWRlcigpCiAgICAgICAgICAgICAgICBmb3Igcm93IGluIHJlYWRlcjoKICAgICAgICAgICAgICAgICAgICB3cml0ZXIud3JpdGVyb3coeydwcm9tcHQnOiBmIlRpdGxlOiB7cm93Wyd0aXRsZSddfVxuXG5TdW1tYXJ5OiB7cm93WydzdW1tYXJ5J119XG5cbiMjXG5cbiIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAnY29tcGxldGlvbic6IHJvd1snYXJ0aWNsZSddfSkKCiAgICBkZWYgdHJhaW5fbW9kZWwoc2VsZiwgc3VmZml4OiBzdHIgPSBOb25lKToKICAgICAgICBpZiBub3QgUGF0aChmImRhdGEve3NlbGYuYXV0aG9yfS90cmFpbmluZ19kYXRhLmNzdiIpLmV4aXN0cygpOgogICAgICAgICAgICByYWlzZSAiTm8gdHJhaW5pbmcgZGF0YSBmb3VuZC4gUGxlYXNlIHJ1biBtYWtlX3RyYWluaW5nX2RhdGEoKSBmaXJzdC4iCgogICAgICAgICMgZGVsZXRlIHByZXZpb3VzbHkgZ2VuZXJhdGVkIHRyYWluaW5nIGRhdGEKICAgICAgICBpZiBQYXRoKGYiZGF0YS97c2VsZi5hdXRob3J9L3RyYWluaW5nX2RhdGFfZm9ybWF0dGVkX3ByZXBhcmVkLmpzb25sIikuZXhpc3RzKCk6CiAgICAgICAgICAgIFBhdGgoZiJkYXRhL3tzZWxmLmF1dGhvcn0vdHJhaW5pbmdfZGF0YV9mb3JtYXR0ZWRfcHJlcGFyZWQuanNvbmwiKS51bmxpbmsoKQogICAgICAgIHByZXAgPSBwZXhwZWN0LnNwYXduKGYib3BlbmFpIHRvb2xzIGZpbmVfdHVuZXMucHJlcGFyZV9kYXRhICIKICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmIi1mIGRhdGEve3NlbGYuYXV0aG9yfS90cmFpbmluZ19kYXRhX2Zvcm1hdHRlZC5jc3YgIgogICAgICAgICAgICAgICAgICAgICAgICAgICAgIGYiLS1xdWlldCIpCiAgICAgICAgcHJlcC5pbnRlcmFjdCgpCiAgICAgICAgcHJlcC5jbG9zZSgpCiAgICAgICAgZnQgPSBwZXhwZWN0LnNwYXduKGYib3BlbmFpIGFwaSBmaW5lX3R1bmVzLmNyZWF0ZSAiCiAgICAgICAgICAgICAgICAgICAgICAgICAgIGYiLXQgZGF0YS97c2VsZi5hdXRob3J9L3RyYWluaW5nX2RhdGFfZm9ybWF0dGVkX3ByZXBhcmVkLmpzb25sICIKICAgICAgICAgICAgICAgICAgICAgICAgICAgZiItbSBkYXZpbmNpICIKICAgICAgICAgICAgICAgICAgICAgICAgICAgZiItLXN1ZmZpeCBcIntzdWZmaXh9XCIiLAogICAgICAgICAgICAgICAgICAgICAgICAgICBlbnY9b3MuZW52aXJvbikKICAgICAgICBmdC5pbnRlcmFjdCgpCiAgICAgICAgZnQuY2xvc2UoKQoKICAgICAgICByZXR1cm4gTm9uZQoKICAgIGRlZiBjcmVhdGUoc2VsZiwgc3VtbWFyeTogc3RyLCB0aXRsZTogc3RyID0gTm9uZSkgLT4gc3RyOgogICAgICAgIHByb21wdCA9IGYiR2VuZXJhdGUgdGhlIGFydGljbGUgYmFzZWQgb24gdGhlIGdpdmVuIHRpdGxlIGFuZCBzdW1tYXJ5OiIgXAogICAgICAgICAgICAgICAgIGYiXG5cblRpdGxlOiB7dGl0bGV9XG5cblN1bW1hcnk6IHtzdW1tYXJ5fVxuXG4jIyNcblxuIgoKICAgICAgICByZXNwb25zZSA9IG9wZW5haS5Db21wbGV0aW9uLmNyZWF0ZSgKICAgICAgICAgICAgZW5naW5lPXNlbGYubW9kZWwsCiAgICAgICAgICAgIHByb21wdD1wcm9tcHQsCiAgICAgICAgICAgIHRlbXBlcmF0dXJlPTAuNywKICAgICAgICAgICAgbWF4X3Rva2Vucz0yMDAwIC0gbGVuKHByb21wdCksCiAgICAgICAgICAgIHRvcF9wPTEsCiAgICAgICAgICAgIGZyZXF1ZW5jeV9wZW5hbHR5PTAsCiAgICAgICAgICAgIHByZXNlbmNlX3BlbmFsdHk9MC41LAogICAgICAgICAgICBzdG9wPVsiIEVORCJdCiAgICAgICAgKQoKICAgICAgICBhcnRpY2xlID0gcmVzcG9uc2UuY2hvaWNlc1swXS50ZXh0LnN0cmlwKCkKCiAgICAgICAgcmV0dXJuIGFydGljbGUKCiAgICBAc3RhdGljbWV0aG9kCiAgICBkZWYgc3VtbWFyeV9mcm9tX3VybCh1cmwpOgogICAgICAgIHByb21wdCA9IGYiVVJMOiB7dXJsfVxuXG5QbGVhc2UgZ2VuZXJhdGUgYSB0aHJlZSBzZW50ZW5jZSBzdW1tYXJ5IG9mIHRoZSBhcnRpY2xlIGZyb20gdGhlIGdpdmVuIFVSTDpcblxuIgoKICAgICAgICByZXNwb25zZSA9IG9wZW5haS5Db21wbGV0aW9uLmNyZWF0ZSgKICAgICAgICAgICAgZW5naW5lPSJ0ZXh0LWRhdmluY2ktMDAzIiwKICAgICAgICAgICAgcHJvbXB0PXByb21wdCwKICAgICAgICAgICAgdGVtcGVyYXR1cmU9MC43LAogICAgICAgICAgICBtYXhfdG9rZW5zPTEwMCwKICAgICAgICAgICAgdG9wX3A9MSwKICAgICAgICAgICAgZnJlcXVlbmN5X3BlbmFsdHk9MCwKICAgICAgICAgICAgcHJlc2VuY2VfcGVuYWx0eT0wLjUsCiAgICAgICAgICAgIHN0b3A9WyIgRU5EIl0KICAgICAgICApCgogICAgICAgIHN1bW1hcnkgPSByZXNwb25zZS5jaG9pY2VzWzBdLnRleHQuc3RyaXAoKQogICAgICAgIHJldHVybiBzdW1tYXJ5CgogICAgQHN0YXRpY21ldGhvZAogICAgZGVmIHN1bW1hcnlfZnJvbV90ZXh0KHRleHQpOgogICAgICAgICIiIgogICAgICAgIEZ1bmN0aW9uIHRvIGdldCBhIHN1bW1hcnkgb2YgYW4gYXJ0aWNsZSBmcm9tIGEgZ2l2ZW4gdGV4dC4KICAgICAgICBBcmdzOgogICAgICAgICAgICB0ZXh0OiBUZXh0IG9mIHRoZSBhcnRpY2xlCgogICAgICAgIFJldHVybnM6CiAgICAgICAgICAgIFN1bW1hcnkgb2YgdGhlIGFydGljbGUKICAgICAgICAiIiIKICAgICAgICByZXNwb25zZSA9IG9wZW5haS5Db21wbGV0aW9uLmNyZWF0ZSgKICAgICAgICAgICAgZW5naW5lPSJ0ZXh0LWRhdmluY2ktMDAzIiwKICAgICAgICAgICAgcHJvbXB0PSJjcmVhdGUgYSB0aHJlZSBzZW50ZW5jZSBzdW1tYXJ5IG9mIHRoZSBmb2xsb3dpbmcgdGV4dDogIiArIHRleHQgKyAiXG5cbiMjXG5cbiIsCiAgICAgICAgICAgIHRlbXBlcmF0dXJlPTAuNywKICAgICAgICAgICAgbWF4X3Rva2Vucz0xMDAsCiAgICAgICAgICAgIHRvcF9wPTEsCiAgICAgICAgICAgIGZyZXF1ZW5jeV9wZW5hbHR5PTAsCiAgICAgICAgICAgIHByZXNlbmNlX3BlbmFsdHk9MC41LAogICAgICAgICAgICBzdG9wPVsiIEVORCJdCiAgICAgICAgKQoKICAgICAgICBzdW1tYXJ5ID0gcmVzcG9uc2UuY2hvaWNlc1swXS50ZXh0LnN0cmlwKCkKICAgICAgICByZXR1cm4gc3VtbWFyeQoKCmlmIF9fbmFtZV9fID09ICJfX21haW5fXyI6CiAgICBwZ3B0ID0gUHViR1BUKCkKICAgIHBncHQuYXV0aG9yID0gImFkdWZmeSIKICAgICMgcGdwdC5wdWJzID0geyJQYWxtIEJlYWNoIElsbHVzdHJhdGVkIjogImh0dHBzOi8vd3d3LnBhbG1iZWFjaGlsbHVzdHJhdGVkLmNvbSIsCiAgICAjICAgICAgICAgICAgICAiTmFwbGVzIElsbHVzdHJhdGVkIjogImh0dHBzOi8vd3d3Lm5hcGxlc2lsbHVzdHJhdGVkLmNvbSIsCiAgICAjICAgICAgICAgICAgICAiSnVwaXRlciBNYWdhemluZSI6ICJodHRwczovL3d3dy5qdXBpdGVybWFnLmNvbS8iLAogICAgIyAgICAgICAgICAgICAgIlN0dWFydCBNYWdhemluZSI6ICJodHRwczovL3d3dy5zdHVhcnRtYWdhemluZS5jb20vIiwKICAgICMgICAgICAgICAgICAgICJBdmVudHVyYSBNYWdhemluZSI6ICJodHRwczovL2F2ZW50dXJhbWFnYXppbmUuY29tLyIsCiAgICAjICAgICAgICAgICAgICAiRmxvcmlkYSBEZXNpZ24iOiAiaHR0cHM6Ly9mbG9yaWRhZGVzaWduLmNvbS8ifQogICAgIyBwZ3B0LmdldF9hcnRpY2xlc19ieV9hdXRob3IoImFkdWZmeSIpCiAgICAjIHBncHQubWFrZV90cmFpbmluZ19kYXRhKCkKICAgICMgcGdwdC5mb3JtYXRfZGF0YSgpCiAgICAjIHBncHQudHJhaW5fbW9kZWwoc3VmZml4PSJhYmJleSB0ZXN0IikKICAgIHBncHQuZ2V0X21vZGVsKCJhYmJleSB0ZXN0IikKICAgIGFydGljbGUgPSBwZ3B0LmNyZWF0ZShzdW1tYXJ5PSJXZXN0IFBhbG0gQmVhY2ggd2lsbCBiZSBob3N0aW5nIGEgbWVtb3JpYWwgZm9yIHRoZSBjaGlja2VucyB0aGF0IGhhdmUgZGllZCBmb3IgY2hpY2tlbiBzb3VwLiAiCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAiQSBnaWFudCBjaGlja2VuIHN0YXR1ZSwgYnVpbHQgYnkgQmFuc2t5LCB3aWxsIGJlIGVyZWN0ZWQgaW4gUm9zZW1hcnkgU3F1YXJlLiAiCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAiVGhlIGV2ZW50IHdpbGwgYmUgaGVsZCBvbiBKYW51YXJ5IDExdGguIFRpY2tldHMgc3RhcnQgYXQgJDUwMDAuIiwKICAgICAgICAgICAgICAgICAgICAgICAgICB0aXRsZT0iQ2hpY2tlbidzIFNvdWxzIGZvciBTb3VwIikKICAgIHByaW50KGFydGljbGUpCg==</text>
       </register>
       <register name="-" type="4">
-        <text encoding="base64">ZQ==</text>
+        <text encoding="base64">dXNlcm5hbWU9Tm9uZSwgcGFzc3dvcmQ=</text>
       </register>
       <register name="." type="4">
         <text encoding="base64" />
       </register>
       <register name="/" type="4">
-        <text encoding="base64">UHViR1BU</text>
+        <text encoding="base64">VXNlcg==</text>
       </register>
       <register name="0" type="2">
-        <text encoding="base64">Y2xhc3MgRmluZVR1bmVBZG1pbihhZG1pbi5Nb2RlbEFkbWluKToKICAgIGxpc3RfZGlzcGxheSA9IFtmaWVsZC5uYW1lIGZvciBmaWVsZCBpbiBGaW5lVHVuZS5fbWV0YS5nZXRfZmllbGRzKCldCg==</text>
+        <text encoding="base64">ICAgICAgbmF2aWdhdGUoc3RhdGUgPyBzdGF0ZS5mcm9tIDogIi8iKTsK</text>
       </register>
       <register name="1" type="2">
-        <text encoding="base64">Cg==</text>
+        <text encoding="base64">ICAgICAgICBkYXRhID0gcmVxdWVzdC5kYXRhCg==</text>
       </register>
       <register name="q" type="4">
-        <text encoding="base64">Y3NdKWkuZ2V0amtmKWksIGpr</text>
+        <keys>
+          <key char="94" code="0" mods="0" />
+          <key char="102" code="0" mods="0" />
+          <key char="61" code="0" mods="0" />
+          <key char="108" code="0" mods="0" />
+          <key char="108" code="0" mods="0" />
+          <key char="50" code="0" mods="0" />
+          <key char="99" code="0" mods="0" />
+          <key char="116" code="0" mods="0" />
+          <key char="46" code="0" mods="0" />
+          <key char="105" code="0" mods="0" />
+          <key char="100" code="0" mods="0" />
+          <key char="84" code="0" mods="0" />
+          <key char="111" code="0" mods="0" />
+          <key char="107" code="0" mods="0" />
+          <key char="101" code="0" mods="0" />
+          <key char="110" code="0" mods="0" />
+          <key char="65535" code="8" mods="0" />
+          <key char="65535" code="8" mods="0" />
+          <key char="65535" code="8" mods="0" />
+          <key char="65535" code="8" mods="0" />
+          <key char="65535" code="8" mods="0" />
+          <key char="65535" code="8" mods="0" />
+          <key char="65535" code="8" mods="0" />
+          <key char="105" code="0" mods="0" />
+          <key char="100" code="0" mods="0" />
+          <key char="95" code="0" mods="0" />
+          <key char="116" code="0" mods="0" />
+          <key char="111" code="0" mods="0" />
+          <key char="107" code="0" mods="0" />
+          <key char="101" code="0" mods="0" />
+          <key char="110" code="0" mods="0" />
+          <key char="95" code="0" mods="0" />
+          <key char="99" code="0" mods="0" />
+          <key char="108" code="0" mods="0" />
+          <key char="97" code="0" mods="0" />
+          <key char="105" code="0" mods="0" />
+          <key char="109" code="0" mods="0" />
+          <key char="115" code="0" mods="0" />
+          <key char="106" code="0" mods="0" />
+          <key char="107" code="0" mods="0" />
+        </keys>
       </register>
       <register name="2" type="2">
-        <text encoding="base64">Y2xhc3MgVXNlcgo=</text>
+        <text encoding="base64">ICAgICAgICB1c2VybmFtZSA9IHJlcXVlc3QuZGF0YS5nZXQoInVzZXJuYW1lIiwgTm9uZSkKICAgICAgICBwYXNzd29yZCA9IHJlcXVlc3QuZGF0YS5nZXQoInBhc3N3b3JkIiwgTm9uZSkK</text>
       </register>
       <register name="3" type="2">
-        <text encoding="base64">ICAgIGFkbWluLnNpdGUucmVnaXN0ZXIoVXNlciwgVXNlckFkbWluKQo=</text>
+        <text encoding="base64">ZnJvbSByZXN0X2ZyYW1ld29yay5kZWNvcmF0b3JzIGltcG9ydCBhcGlfdmlldwo=</text>
       </register>
       <register name="4" type="2">
-        <text encoding="base64">IyBSZWdpc3RlciB5b3VyIG1vZGVscyBoZXJlLgo=</text>
+        <text encoding="base64">ICAgIEBhcGlfdmlldyhbJ1BPU1QnXSkK</text>
       </register>
       <register name="5" type="2">
-        <text encoding="base64">IyBDcmVhdGUgeW91ciBtb2RlbHMgaGVyZS4K</text>
+        <text encoding="base64">ICAgICAgICAgICAgY29uc29sZS5sb2coZXJyLnJlc3BvbnNlKQo=</text>
       </register>
       <register name="6" type="2">
-        <text encoding="base64">ICAgICAgICAgICAgcmFpc2UgIk5vIHRyYWluaW5nIGRhdGEgZm91bmQuIFBsZWFzZSBydW4gbWFrZV90cmFpbmluZ19kYXRhKCkgZmlyc3QuCg==</text>
+        <text encoding="base64">ICAgICAgY29uc29sZS5sb2cocmVzcG9uc2UpCg==</text>
       </register>
       <register name="7" type="2">
-        <text encoding="base64">Cg==</text>
+        <text encoding="base64">ICAgICAgY29uc3QgWywgbWVzc2FnZV0gPSBPYmplY3QuZW50cmllcyhyZXNwb25zZSlbMF07Cg==</text>
       </register>
       <register name="8" type="2">
-        <text encoding="base64">ICAgICAgICAgICAgb3MucmVtb3ZlKGYiZGF0YS97c2VsZi5hdXRob3J9L3RyYWluaW5nX2RhdGEuY3N2IikK</text>
+        <text encoding="base64">ZXhwb3J0IGRlZmF1bHQgTG9naW4uaGFuZGxlRm9ybVN1Ym1pdDsK</text>
       </register>
       <register name="9" type="2">
-        <text encoding="base64">ICAgICAgICAjIERlbGV0ZSB0aGUgYXV0aG9yJ3MgZm9sZGVyIGlmIGl0IGV4aXN0cwo=</text>
+        <text encoding="base64">TG9naW4uaGFuZGxlRm9ybVN1Ym1pdCA9IHVuZGVmaW5lZDsK</text>
       </register>
       <register name=":" type="4">
-        <text encoding="base64">JXMvUHViR1BUL2NvbmZpZy9nYw==</text>
+        <text encoding="base64">JXMvand0X3JlZ2lzdGVyL1JFR0lTVEVSL2dj</text>
       </register>
     </registers>
   </component>
   <component name="VimSearchSettings">
     <search>
-      <last-search encoding="base64">cmF3</last-search>
-      <last-substitute encoding="base64">UHViR1BU</last-substitute>
-      <last-replace encoding="base64">Y29uZmln</last-replace>
-      <last-pattern encoding="base64">UHViR1BU</last-pattern>
+      <last-search encoding="base64">VXNlcg==</last-search>
+      <last-substitute encoding="base64">and0X3JlZ2lzdGVy</last-substitute>
+      <last-replace encoding="base64">UkVHSVNURVI=</last-replace>
+      <last-pattern encoding="base64">VXNlcg==</last-pattern>
       <last-dir encoding="base64">MQ==</last-dir>
       <show-last encoding="base64">ZmFsc2U=</show-last>
     </search>
