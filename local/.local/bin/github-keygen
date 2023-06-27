@@ -52,3 +52,4 @@ if ! $DELETE;
     printf "\nHost ${REPONAME}${REPONAME:+.}github.com\n\tHostName github.com\n\tUser git\n\tIdentityFile ~/.ssh/${KEYNAME}" >> ~/.ssh/config
 fi
 
+cat ~/.ssh/${KEYNAME}.pub

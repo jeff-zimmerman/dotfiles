@@ -23,3 +23,6 @@
 [submodule "vim/my_plugins/quickscope"]
 	path = vim/my_plugins/quickscope
 	url = https://github.com/unblevable/quick-scope.git
+[submodule "vim/.vim_runtime"]
+	path = vim/.vim_runtime
+	url = https://github.com/amix/vimrc.git
