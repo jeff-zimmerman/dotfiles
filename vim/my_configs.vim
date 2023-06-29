@@ -4,6 +4,11 @@ set nocompatible
 " Map Y to y$ instead of yy
 nnoremap Y y$
 
+" Stop the god damn autocommenting
+autocmd BufNewFile,BufRead,FileType * set formatoptions-=cro
+autocmd BufNewFile,BufRead,FileType * setlocal formatoptions-=cro
+au FileType c,cpp setlocal comments-=:// comments+=f://
+
 " chenge cursor shape in insert mode
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
@@ -46,7 +51,7 @@ silent! unmap <C-f>
 map <C-c><C-p> <Plug>(ctrlp) 
 
 " Auto Pairs Config
-call AutoPairsToggle()
+let g:AutoPairsLoaded = 1
 
 " Vimspector Config
 nnoremap <Leader>dd :call vimspector#Launch()<CR>
