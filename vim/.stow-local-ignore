@@ -3,3 +3,5 @@ Vim Ultimate
 /setup_vim.sh
 /my_plugins
 /after
+/ftdetect
+/filetype.vim
