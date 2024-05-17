@@ -44,6 +44,9 @@ set hlsearch
 " Makes search act like search in modern browsers
 set incsearch
 
+" Set relative line number
+set relativenumber number
+
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
@@ -172,8 +175,8 @@ cnoremap <C-N> <Down>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fast editing and reloading of vimrc configs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>e :e! ~/.ideavim<cr>
-autocmd! bufwritepost ~/.ideavim source ~/.ideavim
+map <leader>e :e! ~/.ideavimrc<cr>
+autocmd! bufwritepost ~/.ideavim source ~/.ideavimrc
 
 
 

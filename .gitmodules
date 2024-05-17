@@ -26,3 +26,6 @@
 [submodule "vim/.vim_runtime"]
 	path = vim/.vim_runtime
 	url = https://github.com/amix/vimrc.git
+[submodule "SystemVerilog"]
+	path = vim/my_plugins/systemverilog/systemverilog.vim
+	url = https://github.com/nachumk/systemverilog.vim

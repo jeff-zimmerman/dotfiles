@@ -1,3 +1,6 @@
+" Set font for GVim's weird spacing thing.
+set gfn=Ubuntu\ Mono\ 16
+
 " set nocompatible for inoremap to work
 set nocompatible
 
@@ -25,6 +28,7 @@ augroup AutoSave
 augroup end
 
 set number
+set relativenumber
 set mouse=a
 set ttymouse=sgr
 
