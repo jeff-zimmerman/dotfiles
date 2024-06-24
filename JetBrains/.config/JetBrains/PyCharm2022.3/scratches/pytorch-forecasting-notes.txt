@@ -1,4 +1,0 @@
-Things I had to do to make pytorch forecasting work
-    Install pytorch lightning 1.9.4
-    Change _TORCH_GREATER_EQUAL_1_11 = compare_version("torch", operator.ge, "1.11.0") to _TORCH_GREATER_EQUAL_1_11 = True in file "venv/lib/python3.10/site-packages/lightning_fabric/utilities/imports.py"
-    Use no GroupNormalizer (I think this is a bug in pytorch lightning)

@@ -1,6 +1,0 @@
-<application>
-  <component name="OverrideFileTypeManager">
-    <file url="file://$USER_HOME$/PycharmProjects/PubGPT/PubGPT/data/aduffy/training_data.csv" value="CSV" />
-    <file url="file://$USER_HOME$/PycharmProjects/PubGPT/PubGPT/data/brian/training_data.csv" value="CSV" />
-  </component>
-</application>
