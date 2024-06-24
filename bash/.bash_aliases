@@ -24,10 +24,10 @@ alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
 
 alias top="htop"
 
-alias pivpn-start='systemctl start wg-quick@jzimmerman'
-alias pivpn-stop='systemctl stop wg-quick@jzimmerman'
-alias pivpn-restart='systemctl restart wg-quick@jzimmerman'
-alias pivpn-status='systemctl status wg-quick@jzimmerman'
+alias pivpn-start='wg-quick up jzimmerman'
+alias pivpn-stop='wg-quick down jzimmerman'
+alias pivpn-restart='wg-quick up jzimmerman && wg-quick down jzimmerman'
+alias pivpn-status='wg show'
 
 ###
 # Functions

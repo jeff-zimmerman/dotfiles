@@ -1,3 +1,0 @@
-runfile('/home/jazimmerman/PycharmProjects/bes-edgeml-models/ELMLabeler/elm_finder_pkg.py', wdir='/home/jazimmerman/PycharmProjects/bes-edgeml-models/ELMLabeler')
--. . -..- - / . -. - .-. -.--
-elmo.plot_data()

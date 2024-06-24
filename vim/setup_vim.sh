@@ -11,6 +11,7 @@ done
 DIR=$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )
 
 sed -i "/my_plugins/d" $DIR/.vim_runtime/.gitignore
+echo $DIR
 
 # Run normal installation script for vim_awesome
 /bin/bash $DIR/.vim_runtime/install_awesome_vimrc.sh
