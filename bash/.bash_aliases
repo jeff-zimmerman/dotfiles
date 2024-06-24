@@ -26,7 +26,7 @@ alias top="htop"
 
 alias pivpn-start='wg-quick up jzimmerman'
 alias pivpn-stop='wg-quick down jzimmerman'
-alias pivpn-restart='wg-quick up jzimmerman && wg-quick down jzimmerman'
+alias pivpn-restart='wg-quick down jzimmerman && wg-quick up jzimmerman'
 alias pivpn-status='wg show'
 
 ###
